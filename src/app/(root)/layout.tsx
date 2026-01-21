@@ -1,16 +1,18 @@
-import Header from '@/components/common/Header'
-import React from 'react'
+import Footer from '@/components/Footer';
+import Header from '@/components/Header'
 
 const AppLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <>
       <Header />
 
-      <main>
+      <main className='max-w-3xl mx-auto my-24 px-5 sm:px-0'>
         {children}
       </main>
+
+      <Footer />
     </>
   )
 }
 
-export default AppLayout
+export default AppLayout;
