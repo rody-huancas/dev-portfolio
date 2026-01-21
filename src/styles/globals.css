@@ -5,11 +5,25 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Hero Section Colors */
+  --hero-text-muted: #6F6F6F;
+  --button-bg: #2A2A2A;
+  --button-bg-hover: #3A3A3A;
+  --status-available: #22C55E;
+  --text-secondary: #D1D5DB;
+  --text-description: #9CA3AF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-hero-muted: var(--hero-text-muted);
+  --color-button: var(--button-bg);
+  --color-button-hover: var(--button-bg-hover);
+  --color-status: var(--status-available);
+  --color-secondary: var(--text-secondary);
+  --color-description: var(--text-description);
   --font-sans: var(--font-dm-sans);
 }
 
@@ -17,6 +31,12 @@
   :root {
     --background: #212224;
     --foreground: #ededed;
+    --hero-text-muted: #6F6F6F;
+    --button-bg: #2A2A2A;
+    --button-bg-hover: #3A3A3A;
+    --status-available: #22C55E;
+    --text-secondary: #D1D5DB;
+    --text-description: #9CA3AF;
   }
 }
 
