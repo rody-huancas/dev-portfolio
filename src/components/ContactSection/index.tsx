@@ -1,12 +1,11 @@
+import Title from "../Title";
 import { BsArrowRight } from "react-icons/bs";
 
 const ContactSection = () => {
   return (
     <section id="contact" className="pt-24 w-full">
-      <div className="space-y-12">
-        <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
-          Hablemos <span className="text-status">ahora</span>
-        </h2>
+      <div className="space-y-5">
+        <Title label="Contacto" title="Hablemos" subtitle="ahora" />
 
         <div className="space-y-10">
           <p className="space-y-6 text-text-muted text-lg md:text-xl font-light">

@@ -1,3 +1,4 @@
+import Title from "../Title";
 import CardExperience from "./CardExperience";
 import experienceData from "@/data/experience-data.json";
 import type { IExperience } from "@/types/experience.types";
@@ -9,9 +10,8 @@ const ExperienceSection = () => {
   return (
     <div className="w-full mt-20">
       <div className="mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          Experiencia <span className="text-hero-muted">Laboral</span>
-        </h2>
+        <Title label="Experiencia" title="Mi ruta" subtitle="profesional" />
+
         <p className="text-text-muted text-lg max-w-xl">
           Trayectoria profesional enfocada en crear soluciones digitales
           eficientes y escalables.

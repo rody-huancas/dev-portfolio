@@ -53,15 +53,19 @@ const CardExperience = ({ experience }: Experience) => {
             <span>Sitio web</span>
           </a>
 
-          <a
-            href={experience.certificateUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-text-muted hover:text-white transition-colors"
-          >
-            <FiFileText className="text-status" size={16} />
-            <span>Constancia</span>
-          </a>
+          {
+            experience.certificateUrl && (
+              <a
+                href={experience.certificateUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-text-muted hover:text-white transition-colors"
+              >
+                <FiFileText className="text-status" size={16} />
+                <span>Constancia</span>
+              </a>
+            )
+          }
         </div>
       </div>
     </article>

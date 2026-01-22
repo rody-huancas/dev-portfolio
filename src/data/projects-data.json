@@ -2,21 +2,21 @@
   "projects": [
     {
       "id"          : 1,
-      "title"       : "FavorApp Mobile",
-      "description" : "Aplicación móvil para servicios comunitarios. Incluye chat en tiempo real, geolocalización avanzada y un sistema de reseñas para usuarios.",
-      "technologies": ["React Native", "TypeScript", "NestJS", "PostgreSQL", "Expo"],
-      "githubUrl"   : "#",
-      "liveUrl"     : "#",
-      "imageUrl"    : "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
+      "title"       : "VizGit",
+      "description" : "Visualiza y analiza tu actividad en GitHub mediante gráficos interactivos y un diseño amigable y personalizable.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+      "githubUrl"   : "https://github.com/rody-huancas/vizgit",
+      "liveUrl"     : "https://vizgit.novtiq.com/",
+      "imageUrl"    : "/projects/image-vizgit.png"
     },
     {
       "id"          : 2,
-      "title"       : "Enterprise ERP System v2",
-      "description" : "Plataforma administrativa con dashboards dinámicos. Optimizada para manejar grandes volúmenes de datos con tiempos de respuesta menores a 200ms.",
-      "technologies": ["Next.js", "Tailwind CSS", "Node.js", "MySQL", "Docker"],
-      "githubUrl"   : "#",
-      "liveUrl"     : "#",
-      "imageUrl"    : "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+      "title"       : "Dependra",
+      "description" : "Explora visualmente la arquitectura de repositorios de GitHub para comprender mejor la estructura y organización del código.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+      "githubUrl"   : "https://github.com/rody-huancas/dependra",
+      "liveUrl"     : "https://dependra.novtiq.com/",
+      "imageUrl"    : "/projects/image-dependra.png"
     }
   ]
 }

@@ -1,12 +1,11 @@
+import Title from "../Title";
 import TechSlider from "../TechSlider";
 
 const AboutSection = () => {
   return (
     <section id="about" className="pt-24">
-      <div className="space-y-12">
-        <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter">
-          Sobre <span className="text-status">mí</span>
-        </h2>
+      <div className="space-y-5">
+        <Title label="Sobre Mí" title="Conoce un poco" subtitle="más de mí" />
 
         <div className="space-y-10 text-text-muted text-lg md:text-xl leading-relaxed font-light">
           <p>
