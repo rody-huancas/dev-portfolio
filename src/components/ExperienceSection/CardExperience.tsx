@@ -1,5 +1,5 @@
+import { IExperience } from "@/types/experience.types";
 import { FiExternalLink, FiFileText } from "react-icons/fi";
-import { IExperience } from ".";
 
 interface Experience {
   experience: IExperience;

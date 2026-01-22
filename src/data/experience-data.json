@@ -1,0 +1,44 @@
+{
+  "experience": [
+    {
+      "id"            : 1,
+      "company"       : "NTT DATA Europe & Latam",
+      "position"      : "React Native Developer",
+      "period"        : "Ene 2026 - Presente",
+      "description"   : "Lidero el desarrollo de aplicaciones móviles multiplataforma de alto impacto, enfocándome en arquitectura escalable y rendimiento optimizado para proyectos internacionales.",
+      "technologies"  : ["React Native", "TypeScript", "JavaScript", "Git"],
+      "websiteUrl"    : "#",
+      "certificateUrl": "#"
+    },
+    {
+      "id"          : 2,
+      "company"     : "USS - Universidad Señor de Sipán",
+      "position"    : "Analista Desarrollador",
+      "period"      : "Ago 2024 - Dic 2025",
+      "description" : "Optimicé el rendimiento del sistema reduciendo tiempos de respuesta hasta en un 95%. Lideré la migración tecnológica hacia React/TypeScript y rediseñé interfaces críticas.",
+      "technologies": ["C#", ".Net", "React", "TypeScript", "SQL Server", "Git"],
+      "websiteUrl"    : "#",
+      "certificateUrl": "#"
+    },
+    {
+      "id"          : 3,
+      "company"     : "Appex IA",
+      "position"    : "Desarrollador Frontend",
+      "period"      : "Ene 2025 - Oct 2025",
+      "description" : "Encargado del desarrollo de FavorApp y landing pages de alta conversión. Implementé estándares de calidad mediante mentorías y code reviews sistemáticos.",
+      "technologies": ["React", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Docker"],
+      "websiteUrl"    : "#",
+      "certificateUrl": "#"
+    },
+    {
+      "id"          : 4,
+      "company"     : "DATEC CONSULTING SAC",
+      "position"    : "Desarrollador Full Stack",
+      "period"      : "Ene 2023 - Ago 2024",
+      "description" : "Modernicé el sistema ERP central, incrementando la eficiencia operativa. Colaboré en la arquitectura de una nueva versión bajo estándares modernos de escalabilidad.",
+      "technologies": ["PHP", "React.js", "Node.js", "NestJS", "PostgreSQL", "MySQL", "Git"],
+      "websiteUrl"    : "#",
+      "certificateUrl": "#"
+    }
+  ]
+}

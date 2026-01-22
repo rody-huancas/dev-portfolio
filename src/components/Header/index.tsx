@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavButton from './NavButton';
 import SocialButton from './SocialButton';
 import { menuItems, socialItems } from '@/config/header.config';
@@ -9,6 +9,14 @@ import { useScrollNavigation } from '@/hooks/useScrollNavigation';
 const Header = () => {
   const [activeSection, setActiveSection] = useState('hero-section');
   const { scrollToSection } = useScrollNavigation({ setActiveSection, menuItems });
+
+  useEffect(() => {
+    const handleInitialScroll = () => {
+      window.dispatchEvent(new Event('scroll'));
+    };
+    
+    handleInitialScroll();
+  }, []);
 
   return (
     <header 
