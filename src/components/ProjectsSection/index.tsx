@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Title from "../Title";
 import CardProject from "./CardProject";
 import projectsData from "@/data/projects-data.json";
 import { IProject } from "@/types/projects.types";
+import { BsArrowRight } from "react-icons/bs";
 
 const ProjectsSection = () => {
   const projects = projectsData.projects as IProject[];
@@ -9,20 +11,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="pt-24 px-4 md:px-0">
       <div className="space-y-3">
-        <div className="mb-16">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-8 h-0.5 bg-status"></span>
-            <span className="text-status font-mono text-sm tracking-widest uppercase">
-              Proyectos
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Mis{" "}
-            <span className="text-status underline decoration-button underline-offset-8">
-              Proyectos
-            </span>
-          </h2>
-        </div>
+        <Title label="Proyectos" title="Mis" subtitle="Proyectos" />
 
         <div className="flex flex-col gap-12">
           {projects.map((project) => (
@@ -30,8 +19,12 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <Link href="/projects" className="text-status font-mono text-sm tracking-widest uppercase mt-8 inline-block hover:underline">
-          Ver todos los proyectos
+        <Link 
+          href="/projects" 
+          className="text-status font-mono text-sm tracking-widest uppercase mt-8 flex items-center gap-2 w-fit border-b-2 border-transparent hover:border-status pb-1 transition-colors"
+        >
+          <BsArrowRight />
+          <span>Ver todos los proyectos</span>
         </Link>
       </div>
     </section>
