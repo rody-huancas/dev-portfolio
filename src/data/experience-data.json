@@ -5,7 +5,7 @@
       "company"       : "NTT DATA Europe & Latam",
       "position"      : "React Native Developer",
       "period"        : "Ene 2026 - Presente",
-      "description"   : "Desarrollo de aplicaciones móviles multiplataforma para proyectos internacionales, con foco en arquitectura escalable, rendimiento y buenas prácticas en equipos distribuidos.",
+      "description"   : "",
       "technologies"  : ["React Native", "TypeScript", "JavaScript", "Git"],
       "websiteUrl"    : "https://pe.nttdata.com/",
       "certificateUrl": ""
@@ -16,7 +16,7 @@
       "position"      : "Analista Desarrollador",
       "period"        : "Ago 2024 - Dic 2025",
       "description"   : "Optimicé consultas críticas reduciendo tiempos de respuesta hasta en un 95%. Lideré la adopción de React y TypeScript, rediseñé interfaces clave y desarrollé aplicaciones completas con arquitectura modular.",
-      "technologies"  : ["C#", ".Net", "React", "TypeScript", "SQL Server", "Git"],
+      "technologies"  : ["C#", ".Net", "React.js", "TypeScript", "SQL Server", "Git"],
       "websiteUrl"    : "https://www.uss.edu.pe/",
       "certificateUrl": "https://www.linkedin.com/in/rody-huancas/details/experience/1769064663215/single-media-viewer/?profileId=ACoAAD59a7ABufLi-HR5L7Q-PDSFKC9lu-V09uI"
     },
@@ -26,7 +26,7 @@
       "position"      : "Desarrollador Frontend",
       "period"        : "Ene 2025 - Oct 2025",
       "description"   : "Desarrollo del frontend de FavorApp y landing pages optimizadas para conversión, implementando componentes reutilizables y participando en mentorías y code reviews.",
-      "technologies"  : ["React", "Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Docker"],
+      "technologies"  : ["React Native", "Next.js", "TypeScript", "Tailwind CSS", "Git"],
       "websiteUrl"    : "https://www.appexsistemas.com/",
       "certificateUrl": "https://www.linkedin.com/in/rody-huancas/details/experience/2721821616/multiple-media-viewer/?profileId=ACoAAD59a7ABufLi-HR5L7Q-PDSFKC9lu-V09uI&treasuryMediaId=1757445581047"
     },
@@ -36,7 +36,7 @@
       "position"      : "Desarrollador Full Stack",
       "period"        : "Ene 2023 - Ago 2024",
       "description"   : "Modernización y ampliación de un ERP empresarial, mejorando rendimiento y agregando módulos clave. Participé en la arquitectura de una nueva versión orientada a escalabilidad.",
-      "technologies"  : ["PHP", "React.js", "Node.js", "NestJS", "PostgreSQL", "MySQL", "Git"],
+      "technologies"  : ["PHP", "React.js","NestJS", "TypeORM", "PostgreSQL", "MySQL", "Git", "Docker"],
       "websiteUrl"    : "https://www.datec.pe/",
       "certificateUrl": "https://www.linkedin.com/in/rody-huancas/details/experience/2244137012/multiple-media-viewer/?profileId=ACoAAD59a7ABufLi-HR5L7Q-PDSFKC9lu-V09uI&treasuryMediaId=1757554926421"
     }

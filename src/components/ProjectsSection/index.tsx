@@ -14,9 +14,9 @@ const ProjectsSection = () => {
         <Title label="Proyectos" title="Mis" subtitle="Proyectos" />
 
         <div className="flex flex-col gap-12">
-          {projects.map((project) => (
+            {projects.slice(0, 3).map((project) => (
             <CardProject key={project.id} project={project} />
-          ))}
+            ))}
         </div>
 
         <Link 

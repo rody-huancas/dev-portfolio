@@ -1,12 +1,12 @@
 import { scrollToTop } from "@/utils/scroll.utils";
-import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from "react-icons/fi";
+import { FiArrowUp } from "react-icons/fi";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <footer
-      className="relative mt-20 border-t border-white/5 bg-background"
+      className="relative mt-20 border-t border-white/5 bg-background mb-20 lg:mb-0 px-7 lg:px-0"
       role="contentinfo"
     >
       <div className="hidden" aria-hidden="true">
@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-status/30 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-5 sm:px-0 py-12">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-7">
           <p className="text-text-muted text-xs text-center md:text-left">
             &copy; {currentYear} — Diseñado y desarrollado por{" "}
             <a

@@ -1,3 +1,4 @@
+import { techConfig } from "@/config/tech.config";
 import { IExperience } from "@/types/experience.types";
 import { FiExternalLink, FiFileText } from "react-icons/fi";
 
@@ -32,14 +33,25 @@ const CardExperience = ({ experience }: Experience) => {
         </p>
 
         <div className="flex flex-wrap gap-2">
-          {experience.technologies.map((tech, techIndex) => (
-            <span
-              key={techIndex}
-              className="text-[11px] uppercase tracking-wider text-white/80 bg-button/30 px-3 py-1 rounded-md border border-button/50"
-            >
-              {tech}
-            </span>
-          ))}
+          {experience.technologies.map((tech, techIndex) => {
+            const config = techConfig[tech];
+            const Icon   = config?.icon;
+
+            return (
+              <span
+                key={techIndex}
+                className="flex items-center gap-1.5 text-[11px] font-medium tracking-wider px-3 py-1.5 rounded-lg border"
+                style={{
+                  backgroundColor: config?.bg    || "rgba(255,255,255,0.02)",
+                  color          : config?.color || "#ffffff",
+                  borderColor    : config ? `${config.color}20` : "rgba(255,255,255,0.1)"
+                }}
+              >
+                {Icon && <Icon size={14} style={{ color: config.color }} />}
+                {tech}
+              </span>
+            );
+          })}
         </div>
 
         <div className="flex items-center gap-6 pt-2">
