@@ -18,7 +18,7 @@ const Footer = () => {
 
       <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-status/30 to-transparent" />
 
-      <div className="max-w-3xl mx-auto px-5 sm:px-0 py-12">
+      <div className="max-w-4xl mx-auto px-5 sm:px-0 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-text-muted text-xs text-center md:text-left">
             &copy; {currentYear} — Diseñado y desarrollado por{" "}
