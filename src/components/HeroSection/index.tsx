@@ -24,14 +24,14 @@ const HeroSection = () => {
           </span>
         </div>
 
-        <h1 className="text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
+        <h1 className="text-5xl md:text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
           Hola, soy <span className="text-white">Rody</span>
           <br />
           un <span className="text-hero-muted">desarrollador web.</span>
         </h1>
 
         <nav
-          className="flex items-center gap-4 mb-12"
+          className="flex flex-wrap items-center gap-4 mb-12"
           aria-label="Enlaces de contacto y redes sociales"
         >
           <a
