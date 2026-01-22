@@ -1,5 +1,4 @@
 import { FiEdit } from "react-icons/fi";
-import { IoGitNetworkOutline } from "react-icons/io5";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { TbBriefcase2, TbGridDots } from "react-icons/tb";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
