@@ -7,7 +7,7 @@
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
       "githubUrl"   : "https://github.com/rody-huancas/vizgit",
       "liveUrl"     : "https://vizgit.novtiq.com/",
-      "imageUrl"    : "/projects/image-vizgit.png"
+      "imageUrl"    : "/projects/image-vizgit.webp"
     },
     {
       "id"          : 2,
@@ -16,7 +16,25 @@
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
       "githubUrl"   : "https://github.com/rody-huancas/dependra",
       "liveUrl"     : "https://dependra.novtiq.com/",
-      "imageUrl"    : "/projects/image-dependra.png"
+      "imageUrl"    : "/projects/image-dependra.webp"
+    },
+    {
+      "id"          : 3,
+      "title"       : "FavorApp - Landing Page",
+      "description" : "Presenta la propuesta de valor de FavorApp para conectar a personas con necesidades puntuales con colaboradores locales que buscan generar ingresos.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
+      "githubUrl"   : "",
+      "liveUrl"     : "https://www.favorapp.app/",
+      "imageUrl"    : "/projects/image-favorapp.webp"
+    },
+    {
+      "id"          : 4,
+      "title"       : "Clínica Enfoque Salud",
+      "description" : "",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "githubUrl"   : "",
+      "liveUrl"     : "https://www.clinicaenfoquesalud.com/",
+      "imageUrl"    : "/projects/image-clinicaenfoquesalud.webp"
     }
   ]
 }
