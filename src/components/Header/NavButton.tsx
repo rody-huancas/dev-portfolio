@@ -15,8 +15,8 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
     <button
       onClick={onClick}
       className={cn(
-        "w-12 h-12 rounded-full flex items-center justify-center relative group transition-colors duration-500",
-        isActive ? "text-black" : "text-gray-400 hover:text-white"
+        "w-12 h-12 rounded-full flex items-center justify-center relative group transition-colors duration-500 outline-none",
+        isActive ? "text-black" : "text-gray-400 hover:text-white hover:bg-[#1f1e1e]"
       )}
       aria-label={`Ir a ${item.label}`}
       role="menuitem"
@@ -41,7 +41,13 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
         <Icon size={20} />
       </motion.div>
 
-      <span className="absolute left-full ml-4 px-3 py-1 bg-[#1f1e1e] border border-white/10 text-white text-xs font-medium rounded-md opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 whitespace-nowrap pointer-events-none">
+      <span className="absolute 
+        bottom-[calc(100%+1rem)] left-1/2 -translate-x-1/2
+        md:bottom-auto md:left-full md:ml-4 md:translate-x-0
+        px-3 py-1 bg-[#1f1e1e] border border-white/10 text-white text-xs font-medium rounded-md 
+        opacity-0 pointer-events-none transition-all duration-300
+        group-hover:opacity-100 group-hover:-translate-y-1 md:group-hover:translate-y-0 md:group-hover:translate-x-1 
+        whitespace-nowrap">
         {item.label}
       </span>
     </button>
