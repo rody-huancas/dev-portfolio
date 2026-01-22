@@ -16,9 +16,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed left-10 top-1/2 -translate-y-1/2 z-50">
-      <nav className="flex flex-col gap-4">
-        <div className="bg-[#343639]/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex flex-col gap-2 shadow-2xl">
+    <header className="fixed z-50 
+      bottom-6 left-1/2 -translate-x-1/2 
+      lg:bottom-auto lg:left-10 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0">
+      
+      <nav className="flex flex-row lg:flex-col gap-4 items-center justify-center">
+        
+        <div className="bg-header/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex flex-row lg:flex-col gap-2 shadow-2xl">
           <LayoutGroup>
             {menuItems.map((item) => (
               <NavButton
@@ -31,7 +35,7 @@ const Header = () => {
           </LayoutGroup>
         </div>
 
-        <div className="bg-[#343639]/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex flex-col gap-2">
+        <div className="hidden sm:flex bg-header/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex-row lg:flex-col gap-2">
           {socialItems.map((item) => (
             <SocialButton key={item.id} item={item} />
           ))}
