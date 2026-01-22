@@ -20,6 +20,7 @@ import {
   SiMysql,
   SiAstro,
 } from "react-icons/si";
+import IconReactNative from "@/components/icons/IconReactNative";
 
 export const TECH_STACK = [
   // Languages
@@ -30,6 +31,7 @@ export const TECH_STACK = [
 
   // Frontend
   { name: "React.js"    , icon: SiReact         , color: "#61DAFB" },
+  { name: "React Native", icon: IconReactNative , color: "#61DAFB" },
   { name: "Next.js"     , icon: SiNextdotjs     , color: "#ffffff" },
   { name: "Astro"       , icon: SiAstro         , color: "#ffffff" },
   { name: "Tailwind"    , icon: SiTailwindcss   , color: "#06B6D4" },
