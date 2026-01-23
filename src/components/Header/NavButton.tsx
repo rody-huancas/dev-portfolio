@@ -11,15 +11,21 @@ interface NavButtonProps {
 const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
   const Icon = item.icon;
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    onClick();
+  }
+
   return (
-    <button
-      onClick={onClick}
+    <a
+      href={`/#${item.id}`}
+      onClick={handleClick}
       className={cn(
         "w-12 h-12 rounded-full flex items-center justify-center relative group transition-colors duration-500 outline-none",
         isActive ? "text-black" : "text-gray-400 hover:text-white hover:bg-[#1f1e1e]"
       )}
       aria-label={`Ir a ${item.label}`}
-      role="menuitem"
+      aria-current={isActive ? "page" : undefined}
     >
       {isActive && (
         <motion.div
@@ -50,7 +56,7 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
         whitespace-nowrap">
         {item.label}
       </span>
-    </button>
+    </a>
   );
 };
 
