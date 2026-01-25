@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { techConfig } from "@/config/tech.config";
 import type { IProject } from "@/types/projects.types";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
@@ -11,10 +12,13 @@ const CardProject = ({ project }: { project: IProject }) => {
       <div className="absolute left-0 top-0 w-1 h-0 bg-status transition-all duration-700 ease-in-out group-hover:h-full z-20" />
 
       <div className="w-full lg:w-[45%] min-h-60 lg:min-h-full overflow-hidden relative">
-        <img
+        <Image
           src={imageUrl}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          alt={`Captura de pantalla del proyecto ${title}`}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 45vw"
+          priority={project.id <= 2}
         />
         <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500" />
       </div>
