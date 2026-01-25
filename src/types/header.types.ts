@@ -4,6 +4,7 @@ export interface MenuItem {
   id   : string;
   icon : IconType;
   label: string;
+  path : string;
 }
 
 export interface SocialItem {

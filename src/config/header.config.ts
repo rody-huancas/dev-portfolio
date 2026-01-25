@@ -9,21 +9,22 @@ export const menuItems: MenuItem[] = [
     id   : "hero",
     icon : TbGridDots,
     label: "Inicio",
+    path : "/"
   },
-  {
-    id   : "projects",
+  { id: "projects",
     icon : TbBriefcase2,
     label: "Proyectos",
+    path : "/projects"
   },
-  {
-    id   : "about",
+  { id: "about",
     icon : FiEdit,
     label: "Sobre Mí",
-  },
+    path : "/#about" },
   {
     id   : "contact",
     icon : MdOutlineMarkEmailUnread,
     label: "Contacto",
+    path : "/#contact",
   },
 ];
 

@@ -30,7 +30,7 @@
     {
       "id"          : 4,
       "title"       : "Clínica Enfoque Salud",
-      "description" : "",
+      "description" : "Sitio web enfocado en presentar los servicios médicos y promociones de la clínica, facilitando la reserva de citas y mejorando la experiencia del paciente.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       "githubUrl"   : "",
       "liveUrl"     : "https://www.clinicaenfoquesalud.com/",

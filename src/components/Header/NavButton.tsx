@@ -1,3 +1,7 @@
+"use client"
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn.utils';
 import type { MenuItem } from '@/types/header.types';
@@ -9,16 +13,26 @@ interface NavButtonProps {
 }
 
 const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
+  const pathname = usePathname();
   const Icon = item.icon;
+  
+  const isInternalScroll = item.path.startsWith('/#') && pathname === '/';
+  const isHomeScroll     = item.path                              === '/' && pathname === '/';
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    onClick();
-  }
+    if (isInternalScroll || isHomeScroll) {
+      e.preventDefault();
+      if (isHomeScroll) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        onClick();
+      }
+    }
+  };
 
   return (
-    <a
-      href={`/#${item.id}`}
+    <Link
+      href={item.path}
       onClick={handleClick}
       className={cn(
         "w-12 h-12 rounded-full flex items-center justify-center relative group transition-colors duration-500 outline-none",
@@ -31,11 +45,7 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
         <motion.div
           layoutId="activeBackground"
           className="absolute inset-0 bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)]"
-          transition={{
-            type: "spring",
-            stiffness: 300,
-            damping: 30,
-          }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
         />
       )}
 
@@ -47,16 +57,10 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
         <Icon size={20} />
       </motion.div>
 
-      <span className="absolute 
-        bottom-[calc(100%+1rem)] left-1/2 -translate-x-1/2
-        md:bottom-auto md:left-full md:ml-4 md:translate-x-0
-        px-3 py-1 bg-[#1f1e1e] border border-white/10 text-white text-xs font-medium rounded-md 
-        opacity-0 pointer-events-none transition-all duration-300
-        group-hover:opacity-100 group-hover:-translate-y-1 md:group-hover:translate-y-0 md:group-hover:translate-x-1 
-        whitespace-nowrap">
+      <span className="absolute bottom-[calc(100%+1rem)] left-1/2 -translate-x-1/2 md:bottom-auto md:left-full md:ml-4 md:translate-x-0 px-3 py-1 bg-[#1f1e1e] border border-white/10 text-white text-xs font-medium rounded-md opacity-0 pointer-events-none transition-all duration-300 group-hover:opacity-100 whitespace-nowrap">
         {item.label}
       </span>
-    </a>
+    </Link>
   );
 };
 

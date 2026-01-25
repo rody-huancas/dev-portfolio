@@ -21,35 +21,24 @@ const Header = () => {
     }
   }, [isHomePage]);
 
-  if (!isHomePage) {
-    return (
-      <header className="fixed z-50 top-6 right-6">
-        <nav className="bg-header/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex gap-2">
-          {socialItems.map((item) => (
-            <SocialButton key={item.id} item={item} />
-          ))}
-        </nav>
-      </header>
-    );
-  }
-
   return (
-    <header className="fixed z-50 
-      bottom-6 left-1/2 -translate-x-1/2 
-      lg:bottom-auto lg:left-10 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0">
-      
+    <header className="fixed z-50 bottom-6 left-1/2 -translate-x-1/2 lg:bottom-auto lg:left-10 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0">
       <nav className="flex flex-row lg:flex-col gap-4 items-center justify-center" role="navigation" aria-label="Navegación principal">
         
         <div className="bg-header/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex flex-row lg:flex-col gap-2 shadow-2xl">
           <LayoutGroup>
-            {menuItems.map((item) => (
-              <NavButton
-                key={item.id}
-                item={item}
-                isActive={activeSection === item.id}
-                onClick={() => scrollToSection(item.id)}
-              />
-            ))}
+            {menuItems.map((item) => {
+              const isActive = isHomePage ? activeSection === item.id : pathname === item.path;
+
+              return (
+                <NavButton
+                  key={item.id}
+                  item={item}
+                  isActive={isActive}
+                  onClick={() => scrollToSection(item.id)}
+                />
+              );
+            })}
           </LayoutGroup>
         </div>
 
