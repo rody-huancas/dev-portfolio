@@ -1,78 +1,112 @@
+"use client";
+
+import { useState } from "react";
+import { toast } from "sonner";
 import Title from "../Title";
 import { BsArrowRight } from "react-icons/bs";
 
-const ContactSection = () => {
+const ContactSection: React.FC = () => {
+  const [isPending, setIsPending] = useState<boolean>(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsPending(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data     = {
+      name   : formData.get("name")    as string,
+      email  : formData.get("email")   as string,
+      message: formData.get("message") as string,
+    };
+
+    try {
+      const response = await fetch("/api/send", {
+        method : "POST",
+        body   : JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      if (!response.ok) throw new Error("Error en el envío");
+
+      toast.success("¡Mensaje enviado correctamente! Te responderé pronto.");
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      toast.error("Hubo un problema al enviar el mensaje. Inténtalo de nuevo.");
+    } finally {
+      setIsPending(false);
+    }
+  };
+
   return (
     <section id="contact" className="pt-24 w-full">
       <div className="space-y-5">
         <Title label="Contacto" title="Hablemos" subtitle="ahora" />
 
         <div className="space-y-10">
-          <p className="space-y-6 text-text-muted text-lg md:text-xl font-light">
+          <p className="text-text-muted text-lg md:text-xl font-light">
             ¿Tienes un proyecto en mente o simplemente quieres saludar? Estoy
             disponible para nuevas oportunidades y retos técnicos.
           </p>
 
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label
-                  htmlFor="name"
-                  className="text-xs font-mono uppercase tracking-widest text-hero-muted"
-                >
+                <label htmlFor="name" className="text-xs font-mono uppercase tracking-widest text-hero-muted">
                   Nombre
                 </label>
                 <input
+                  name="name"
                   type="text"
                   id="name"
-                  className="w-full bg-[#1f1e1e] border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors"
-                  placeholder="Tu nombre"
                   required
+                  className="w-full bg-input-bg border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors"
+                  placeholder="Tu nombre"
                 />
               </div>
+
               <div className="space-y-2">
-                <label
-                  htmlFor="email"
-                  className="text-xs font-mono uppercase tracking-widest text-hero-muted"
-                >
+                <label htmlFor="email" className="text-xs font-mono uppercase tracking-widest text-hero-muted">
                   Email
                 </label>
                 <input
+                  name="email"
                   type="email"
                   id="email"
-                  className="w-full bg-[#1f1e1e] border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors"
-                  placeholder="email@ejemplo.com"
                   required
+                  className="w-full bg-input-bg border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors"
+                  placeholder="email@ejemplo.com"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label
-                htmlFor="message"
-                className="text-xs font-mono uppercase tracking-widest text-hero-muted"
-              >
+              <label htmlFor="message" className="text-xs font-mono uppercase tracking-widest text-hero-muted">
                 Mensaje
               </label>
               <textarea
+                name="message"
                 id="message"
                 rows={5}
-                className="w-full bg-[#1f1e1e] border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors resize-none"
-                placeholder="¿En qué puedo ayudarte?"
                 required
+                className="w-full bg-input-bg border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors resize-none"
+                placeholder="¿En qué puedo ayudarte?"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="group relative w-full md:w-auto px-10 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-all hover:pr-14 active:scale-95"
+              disabled={isPending}
+              className="group relative w-full md:w-auto px-10 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-all hover:pr-14 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span className="relative z-10 text-sm uppercase tracking-widest">
-                Enviar mensaje
+                {isPending ? "Enviando..." : "Enviar mensaje"}
               </span>
-              <span className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all text-xl">
-                <BsArrowRight />
-              </span>
+
+              {!isPending && (
+                <span className="absolute right-6 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all text-xl">
+                  <BsArrowRight />
+                </span>
+              )}
             </button>
           </form>
         </div>
