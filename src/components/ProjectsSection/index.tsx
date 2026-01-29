@@ -9,7 +9,7 @@ const ProjectsSection = () => {
   const projects = projectsData.projects as IProject[];
 
   return (
-    <section id="projects" className="pt-24 px-4 md:px-0">
+    <section id="projects" className="pt-24">
       <div className="space-y-3">
         <Title label="Proyectos" title="Mis" subtitle="Proyectos" />
 
