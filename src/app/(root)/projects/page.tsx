@@ -19,7 +19,7 @@ const ProjectsPage = () => {
   const projects = projectsData.projects as IProject[];
 
   return (
-    <section className="animate-in fade-in duration-700">
+    <section className="animate-in fade-in duration-700 pt-16 md:pt-0">
       <Title 
         label="Portafolio" 
         title="Todos mis" 
