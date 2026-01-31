@@ -27,7 +27,7 @@ const HeroSection = () => {
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
+        <h1 className="text-4xl md:text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
           Hola, soy <span className="text-white">Rody,</span>
           <br />
           <span className="text-hero-muted">Software Developer.</span>
