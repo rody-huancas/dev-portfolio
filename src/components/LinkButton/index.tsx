@@ -14,7 +14,7 @@ const LinkButton = (props: Props) => {
   return (
     <a
       href={href}
-      className="flex items-center gap-2 px-6 py-3 bg-button hover:bg-button-hover text-white rounded-full transition-colors duration-300"
+      className="flex items-center gap-2 px-6 py-3 bg-button hover:bg-button-hover dark:bg-white/10 dark:hover:bg-white/20 text-white dark:text-foreground rounded-full transition-colors duration-300 border border-transparent dark:border-foreground/10"
       aria-label={ariaLabel}
       title={title}
       target="_blank"
