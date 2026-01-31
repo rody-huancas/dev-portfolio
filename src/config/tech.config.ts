@@ -1,37 +1,48 @@
-import IconGsap from "@/components/icons/IconGsap";
 import type { IconType } from "react-icons";
+import IconGsap from "@/components/icons/IconGsap";
+import IconReactNative from "@/components/icons/IconReactNative";
 import { DiMsqlServer } from "react-icons/di";
 import { TbBrandCSharp, TbBrandFramerMotion } from "react-icons/tb";
 import { 
   SiReact, SiTailwindcss, SiNextdotjs, SiNestjs, 
   SiNodedotjs, SiTypescript, SiPostgresql, SiDocker, 
   SiMysql, SiExpo, SiJavascript, SiTypeorm, 
-  SiVite, SiDotnet, SiGit, SiPhp
+  SiVite, SiDotnet, SiGit, SiPhp, SiExpress,
+  SiLaravel, SiGraphql, SiMongodb, SiAstro,
+  SiMaterialdesign
 } from "react-icons/si";
-import IconReactNative from "@/components/icons/IconReactNative";
 
+export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
+  "JavaScript": { color: "#F7DF1E", icon : SiJavascript , bg: "rgba(247, 223, 30, 0.1)"   },
+  "TypeScript": { color: "#3178C6", icon : SiTypescript , bg: "rgba(49, 120, 198, 0.15)"  },
+  "PHP"       : { color: "#777BB4", icon : SiPhp        , bg: "rgba(119, 123, 180, 0.15)" },
+  "C#"        : { color: "#239120", icon : TbBrandCSharp, bg: "rgba(35, 145, 32, 0.15)"   },
 
-export const techConfig: Record<string, { color: string; icon: IconType; bg: string }> = {
-  "React"         : { color: "#61DAFB", icon: SiReact            , bg: "rgba(97, 218, 251, 0.15)"   },
-  "React.js"      : { color: "#61DAFB", icon: SiReact            , bg: "rgba(97, 218, 251, 0.15)"   },
-  "React Native"  : { color: "#61DAFB", icon: IconReactNative    , bg: "rgba(97, 218, 251, 0.15)"   },
-  "TypeScript"    : { color: "#3178C6", icon: SiTypescript       , bg: "rgba(49, 120, 198, 0.15)"   },
-  "JavaScript"    : { color: "#F7DF1E", icon: SiJavascript       , bg: "rgba(247, 223, 30, 0.15)"   },
-  "Next.js"       : { color: "#E0E0E0", icon: SiNextdotjs        , bg: "rgba(255, 255, 255, 0.08)"  },
-  "Tailwind CSS"  : { color: "#06B6D4", icon: SiTailwindcss      , bg: "rgba(6, 182, 212, 0.15)"    },
-  "Node.js"       : { color: "#68A063", icon: SiNodedotjs        , bg: "rgba(104, 160, 99, 0.15)"   },
-  "NestJS"        : { color: "#E0234E", icon: SiNestjs           , bg: "rgba(224, 35, 78, 0.08)"    },
-  "PostgreSQL"    : { color: "#E0E0E0", icon: SiPostgresql       , bg: "rgba(65, 105, 225, 0.3)"    },
-  "MySQL"         : { color: "#E0E0E0", icon: SiMysql            , bg: "rgba(68, 121, 161, 0.4)"    },
-  "SQL Server"    : { color: "#E0E0E0", icon: DiMsqlServer       , bg: "rgba(204, 41, 39, 0.4)"     },
-  "C#"            : { color: "#E0E0E0", icon: TbBrandCSharp      , bg: "rgba(104, 33, 122, 0.4)"    },
-  ".Net"          : { color: "#E0E0E0", icon: SiDotnet           , bg: "rgba(155, 126, 222, 0.5)"   },
-  "PHP"           : { color: "#8993BE", icon: SiPhp              , bg: "rgba(137, 147, 190, 0.15)"  },
-  "Git"           : { color: "#F05032", icon: SiGit              , bg: "rgba(240, 80, 50, 0.15)"    },
-  "Docker"        : { color: "#2496ED", icon: SiDocker           , bg: "rgba(36, 150, 237, 0.15)"   },
-  "Expo"          : { color: "#E0E0E0", icon: SiExpo             , bg: "rgba(255, 255, 255, 0.08)"  },
-  "Vite"          : { color: "#646CFF", icon: SiVite             , bg: "rgba(100, 108, 255, 0.15)"  },
-  "TypeORM"       : { color: "#FF6619", icon: SiTypeorm          , bg: "rgba(255, 102, 25, 0.07)"   },
-  "Framer Motion" : { color: "#FEF62A", icon: TbBrandFramerMotion, bg: "rgba(254, 246, 42, 0.15)"   },
-  "GSAP"          : { color: "#88CE02", icon: IconGsap           , bg: "rgba(136, 206, 2, 0.15)"    },
+  "React"        : { color: "#61DAFB", lightColor: "#087EA4", icon: SiReact            , bg: "rgba(97, 218, 251, 0.15)" },
+  "React.js"     : { color: "#61DAFB", lightColor: "#087EA4", icon: SiReact            , bg: "rgba(97, 218, 251, 0.15)" },
+  "React Native" : { color: "#61DAFB", lightColor: "#0A69DA", icon: IconReactNative    , bg: "rgba(97, 218, 251, 0.15)" },
+  "Next.js"      : { color: "#ffffff", lightColor: "#000000", icon: SiNextdotjs        , bg: "rgba(255, 255, 255, 0.1)" },
+  "Astro"        : { color: "#ffffff", lightColor: "#FF5D01", icon: SiAstro            , bg: "rgba(255, 93, 1, 0.1)"    },
+  "Framer Motion": { color: "#FEF62A", lightColor: "#d4cd00", icon: TbBrandFramerMotion, bg: "rgba(254, 246, 42, 0.1)"  },
+  "Tailwind CSS" : { color: "#06B6D4", icon : SiTailwindcss   , bg: "rgba(6, 182, 212, 0.15)"   },
+  "Material UI"  : { color: "#0081CB", icon : SiMaterialdesign, bg: "rgba(0, 129, 203, 0.15)"   },
+  "Vite"         : { color: "#646CFF", icon : SiVite          , bg: "rgba(100, 108, 255, 0.15)" },
+  "GSAP"         : { color: "#88CE02", icon : IconGsap        , bg: "rgba(136, 206, 2, 0.15)"   },
+
+  "Express": { color: "#ffffff", lightColor: "#000000", icon: SiExpress, bg: "rgba(255, 255, 255, 0.1)" },
+  "Node.js": { color: "#339933", icon : SiNodedotjs , bg: "rgba(51, 153, 51, 0.15)" },
+  "NestJS" : { color: "#E0234E", icon : SiNestjs    , bg: "rgba(224, 35, 78, 0.1)"  },
+  "Laravel": { color: "#FF2D20", icon : SiLaravel   , bg: "rgba(255, 45, 32, 0.1)"  },
+  "GraphQL": { color: "#E10098", icon : SiGraphql   , bg: "rgba(225, 0, 152, 0.1)"  },
+  ".Net"   : { color: "#512BD4", icon : SiDotnet    , bg: "rgba(81, 43, 212, 0.15)" },
+
+  "PostgreSQL": { color: "#4169E1", icon : SiPostgresql, bg: "rgba(65, 105, 225, 0.15)" },
+  "MySQL"     : { color: "#4479A1", icon : SiMysql     , bg: "rgba(68, 121, 161, 0.15)" },
+  "SQL Server": { color: "#CC2927", icon : DiMsqlServer, bg: "rgba(204, 41, 39, 0.15)"  },
+  "MongoDB"   : { color: "#47A248", icon : SiMongodb   , bg: "rgba(71, 162, 72, 0.15)"  },
+  "TypeORM"   : { color: "#FF6619", icon : SiTypeorm   , bg: "rgba(255, 102, 25, 0.1)"  },
+
+  "Docker": { color: "#2496ED", icon : SiDocker, bg: "rgba(36, 150, 237, 0.15)" },
+  "Git"   : { color: "#F05032", icon : SiGit   , bg: "rgba(240, 80, 50, 0.15)"  },
+  "Expo"  : { color: "#ffffff", lightColor: "#000000", icon: SiExpo, bg: "rgba(255, 255, 255, 0.1)" },
 };
