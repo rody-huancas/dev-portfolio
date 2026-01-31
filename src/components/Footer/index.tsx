@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="relative mt-20 border-t border-white/5 bg-background mb-20 lg:mb-0 px-7 lg:px-0"
+      className="relative mt-20 border-t border-white/5 mb-20 lg:mb-0 px-7 lg:px-0 bg-foreground dark:bg-background"
       role="contentinfo"
     >
       <div className="hidden" aria-hidden="true">
