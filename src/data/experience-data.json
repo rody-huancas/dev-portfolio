@@ -23,7 +23,7 @@
     {
       "id"            : 3,
       "company"       : "Appex IA",
-      "position"      : "Desarrollador Frontend",
+      "position"      : "Desarrollador Frontend (Freelance)",
       "period"        : "Ene 2025 - Oct 2025",
       "description"   : "Desarrollo del frontend de FavorApp y landing pages optimizadas para conversión, implementando componentes reutilizables y participando en mentorías y code reviews.",
       "technologies"  : ["React Native", "Next.js", "TypeScript", "Tailwind CSS", "Git"],
