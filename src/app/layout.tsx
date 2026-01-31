@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body className={cn("antialiased", dmSans.className)}>
+      <body className={cn("antialiased bg-foreground text-background dark:text-foreground dark:bg-background", dmSans.className)}>
         {children}
       </body>
     </html>

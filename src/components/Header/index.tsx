@@ -1,31 +1,35 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import { LayoutGroup } from 'framer-motion';
-import NavButton from './NavButton';
-import SocialButton from './SocialButton';
-import { useScrollNavigation } from '@/hooks/useScrollNavigation';
-import { menuItems, socialItems } from '@/config/header.config';
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { LayoutGroup } from "framer-motion";
+import NavButton from "./NavButton";
+import ThemeToggle from "./ThemeToggle";
+import SocialButton from "./SocialButton";
+import { useScrollNavigation } from "@/hooks/useScrollNavigation";
+import { menuItems, socialItems } from "@/config/header.config";
 
 const Header = () => {
   const pathname = usePathname();
-  const [activeSection, setActiveSection] = useState('hero');
+  const [activeSection, setActiveSection] = useState("hero");
   const { scrollToSection } = useScrollNavigation({ setActiveSection, menuItems });
 
-  const isHomePage = pathname === '/';
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     if (isHomePage) {
-      window.dispatchEvent(new Event('scroll'));
+      window.dispatchEvent(new Event("scroll"));
     }
   }, [isHomePage]);
 
   return (
     <header className="fixed z-50 bottom-6 left-1/2 -translate-x-1/2 lg:bottom-auto lg:left-10 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0">
-      <nav className="flex flex-row lg:flex-col gap-4 items-center justify-center" role="navigation" aria-label="Navegación principal">
-        
-        <div className="bg-header/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex flex-row lg:flex-col gap-2 shadow-2xl">
+      <nav
+        className="flex flex-row lg:flex-col gap-4 items-center justify-center"
+        role="navigation"
+        aria-label="Navegación principal"
+      >
+        <div className="bg-white/80 dark:bg-header/80 backdrop-blur-md border border-black/5 dark:border-white/5 rounded-full p-2 flex flex-row lg:flex-col gap-2 shadow-xl dark:shadow-2xl transition-colors duration-500">
           <LayoutGroup>
             {menuItems.map((item) => {
               const isActive = isHomePage ? activeSection === item.id : pathname === item.path;
@@ -42,10 +46,14 @@ const Header = () => {
           </LayoutGroup>
         </div>
 
-        <div className="hidden sm:flex bg-header/80 backdrop-blur-md border border-white/5 rounded-full p-2 flex-row lg:flex-col gap-2">
+        <div className="hidden sm:flex bg-white/80 dark:bg-header/80 backdrop-blur-md border border-black/5 dark:border-white/5 rounded-full p-2 flex-row lg:flex-col gap-2 shadow-xl dark:shadow-2xl transition-colors duration-500">
           {socialItems.map((item) => (
             <SocialButton key={item.id} item={item} />
           ))}
+        </div>
+
+        <div className="bg-white/80 dark:bg-header/80 backdrop-blur-md border border-black/5 dark:border-white/5 rounded-full p-2 flex-row lg:flex-col gap-2 shadow-xl dark:shadow-2xl transition-colors duration-500">
+          <ThemeToggle />
         </div>
       </nav>
     </header>

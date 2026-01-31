@@ -6,4 +6,5 @@ export interface IProject {
   githubUrl   : string;
   liveUrl     : string;
   imageUrl    : string;
+  type       ?: "FrontEnd" | "BackEnd" | "FullStack";
 }

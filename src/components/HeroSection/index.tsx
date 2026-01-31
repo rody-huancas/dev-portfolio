@@ -1,9 +1,8 @@
 import LinkButton from "../LinkButton";
 import ExperienceSection from "../ExperienceSection";
 import { FiMail } from "react-icons/fi";
-import { FcDocument } from "react-icons/fc";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiDocumentText } from "react-icons/hi";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
@@ -22,15 +21,15 @@ const HeroSection = () => {
             className="w-2.5 h-2.5 rounded-full bg-status animate-pulse"
             aria-hidden="true"
           ></div>
-          <span className="text-gray-300 text-sm font-medium">
+          <span className="text-background/60 dark:text-foreground text-sm font-medium">
             Disponible para trabajar
           </span>
         </div>
 
         <h1 className="text-4xl md:text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
-          Hola, soy <span className="text-white">Rody,</span>
+          Hola, soy <span className="text-background/80 dark:text-foreground">Rody,</span>
           <br />
-          <span className="text-hero-muted">Software Developer.</span>
+          <span className="text-background/60 dark:text-foreground/60">Software Developer.</span>
         </h1>
 
         <nav
@@ -70,7 +69,7 @@ const HeroSection = () => {
           />
         </nav>
 
-        <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
+        <p className="text-background/60 dark:text-foreground text-lg max-w-2xl leading-relaxed">
           Desarrollo aplicaciones para resolver problemas concretos, con código
           claro y decisiones técnicas bien pensadas. +3 años construyendo
           software mantenible y bien estructurado.

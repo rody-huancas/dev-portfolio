@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import Title from "../Title";
 import { BsArrowRight } from "react-icons/bs";
 
-const ContactSection: React.FC = () => {
+const ContactSection = () => {
   const [isPending, setIsPending] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -43,7 +43,7 @@ const ContactSection: React.FC = () => {
         <Title label="Contacto" title="Hablemos" subtitle="ahora" />
 
         <div className="space-y-10">
-          <p className="text-text-muted text-lg md:text-xl font-light">
+          <p className="text-description text-lg md:text-xl font-light">
             ¿Tienes un proyecto en mente o simplemente quieres saludar? Estoy
             disponible para nuevas oportunidades y retos técnicos.
           </p>
@@ -59,7 +59,7 @@ const ContactSection: React.FC = () => {
                   type="text"
                   id="name"
                   required
-                  className="w-full bg-input-bg border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors"
+                  className="w-full dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -73,7 +73,7 @@ const ContactSection: React.FC = () => {
                   type="email"
                   id="email"
                   required
-                  className="w-full bg-input-bg border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors"
+                  className="w-full dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
                   placeholder="email@ejemplo.com"
                 />
               </div>
@@ -88,7 +88,7 @@ const ContactSection: React.FC = () => {
                 id="message"
                 rows={5}
                 required
-                className="w-full bg-input-bg border border-white/5 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-status transition-colors resize-none"
+                className="w-full dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors resize-none placeholder:text-description"
                 placeholder="¿En qué puedo ayudarte?"
               ></textarea>
             </div>
@@ -96,7 +96,7 @@ const ContactSection: React.FC = () => {
             <button
               type="submit"
               disabled={isPending}
-              className="group relative w-full md:w-auto px-10 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-all hover:pr-14 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full md:w-auto px-10 py-4 bg-background dark:bg-foreground dark:text-background text-foreground font-bold rounded-full overflow-hidden transition-all hover:pr-14 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span className="relative z-10 text-sm uppercase tracking-widest">
                 {isPending ? "Enviando..." : "Enviar mensaje"}

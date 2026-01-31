@@ -3,8 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #eeeeee;
   
   /* Header Colors */
   --header-bg: #343639;
@@ -35,22 +35,6 @@
   --font-sans         : var(--font-dm-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background      : #212224;
-    --foreground      : #ededed;
-    --header-bg       : #2C2C2E;
-    --hero-text-muted : #6F6F6F;
-    --button-bg       : #2A2A2A;
-    --button-bg-hover : #3A3A3A;
-    --status-available: #22C55E;
-    --text-secondary  : #D1D5DB;
-    --text-description: #9CA3AF;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-sans);
 }

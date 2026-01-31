@@ -27,14 +27,14 @@ const ExperienceSection = () => {
       <div className="mb-16">
         <Title label="Experiencia" title="Mi ruta" subtitle="profesional" />
 
-        <p className="text-text-muted text-lg max-w-xl">
+        <p className="text-text-muted dark:text-foreground/70 text-lg max-w-xl">
           Trayectoria profesional enfocada en crear soluciones digitales
           eficientes y escalables.
         </p>
       </div>
 
       <div ref={containerRef} className="relative max-w-5xl mx-auto">
-        <div className="absolute left-0 top-0 w-0.5 h-full bg-button/30" />
+        <div className="absolute left-0 top-0 w-0.5 h-full bg-button/30 dark:bg-foreground/20" />
 
         <motion.div
           style={{ scaleY, originY: 0 }}

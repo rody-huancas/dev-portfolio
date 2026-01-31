@@ -7,7 +7,8 @@
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
       "githubUrl"   : "https://github.com/rody-huancas/vizgit",
       "liveUrl"     : "https://vizgit.novtiq.com/",
-      "imageUrl"    : "/projects/image-vizgit.webp"
+      "imageUrl"    : "/projects/image-vizgit.webp",
+      "type"        : "FrontEnd"
     },
     {
       "id"          : 2,
@@ -16,7 +17,8 @@
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
       "githubUrl"   : "https://github.com/rody-huancas/dependra",
       "liveUrl"     : "https://dependra.novtiq.com/",
-      "imageUrl"    : "/projects/image-dependra.webp"
+      "imageUrl"    : "/projects/image-dependra.webp",
+      "type"        : "FrontEnd"
     },
     {
       "id"          : 3,
@@ -25,7 +27,8 @@
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
       "githubUrl"   : "",
       "liveUrl"     : "https://www.favorapp.app/",
-      "imageUrl"    : "/projects/image-favorapp.webp"
+      "imageUrl"    : "/projects/image-favorapp.webp",
+      "type"        : "FrontEnd"
     },
     {
       "id"          : 4,
@@ -34,7 +37,8 @@
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       "githubUrl"   : "",
       "liveUrl"     : "https://www.clinicaenfoquesalud.com/",
-      "imageUrl"    : "/projects/image-clinicaenfoquesalud.webp"
+      "imageUrl"    : "/projects/image-clinicaenfoquesalud.webp",
+      "type"        : "FrontEnd"
     }
   ]
 }
