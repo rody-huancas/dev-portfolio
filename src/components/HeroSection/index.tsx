@@ -28,9 +28,9 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
-          Hola, soy <span className="text-white">Rody</span>
+          Hola, soy <span className="text-white">Rody,</span>
           <br />
-          un <span className="text-hero-muted">desarrollador web.</span>
+          <span className="text-hero-muted">Software Developer.</span>
         </h1>
 
         <nav

@@ -1,19 +1,40 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { techConfig } from "@/config/tech.config";
 import { IExperience } from "@/types/experience.types";
 import { FiExternalLink, FiFileText } from "react-icons/fi";
 
-interface Experience {
+interface ExperienceProps {
   experience: IExperience;
 }
 
-const CardExperience = ({ experience }: Experience) => {
+const CardExperience = ({ experience }: ExperienceProps) => {
   return (
-    <article className="group relative pl-8 pb-12 last:pb-0 border-l-2 border-button transition-colors duration-500">
-      <div className="absolute -left-0.5 top-0 w-0.5 h-0 bg-status transition-all duration-700 ease-in-out group-hover:h-full" />
+    <article className="group relative pl-10 pb-12 last:pb-0">
+      <motion.div
+        initial={{
+          backgroundColor: "#1e1e1e",
+          borderColor    : "rgba(255,255,255,0.1)",
+          scale          : 1,
+        }}
+        whileInView={{
+          backgroundColor: "#22C55E",
+          borderColor    : "#22C55E",
+          scale          : 1,
+        }}
+        viewport={{ once: false, margin: "0% 0px -50% 0px" }}
+        transition={{ duration: 0.3 }}
+        className="absolute -left-1.75 top-0 w-4 h-4 rounded-full border-2 bg-background z-20 shadow-[0_0_10px_rgba(0,0,0,0.5)]"
+      />
 
-      <div className="absolute -left-2.5 top-0 w-4 h-4 rounded-full bg-button border-2 border-background group-hover:bg-status group-hover:scale-125 transition-all duration-300 z-10" />
-
-      <div className="space-y-4 transform group-hover:translate-x-2 transition-transform duration-300">
+      <motion.div
+        initial={{ opacity: 0.3 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, margin: "0% 0px -50% 0px" }}
+        transition={{ duration: 0.5 }}
+        className="space-y-4"
+      >
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
           <div>
             <h3 className="text-2xl font-bold text-white group-hover:text-status transition-colors">
@@ -44,7 +65,7 @@ const CardExperience = ({ experience }: Experience) => {
                 style={{
                   backgroundColor: config?.bg    || "rgba(255,255,255,0.02)",
                   color          : config?.color || "#ffffff",
-                  borderColor    : config ? `${config.color}20` : "rgba(255,255,255,0.1)"
+                  borderColor    : config ? `${config.color}20` : "rgba(255,255,255,0.1)",
                 }}
               >
                 {Icon && <Icon size={14} style={{ color: config.color }} />}
@@ -64,22 +85,19 @@ const CardExperience = ({ experience }: Experience) => {
             <FiExternalLink className="text-status" size={16} />
             <span>Sitio web</span>
           </a>
-
-          {
-            experience.certificateUrl && (
-              <a
-                href={experience.certificateUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-text-muted hover:text-white transition-colors"
-              >
-                <FiFileText className="text-status" size={16} />
-                <span>Constancia</span>
-              </a>
-            )
-          }
+          {experience.certificateUrl && (
+            <a
+              href={experience.certificateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-text-muted hover:text-white transition-colors"
+            >
+              <FiFileText className="text-status" size={16} />
+              <span>Constancia</span>
+            </a>
+          )}
         </div>
-      </div>
+      </motion.div>
     </article>
   );
 };
