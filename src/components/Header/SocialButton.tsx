@@ -14,18 +14,15 @@ const SocialButton = ({ item }: SocialButtonProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "w-12 h-12 rounded-full flex items-center justify-center",
-        "text-gray-100 hover:text-white hover:bg-[#1f1e1e]",
-        "transition-all duration-300 group relative"
+        "w-12 h-12 rounded-full flex items-center justify-center relative group transition-all duration-300",
+        "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10"
       )}
       aria-label={`Visitar mi perfil de ${item.label}`}
-      role="menuitem"
-      title={item.label}
     >
       <Icon size={20} aria-hidden="true" />
       
       <span 
-        className="absolute left-full ml-4 px-3 py-1.5 bg-white text-black text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none"
+        className="absolute left-full ml-4 px-3 py-1.5 bg-black dark:bg-white text-white dark:text-black text-sm font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-all whitespace-nowrap pointer-events-none shadow-xl"
         aria-hidden="true"
       >
         {item.label}
