@@ -20,6 +20,8 @@ const Title = (props: Props) => {
   const headingId =
     id || (title ? title.toLowerCase().replace(/\s+/g, "-") : undefined);
 
+  const fullTitle = subtitle ? `${title} ${subtitle}` : title;
+
   return (
     <header className={cn("mb-10", className)}>
       {label && (
@@ -41,13 +43,45 @@ const Title = (props: Props) => {
           {
             id       : headingId,
             className: "text-4xl md:text-5xl font-extrabold text-white tracking-tight",
+            title    : fullTitle,
           },
           <>
-            {title}
+            {title}{" "}
             {subtitle && (
-              <span className="text-status underline decoration-button underline-offset-8">
-                {" "}
+              <span 
+                className="relative inline-block text-status"
+                aria-label={subtitle}
+              >
                 {subtitle}
+                <svg
+                  className="absolute left-[-2.5%] -bottom-2 w-[105%] h-6 pointer-events-none overflow-visible rotate-180"
+                  viewBox="0 0 210 25"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                  role="presentation"
+                  focusable="false"
+                >
+                  <defs>
+                    <linearGradient id="underline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="currentColor" stopOpacity="1" />
+                      <stop offset="80%" stopColor="currentColor" stopOpacity="0.8" />
+                      <stop offset="100%" stopColor="currentColor" stopOpacity="0.1" />
+                    </linearGradient>
+                    <filter id="brush-texture">
+                      <feTurbulence type="fractalNoise" baseFrequency="0.59 0.1" numOctaves="2" seed="3" />
+                      <feDisplacementMap in="SourceGraphic" scale="4" />
+                    </filter>
+                  </defs>
+
+                  <path
+                    d="M5 2 Q 105 22 205 2"
+                    stroke="url(#underline-gradient)"
+                    strokeWidth="6"
+                    fill="none"
+                    strokeLinecap="round"
+                    filter="url(#brush-texture)"
+                  />
+                </svg>
               </span>
             )}
           </>,
