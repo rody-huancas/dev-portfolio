@@ -17,8 +17,7 @@ const Title = (props: Props) => {
 
   if (!title && !label) return null;
 
-  const headingId =
-    id || (title ? title.toLowerCase().replace(/\s+/g, "-") : undefined);
+  const headingId = id || (title ? title.toLowerCase().replace(/\s+/g, "-") : undefined);
 
   const fullTitle = subtitle ? `${title} ${subtitle}` : title;
 
@@ -42,7 +41,7 @@ const Title = (props: Props) => {
           level,
           {
             id       : headingId,
-            className: "text-4xl md:text-5xl font-extrabold text-white tracking-tight",
+            className: "text-4xl md:text-5xl font-extrabold text-background dark:text-foreground tracking-tight",
             title    : fullTitle,
           },
           <>
@@ -84,7 +83,7 @@ const Title = (props: Props) => {
                 </svg>
               </span>
             )}
-          </>,
+          </>
         )}
     </header>
   );
