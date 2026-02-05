@@ -11,12 +11,13 @@ import {
   SiLaravel, SiGraphql, SiMongodb, SiAstro,
   SiMaterialdesign
 } from "react-icons/si";
+import IconCSharp from "@/components/icons/IconCSharp";
 
 export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
   "JavaScript": { color: "#F7DF1E", icon : SiJavascript , bg: "rgba(247, 223, 30, 0.1)"   },
   "TypeScript": { color: "#3178C6", icon : SiTypescript , bg: "rgba(49, 120, 198, 0.15)"  },
   "PHP"       : { color: "#777BB4", icon : SiPhp        , bg: "rgba(119, 123, 180, 0.15)" },
-  "C#"        : { color: "#239120", icon : TbBrandCSharp, bg: "rgba(35, 145, 32, 0.15)"   },
+  "C#"        : { color: "#ffffff", icon : IconCSharp   , bg: "rgba(57, 0, 145, 0.7)"    },
 
   "React"        : { color: "#61DAFB", lightColor: "#087EA4", icon: SiReact            , bg: "rgba(97, 218, 251, 0.15)" },
   "React.js"     : { color: "#61DAFB", lightColor: "#087EA4", icon: SiReact            , bg: "rgba(97, 218, 251, 0.15)" },
@@ -34,7 +35,7 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
   "NestJS" : { color: "#E0234E", icon : SiNestjs    , bg: "rgba(224, 35, 78, 0.1)"  },
   "Laravel": { color: "#FF2D20", icon : SiLaravel   , bg: "rgba(255, 45, 32, 0.1)"  },
   "GraphQL": { color: "#E10098", icon : SiGraphql   , bg: "rgba(225, 0, 152, 0.1)"  },
-  ".Net"   : { color: "#512BD4", icon : SiDotnet    , bg: "rgba(81, 43, 212, 0.15)" },
+  ".Net"   : { color: "#ffffff", icon : SiDotnet    , bg: "rgba(81, 43, 212, 0.7)" },
 
   "PostgreSQL": { color: "#4169E1", icon : SiPostgresql, bg: "rgba(65, 105, 225, 0.15)" },
   "MySQL"     : { color: "#4479A1", icon : SiMysql     , bg: "rgba(68, 121, 161, 0.15)" },
