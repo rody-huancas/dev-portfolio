@@ -21,21 +21,23 @@ import {
   SiAstro,
 } from "react-icons/si";
 import IconReactNative from "@/components/icons/IconReactNative";
+import IconMUI from "@/components/icons/IconMUI";
+import IconCSharp from "@/components/icons/IconCSharp";
 
 export const TECH_STACK = [
   // Languages
   { name: "JavaScript"  , icon: SiJavascript , color: "#F7DF1E", lightColor: "#F7DF1E" },
   { name: "TypeScript"  , icon: SiTypescript , color: "#3178C6", lightColor: "#3178C6" },
   { name: "PHP"         , icon: SiPhp        , color: "#777BB4", lightColor: "#777BB4" },
-  { name: "C#"          , icon: TbBrandCSharp, color: "#239120", lightColor: "#239120" },
+  { name: "C#"          , icon: IconCSharp   , color: "#390091", lightColor: "#390091" },
 
   // Frontend
   { name: "React.js"    , icon: SiReact         , color: "#61DAFB", lightColor: "#61DAFB" },
   { name: "React Native", icon: IconReactNative , color: "#61DAFB", lightColor: "#61DAFB" },
   { name: "Next.js"     , icon: SiNextdotjs     , color: "#ffffff", lightColor: "#000000" },
-  { name: "Astro"       , icon: SiAstro         , color: "#ffffff", lightColor: "#FF5D01" },
+  { name: "Astro"       , icon: SiAstro         , color: "#FF5D01", lightColor: "#FF5D01" },
   { name: "Tailwind"    , icon: SiTailwindcss   , color: "#06B6D4", lightColor: "#06B6D4" },
-  { name: "Material UI" , icon: SiMaterialdesign, color: "#0081CB", lightColor: "#0081CB" },
+  { name: "Material UI" , icon: IconMUI         , color: "#0081CB", lightColor: "#0081CB" },
 
   // Backend
   { name: "Node.js" , icon: SiNodedotjs , color: "#339933", lightColor: "#339933" },
