@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { cn } from "@/utils/cn.utils";
+import { themeScript } from "@/utils/theme-script";
 import "@/styles/globals.css";
 
 const dmSans = DM_Sans({
@@ -49,6 +50,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
+      
       <body className={cn("antialiased bg-foreground text-background dark:text-foreground dark:bg-background", dmSans.className)}>
         {children}
       </body>
