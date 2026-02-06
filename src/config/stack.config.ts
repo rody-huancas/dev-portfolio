@@ -1,5 +1,4 @@
 import { DiMsqlServer } from "react-icons/di";
-import { TbBrandCSharp } from "react-icons/tb";
 import {
   SiJavascript,
   SiTypescript,
@@ -7,7 +6,6 @@ import {
   SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiMaterialdesign,
   SiNodedotjs,
   SiExpress,
   SiNestjs,
@@ -18,11 +16,11 @@ import {
   SiMongodb,
   SiDocker,
   SiMysql,
-  SiAstro,
 } from "react-icons/si";
-import IconReactNative from "@/components/icons/IconReactNative";
 import IconMUI from "@/components/icons/IconMUI";
+import IconAstro from "@/components/icons/IconAstro";
 import IconCSharp from "@/components/icons/IconCSharp";
+import IconReactNative from "@/components/icons/IconReactNative";
 
 export const TECH_STACK = [
   // Languages
@@ -35,7 +33,7 @@ export const TECH_STACK = [
   { name: "React.js"    , icon: SiReact         , color: "#61DAFB", lightColor: "#61DAFB" },
   { name: "React Native", icon: IconReactNative , color: "#61DAFB", lightColor: "#61DAFB" },
   { name: "Next.js"     , icon: SiNextdotjs     , color: "#ffffff", lightColor: "#000000" },
-  { name: "Astro"       , icon: SiAstro         , color: "#FF5D01", lightColor: "#FF5D01" },
+  { name: "Astro"       , icon: IconAstro       , color: "#FF5D01", lightColor: "#FF5D01" },
   { name: "Tailwind"    , icon: SiTailwindcss   , color: "#06B6D4", lightColor: "#06B6D4" },
   { name: "Material UI" , icon: IconMUI         , color: "#0081CB", lightColor: "#0081CB" },
 

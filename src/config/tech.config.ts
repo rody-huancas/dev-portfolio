@@ -1,17 +1,18 @@
 import type { IconType } from "react-icons";
+import IconMUI from "@/components/icons/IconMUI";
 import IconGsap from "@/components/icons/IconGsap";
+import IconAstro from "@/components/icons/IconAstro";
+import IconCSharp from "@/components/icons/IconCSharp";
 import IconReactNative from "@/components/icons/IconReactNative";
 import { DiMsqlServer } from "react-icons/di";
-import { TbBrandCSharp, TbBrandFramerMotion } from "react-icons/tb";
+import { TbBrandFramerMotion } from "react-icons/tb";
 import { 
   SiReact, SiTailwindcss, SiNextdotjs, SiNestjs, 
   SiNodedotjs, SiTypescript, SiPostgresql, SiDocker, 
   SiMysql, SiExpo, SiJavascript, SiTypeorm, 
   SiVite, SiDotnet, SiGit, SiPhp, SiExpress,
-  SiLaravel, SiGraphql, SiMongodb, SiAstro,
-  SiMaterialdesign
+  SiLaravel, SiGraphql, SiMongodb
 } from "react-icons/si";
-import IconCSharp from "@/components/icons/IconCSharp";
 
 export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
   "JavaScript": { color: "#F7DF1E", icon : SiJavascript , bg: "rgba(247, 223, 30, 0.1)"   },
@@ -23,12 +24,12 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
   "React.js"     : { color: "#61DAFB", lightColor: "#087EA4", icon: SiReact            , bg: "rgba(97, 218, 251, 0.15)" },
   "React Native" : { color: "#61DAFB", lightColor: "#0A69DA", icon: IconReactNative    , bg: "rgba(97, 218, 251, 0.15)" },
   "Next.js"      : { color: "#ffffff", lightColor: "#000000", icon: SiNextdotjs        , bg: "rgba(255, 255, 255, 0.1)" },
-  "Astro"        : { color: "#ffffff", lightColor: "#FF5D01", icon: SiAstro            , bg: "rgba(255, 93, 1, 0.1)"    },
+  "Astro"        : { color: "#ffffff", lightColor: "#FF5D01", icon: IconAstro          , bg: "rgba(255, 93, 1, 0.1)"    },
   "Framer Motion": { color: "#FEF62A", lightColor: "#d4cd00", icon: TbBrandFramerMotion, bg: "rgba(254, 246, 42, 0.1)"  },
-  "Tailwind CSS" : { color: "#06B6D4", icon : SiTailwindcss   , bg: "rgba(6, 182, 212, 0.15)"   },
-  "Material UI"  : { color: "#0081CB", icon : SiMaterialdesign, bg: "rgba(0, 129, 203, 0.15)"   },
-  "Vite"         : { color: "#646CFF", icon : SiVite          , bg: "rgba(100, 108, 255, 0.15)" },
-  "GSAP"         : { color: "#88CE02", icon : IconGsap        , bg: "rgba(136, 206, 2, 0.15)"   },
+  "Tailwind CSS" : { color: "#06B6D4", icon : SiTailwindcss , bg: "rgba(6, 182, 212, 0.15)"   },
+  "Material UI"  : { color: "#0081CB", icon : IconMUI       , bg: "rgba(0, 129, 203, 0.15)"   },
+  "Vite"         : { color: "#646CFF", icon : SiVite        , bg: "rgba(100, 108, 255, 0.15)" },
+  "GSAP"         : { color: "#88CE02", icon : IconGsap      , bg: "rgba(136, 206, 2, 0.15)"   },
 
   "Express": { color: "#ffffff", lightColor: "#000000", icon: SiExpress, bg: "rgba(255, 255, 255, 0.1)" },
   "Node.js": { color: "#339933", icon : SiNodedotjs , bg: "rgba(51, 153, 51, 0.15)" },
