@@ -27,23 +27,26 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-4xl md:text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
-          Hola, soy <span className="text-background/80 dark:text-foreground">Rody,</span>
+          Hola, soy{" "}
+          <span className="text-background/80 dark:text-foreground">Rody,</span>
           <br />
-          <span className="text-background/60 dark:text-foreground/60">Software Developer.</span>
+          <span className="text-background/60 dark:text-foreground/60">
+            Software Developer.
+          </span>
         </h1>
 
         <nav
           className="flex flex-wrap items-center gap-4 mb-12"
           aria-label="Enlaces de contacto y redes sociales"
         >
-          <LinkButton 
+          <LinkButton
             href="mailto:rodyhuancas.04@gmail.com"
             ariaLabel="Enviar correo electrónico"
             title="Contactar por email"
             icon={FiMail}
             label="Email"
           />
-          
+
           <LinkButton
             href="https://github.com/rody-huancas"
             ariaLabel="Ver perfil de GitHub"
@@ -70,9 +73,10 @@ const HeroSection = () => {
         </nav>
 
         <p className="text-background/60 dark:text-foreground text-lg max-w-2xl leading-relaxed">
-          Desarrollo aplicaciones para resolver problemas concretos, con código
-          claro y decisiones técnicas bien pensadas. +3 años construyendo
-          software mantenible y bien estructurado.
+          Programar es fácil, lo difícil es hacerlo simple. Llevo +3 años
+          priorizando la claridad sobre la complejidad, convencido de que una
+          solución es perfecta no cuando no hay nada más que añadir, sino cuando
+          no queda nada por quitar.
         </p>
       </div>
 
