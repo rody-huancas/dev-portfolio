@@ -7,8 +7,8 @@ import useThemeStore from "@/store/useThemeStore";
 
 const TechSlider = () => {
   const [isPaused, setIsPaused] = useState<boolean>(false);
-  const theme = useThemeStore((state) => state.theme);
-
+  
+  const theme          = useThemeStore((state) => state.theme);
   const controls       = useAnimationControls();
   const duplicatedTech = [...TECH_STACK, ...TECH_STACK];
 
@@ -26,7 +26,7 @@ const TechSlider = () => {
         });
       }
     };
-    
+
     startAnimation();
   }, [isPaused, controls]);
 
@@ -37,6 +37,15 @@ const TechSlider = () => {
 
   const handleMouseLeave = () => {
     setIsPaused(false);
+    controls.start({
+      x         : "-50%",
+      transition: {
+        duration  : 50,
+        repeat    : Infinity,
+        ease      : "linear",
+        repeatType: "loop",
+      },
+    });
   };
 
   return (
