@@ -59,7 +59,7 @@ const ContactSection = () => {
                   type="text"
                   id="name"
                   required
-                  className="w-full dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
+                  className="w-full bg-white/40 dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -73,7 +73,7 @@ const ContactSection = () => {
                   type="email"
                   id="email"
                   required
-                  className="w-full dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
+                  className="w-full bg-white/40 dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
                   placeholder="email@ejemplo.com"
                 />
               </div>
@@ -88,7 +88,7 @@ const ContactSection = () => {
                 id="message"
                 rows={5}
                 required
-                className="w-full dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors resize-none placeholder:text-description"
+                className="w-full bg-white/40 dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors resize-none placeholder:text-description"
                 placeholder="¿En qué puedo ayudarte?"
               ></textarea>
             </div>
