@@ -3,7 +3,7 @@
     {
       "id"          : 1,
       "title"       : "VizGit",
-      "description" : "Visualiza y analiza tu actividad en GitHub mediante gráficos interactivos y un diseño amigable y personalizable.",
+      "description" : "Transforma tus commits en una experiencia visual. Una herramienta rápida y sin registros para analizar tu impacto en GitHub y compartir tus estadísticas con estilo.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
       "githubUrl"   : "https://github.com/rody-huancas/vizgit",
       "liveUrl"     : "https://vizgit.novtiq.com/",
@@ -13,7 +13,7 @@
     {
       "id"          : 2,
       "title"       : "Dependra",
-      "description" : "Explora visualmente la arquitectura de repositorios de GitHub para comprender mejor la estructura y organización del código.",
+      "description" : "Convierte cualquier repo público de GitHub en un mapa interactivo. Ideal para entender arquitecturas complejas y ver cómo se conectan las piezas de tu código de un vistazo.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
       "githubUrl"   : "https://github.com/rody-huancas/dependra",
       "liveUrl"     : "https://dependra.novtiq.com/",
@@ -22,8 +22,8 @@
     },
     {
       "id"          : 3,
-      "title"       : "FavorApp - Landing Page",
-      "description" : "Presenta la propuesta de valor de FavorApp para conectar a personas con necesidades puntuales con colaboradores locales que buscan generar ingresos.",
+      "title"       : "FavorApp",
+      "description" : "La app para encontrar trabajo o pedir favores en tu ciudad. Landing page diseñada para conectar colaboradores locales con clientes de forma sencilla y directa.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
       "githubUrl"   : "",
       "liveUrl"     : "https://www.favorapp.app/",
@@ -32,8 +32,8 @@
     },
     {
       "id"          : 4,
-      "title"       : "Clínica Enfoque Salud",
-      "description" : "Sitio web enfocado en presentar los servicios médicos y promociones de la clínica, facilitando la reserva de citas y mejorando la experiencia del paciente.",
+      "title"       : "Enfoque Salud",
+      "description" : "Web médica que va más allá de informar. Incluye asistentes para calcular tu IMC o seguir tu embarazo, mejorando la experiencia del paciente desde el primer clic.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       "githubUrl"   : "",
       "liveUrl"     : "https://www.clinicaenfoquesalud.com/",

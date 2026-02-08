@@ -11,7 +11,7 @@ interface ExperienceProps {
 }
 
 const CardExperience = ({ experience }: ExperienceProps) => {
-  const theme = useThemeStore((state) => state.theme); // Obtenemos el tema
+  const theme = useThemeStore((state) => state.theme);
 
   return (
     <article className="group relative pl-10 pb-12 last:pb-0">
@@ -44,7 +44,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
               {experience.company}
             </p>
           </div>
-          <span className="inline-block text-[10px] md:text-[10px] font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border 
+          <span className="w-fit inline-block text-[10px] md:text-[10px] font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border 
             bg-indigo-50 text-blue-500 border-blue-200 
             dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/30 
             transition-colors duration-300">
@@ -52,9 +52,21 @@ const CardExperience = ({ experience }: ExperienceProps) => {
           </span>
         </div>
 
-        <p className="text-background/60 dark:text-foreground leading-relaxed text-base max-w-3xl">
-          {experience.description}
-        </p>
+        <ul className="space-y-1 max-w-3xl">
+          {experience.description.map((item, index) => (
+            <li 
+              key={index} 
+              className="text-background/60 dark:text-foreground leading-relaxed text-base flex gap-2"
+            >
+              {/* Viñeta personalizada con el color status */}
+              <span className="text-status mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-status" />
+              <span 
+                className="flex-1"
+                dangerouslySetInnerHTML={{ __html: item }} 
+              />
+            </li>
+          ))}
+        </ul>
 
         <div className="flex flex-wrap gap-2">
           {experience.technologies.map((tech, techIndex) => {
