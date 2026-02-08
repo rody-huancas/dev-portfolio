@@ -26,7 +26,7 @@ const HeroSection = () => {
           </span>
         </div>
 
-        <h1 className="text-4xl md:text-7xl font-bold mb-12 leading-[1.1] tracking-tighter">
+        <h1 className="text-4xl md:text-7xl font-bold mb-8 leading-[1.1] tracking-tighter">
           Hola, soy{" "}
           <span className="text-background/80 dark:text-foreground">Rody,</span>
           <br />
@@ -34,6 +34,13 @@ const HeroSection = () => {
             Software Developer.
           </span>
         </h1>
+
+        <p className="text-background/60 dark:text-foreground text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+          Programar es fácil, lo difícil es hacerlo simple. Llevo +3 años
+          priorizando la claridad sobre la complejidad, convencido de que una
+          solución es perfecta no cuando no hay nada más que añadir, sino cuando
+          no queda nada por quitar.
+        </p>
 
         <nav
           className="flex flex-wrap items-center gap-4 mb-12"
@@ -71,13 +78,6 @@ const HeroSection = () => {
             label="CV"
           />
         </nav>
-
-        <p className="text-background/60 dark:text-foreground text-lg max-w-2xl leading-relaxed">
-          Programar es fácil, lo difícil es hacerlo simple. Llevo +3 años
-          priorizando la claridad sobre la complejidad, convencido de que una
-          solución es perfecta no cuando no hay nada más que añadir, sino cuando
-          no queda nada por quitar.
-        </p>
       </div>
 
       <ExperienceSection />
