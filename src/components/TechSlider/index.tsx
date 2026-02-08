@@ -1,74 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, useAnimationControls } from "framer-motion";
+import { motion } from "framer-motion";
 import { TECH_STACK } from "@/config/stack.config";
 import useThemeStore from "@/store/useThemeStore";
 
 const TechSlider = () => {
-  const [isPaused, setIsPaused] = useState<boolean>(false);
-  
-  const theme          = useThemeStore((state) => state.theme);
-  const controls       = useAnimationControls();
+  const theme = useThemeStore((state) => state.theme);
   const duplicatedTech = [...TECH_STACK, ...TECH_STACK];
-
-  useEffect(() => {
-    const startAnimation = async () => {
-      if (!isPaused) {
-        await controls.start({
-          x         : "-50%",
-          transition: {
-            duration  : 50,
-            repeat    : Infinity,
-            ease      : "linear",
-            repeatType: "loop",
-          },
-        });
-      }
-    };
-
-    startAnimation();
-  }, [isPaused, controls]);
-
-  const handleMouseEnter = () => {
-    setIsPaused(true);
-    controls.stop();
-  };
-
-  const handleMouseLeave = () => {
-    setIsPaused(false);
-    controls.start({
-      x         : "-50%",
-      transition: {
-        duration  : 50,
-        repeat    : Infinity,
-        ease      : "linear",
-        repeatType: "loop",
-      },
-    });
-  };
 
   return (
     <div 
       className="py-16 overflow-hidden w-full bg-transparent relative" 
-      aria-label="Stack tecnológico y herramientas"
+      aria-label="Stack tecnológico"
     >
-      <h2 className="sr-only">Habilidades técnicas y tecnologías: React, Next.js, TypeScript y más.</h2>
+      <h2 className="sr-only">Habilidades técnicas</h2>
       
       <div className="relative overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-foreground dark:from-background dark:via-background/50 to-transparent z-10 pointer-events-none" />
-        
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-foreground dark:from-background dark:via-background/50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-foreground dark:from-background to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-foreground dark:from-background to-transparent z-10 pointer-events-none" />
 
-        <div 
-          className="flex overflow-visible py-12"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          role="list"
-        >
+        <div className="flex overflow-visible py-12">
           <motion.div
             className="flex whitespace-nowrap gap-20 items-center px-10"
-            animate={controls}
+            animate={{
+              x: ["0%", "-50%"],
+            }}
+            transition={{
+              x: {
+                repeat    : Infinity,
+                repeatType: "loop",
+                duration  : 40,
+                ease      : "linear",
+              },
+            }}
+            whileHover={{ transition: { duration: 0 } }} 
+            style={{ width: "fit-content" }}
           >
             {duplicatedTech.map((tech, index) => {
               const Icon = tech.icon;
@@ -77,21 +43,18 @@ const TechSlider = () => {
               return (
                 <div
                   key={index}
-                  className="group relative flex flex-col items-center justify-center gap-3 transition-all duration-300"
+                  className="group relative flex flex-col items-center justify-center gap-3"
                   role="listitem"
-                  aria-label={tech.name}
                 >
                   <div
                     className="absolute inset-0 blur-xl opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-full scale-125"
                     style={{ backgroundColor: iconColor }}
                   />
 
-                  <div 
-                    className="relative p-4 rounded-xl bg-white/5 dark:bg-input-bg/40 border border-none dark:border-foreground/10 group-hover:bg-white/10 dark:group-hover:bg-input-bg/60 group-hover:border-white/20 dark:group-hover:border-foreground/20 transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"
-                  >
+                  <div className="relative p-4 rounded-xl bg-white/5 dark:bg-input-bg/40 border-none transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1">
                     <Icon
                       size={50}
-                      className="relative z-20 transition-all duration-300"
+                      className="relative z-20"
                       style={{ color: iconColor, opacity: 0.9 }}
                     />
                   </div>
