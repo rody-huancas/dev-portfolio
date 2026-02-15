@@ -14,7 +14,7 @@
       "id"          : 2,
       "title"       : "Dependra",
       "description" : "Convierte cualquier repo público de GitHub en un mapa interactivo. Ideal para entender arquitecturas complejas y ver cómo se conectan las piezas de tu código de un vistazo.",
-      "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
       "githubUrl"   : "https://github.com/rody-huancas/dependra",
       "liveUrl"     : "https://dependra.novtiq.com/",
       "imageUrl"    : "/projects/image-dependra.webp",
