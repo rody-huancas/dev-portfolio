@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex flex-col justify-center gap-10 py-10 px-4 md:px-6"
+      className="min-h-screen flex flex-col justify-center gap-10 pt-20 md:pt-10"
       aria-label="Sección de presentación"
     >
       <div className="w-full">
