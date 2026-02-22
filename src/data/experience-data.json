@@ -6,11 +6,9 @@
       "position"   : "Desarrollador Frontend",
       "period"     : "Ene 2026 - Presente",
       "description": [
-        "Desarrollo de interfaces a gran escala para proyectos globales.",
-        "Trabajo en equipos multidisciplinarios bajo estándares internacionales de calidad.",
-        "Implementación de arquitecturas modernas centradas en rendimiento y mantenibilidad."
+        "Desarrollo del frontend de la nueva aplicación para Telefónica Argentina, implementando interfaces basadas en lineamientos de UX y colaborando en equipos multidisciplinarios bajo metodologías ágiles."
       ],
-      "technologies"  : ["React.js", "Next.js", "TypeScript", "Git"],
+      "technologies"  : ["React.js", "React Native", "Next.js", "TypeScript", "Git"],
       "websiteUrl"    : "https://pe.nttdata.com/",
       "certificateUrl": ""
     },
