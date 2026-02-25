@@ -10,7 +10,7 @@
         "Trabajo en equipos multidisciplinarios bajo estándares internacionales de calidad.",
         "Implementación de arquitecturas modernas centradas en rendimiento y mantenibilidad."
       ],
-      "technologies"  : ["React.js", "Next.js", "TypeScript", "Git"],
+      "technologies"  : ["React.js", "Next.js", "TypeScript", "Git", "Jest", "Storybook"],
       "websiteUrl"    : "https://pe.nttdata.com/",
       "certificateUrl": ""
     },
