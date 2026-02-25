@@ -8,7 +8,7 @@
       "description": [
         "Desarrollo del frontend de la nueva aplicación para Telefónica Argentina, implementando interfaces basadas en lineamientos de UX y colaborando en equipos multidisciplinarios bajo metodologías ágiles."
       ],
-      "technologies"  : ["React.js", "React Native", "Next.js", "TypeScript", "Material UI", "Git"],
+      "technologies"  : ["React.js", "React Native", "Next.js", "TypeScript", "Material UI", "Git", "Jest", "Storybook"],
       "websiteUrl"    : "https://pe.nttdata.com/",
       "certificateUrl": ""
     },
