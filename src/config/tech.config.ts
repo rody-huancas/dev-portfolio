@@ -12,8 +12,7 @@ import {
   SiMysql, SiExpo, SiJavascript, SiTypeorm, 
   SiVite, SiDotnet, SiGit, SiPhp, SiExpress,
   SiLaravel, SiGraphql, SiMongodb,
-  SiJest,
-  SiStorybook
+  SiJest, SiStorybook
 } from "react-icons/si";
 
 export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
