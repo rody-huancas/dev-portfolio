@@ -22,7 +22,7 @@
         "Integración de React y TypeScript como stack principal para el desarrollo de nuevos proyectos internos.",
         "Rediseño y desarrollo de módulos integrales para la gestión de procesos universitarios."
       ],
-      "technologies"  : ["C#", ".Net", "React.js", "TypeScript", "SQL Server", "Git"],
+      "technologies"  : ["C#", ".Net", "React.js", "JavaScript", "TypeScript", "SQL Server", "Git"],
       "websiteUrl"    : "https://www.uss.edu.pe/",
       "certificateUrl": "https://www.linkedin.com/in/rody-huancas/details/experience/1769064663215/single-media-viewer/"
     },
@@ -50,7 +50,7 @@
         "Desarrollo de una nueva versión del ERP utilizando NestJS para modernizar la estructura del sistema.",
         "Implementación de nuevas funcionalidades y módulos de gestión integrados al ecosistema existente."
       ],
-      "technologies"  : ["PHP", "React.js", "NestJS", "PostgreSQL", "Docker"],
+      "technologies"  : ["PHP", "React.js", "JavaScript", "NestJS", "PostgreSQL", "Docker"],
       "websiteUrl"    : "https://www.datec.pe/",
       "certificateUrl": "https://www.linkedin.com/in/rody-huancas/details/experience/2244137012/multiple-media-viewer/"
     }
