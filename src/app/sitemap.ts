@@ -1,13 +1,14 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
+import { seoConfig } from "@/config/seo.config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://rody-huancas.dev";
+  const baseUrl = seoConfig.siteUrl;
 
   return [
     {
       url            : baseUrl,
       lastModified   : new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "weekly",
       priority       : 1,
     },
     {
