@@ -1,10 +1,14 @@
+export interface IExperienceRole {
+  position    : string;
+  period      : string;
+  description : string[];
+  technologies: string[];
+}
+
 export interface IExperience {
-  id            : number;
+  id            : string;
   company       : string;
-  position      : string;
-  period        : string;
-  description   : string[];
-  technologies  : string[];
   websiteUrl    : string;
   certificateUrl: string;
+  roles         : IExperienceRole[];
 }
