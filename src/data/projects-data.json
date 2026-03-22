@@ -1,7 +1,17 @@
 {
   "projects": [
     {
-      "id"          : 1,
+      "id"          : "62c17723-d764-4b6e-95a8-c86c69a5bd50",
+      "title"       : "Appex IA",
+      "description" : "La web principal de Appex IA diseñada para conectar empresas con soluciones tecnológicas. Incluye una interfaz interactiva para el usuario y un sistema privado donde el equipo administra todas las consultas de forma centralizada.",
+      "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Prisma ORM", "MongoDB"],
+      "githubUrl"   : "",
+      "liveUrl"     : "https://www.appexsistemas.com/",
+      "imageUrl"    : "/projects/image-appexia.webp",
+      "type"        : "FullStack"
+    },
+    {
+      "id"          : "ed4f0c80-014e-4fa9-b8b0-e58cceedee08",
       "title"       : "VizGit",
       "description" : "Transforma tus commits en una experiencia visual. Una herramienta rápida y sin registros para analizar tu impacto en GitHub y compartir tus estadísticas con estilo.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS"],
@@ -11,7 +21,7 @@
       "type"        : "FrontEnd"
     },
     {
-      "id"          : 2,
+      "id"          : "e6c0c439-8959-4c42-a627-d78f69ef0c15",
       "title"       : "Dependra",
       "description" : "Convierte cualquier repo público de GitHub en un mapa interactivo. Ideal para entender arquitecturas complejas y ver cómo se conectan las piezas de tu código de un vistazo.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
@@ -21,7 +31,7 @@
       "type"        : "FrontEnd"
     },
     {
-      "id"          : 3,
+      "id"          : "13e17624-43aa-46da-9b8f-859c5e682916",
       "title"       : "FavorApp",
       "description" : "La app para encontrar trabajo o pedir favores en tu ciudad. Landing page diseñada para conectar colaboradores locales con clientes de forma sencilla y directa.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "GSAP"],
@@ -31,7 +41,7 @@
       "type"        : "FrontEnd"
     },
     {
-      "id"          : 4,
+      "id"          : "84f21e59-a43d-4ae9-9291-73529eba385a",
       "title"       : "Enfoque Salud",
       "description" : "Web médica que va más allá de informar. Incluye asistentes para calcular tu IMC o seguir tu embarazo, mejorando la experiencia del paciente desde el primer clic.",
       "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
