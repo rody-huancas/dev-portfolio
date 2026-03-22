@@ -37,61 +37,72 @@ const CardExperience = ({ experience }: ExperienceProps) => {
       >
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
           <div>
-            <h3 className="text-2xl font-bold text-background/80 dark:text-foreground group-hover:text-status transition-colors">
-              {experience.position}
+            <h3 className="text-2xl font-bold text-background/80 dark:text-status transition-colors">
+              {experience.company}
             </h3>
             <p className="text-lg text-background/60 dark:text-foreground font-medium">
-              {experience.company}
+              {experience.roles.length === 1 ? experience.roles[0].position : "Colaboraciones en distintos periodos"}
             </p>
           </div>
-          <span className="w-fit inline-block text-[10px] md:text-[10px] font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border 
-            bg-indigo-50 text-blue-500 border-blue-200 
-            dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/30 
-            transition-colors duration-300">
-            {experience.period}
-          </span>
         </div>
 
-        <ul className="space-y-1 max-w-3xl">
-          {experience.description.map((item, index) => (
-            <li 
-              key={index} 
-              className="text-background/60 dark:text-foreground leading-relaxed text-base flex gap-2"
+        <div className="space-y-10">
+          {experience.roles.map((role, index) => (
+            <div
+              key={`${experience.id}-${role.position}-${role.period}`}
+              className={index === 0 ? "space-y-4" : "space-y-4 pt-6 border-t border-background/10 dark:border-foreground/10"}
             >
-              {/* Viñeta personalizada con el color status */}
-              <span className="text-status mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-status" />
-              <span 
-                className="flex-1"
-                dangerouslySetInnerHTML={{ __html: item }} 
-              />
-            </li>
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                <p className="text-lg font-semibold text-background/70 dark:text-foreground">
+                  {role.position}
+                </p>
+                <span className="w-fit inline-block text-[10px] md:text-[10px] font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border 
+                  bg-indigo-50 text-blue-500 border-blue-200 
+                  dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/30 
+                  transition-colors duration-300">
+                  {role.period}
+                </span>
+              </div>
+
+              <ul className="space-y-1 max-w-3xl">
+                {role.description.map((item, descIndex) => (
+                  <li
+                    key={descIndex}
+                    className="text-background/60 dark:text-foreground leading-relaxed text-base flex gap-2"
+                  >
+                    <span className="text-status mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-status" />
+                    <span className="flex-1" dangerouslySetInnerHTML={{ __html: item }} />
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-wrap gap-2">
+                {role.technologies.map((tech, techIndex) => {
+                  const config = techConfig[tech];
+                  if (!config) return null;
+
+                  const Icon = config.icon;
+                  const activeColor = theme === "dark" ? config.color : (config.lightColor || config.color);
+                  const activeBg    = theme === "dark" ? `${activeColor}15` : `${activeColor}10`;
+
+                  return (
+                    <span
+                      key={`${tech}-${techIndex}`}
+                      className="flex items-center gap-1.5 text-[11px] font-medium tracking-wider px-3 py-1.5 rounded-lg border transition-all duration-300"
+                      style={{
+                        backgroundColor: activeBg,
+                        color: activeColor,
+                        borderColor: `${activeColor}30`,
+                      }}
+                    >
+                      {Icon && <Icon size={14} style={{ color: activeColor }} />}
+                      {tech}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
           ))}
-        </ul>
-
-        <div className="flex flex-wrap gap-2">
-          {experience.technologies.map((tech, techIndex) => {
-            const config = techConfig[tech];
-            if (!config) return null;
-
-            const Icon = config.icon;
-            const activeColor = theme === "dark" ? config.color : (config.lightColor || config.color);
-            const activeBg    = theme === "dark" ? `${activeColor}15` : `${activeColor}10`;
-
-            return (
-              <span
-                key={techIndex}
-                className="flex items-center gap-1.5 text-[11px] font-medium tracking-wider px-3 py-1.5 rounded-lg border transition-all duration-300"
-                style={{
-                  backgroundColor: activeBg,
-                  color: activeColor,
-                  borderColor: `${activeColor}30`,
-                }}
-              >
-                {Icon && <Icon size={14} style={{ color: activeColor }} />}
-                {tech}
-              </span>
-            );
-          })}
         </div>
 
         <div className="flex items-center gap-6 pt-2">
