@@ -29,8 +29,12 @@ const ProjectsPage = () => {
       />
 
       <div className="flex flex-col gap-16 mt-12">
-        {projects.map((project) => (
-          <CardProject key={project.id} project={project} />
+        {projects.map((project, index) => (
+          <CardProject 
+            key={project.id} 
+            project={project} 
+            priority={index < 2}
+          />
         ))}
       </div>
     </section>
