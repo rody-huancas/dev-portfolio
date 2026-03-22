@@ -7,7 +7,7 @@ import { techConfig } from "@/config/tech.config";
 import type { IProject } from "@/types/projects.types";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-const CardProject = ({ project }: { project: IProject }) => {
+const CardProject = ({ project, priority = false }: { project: IProject; priority?: boolean }) => {
   const theme = useThemeStore((state) => state.theme);
   const { imageUrl, title, description, technologies, githubUrl, liveUrl, type } = project;
 
@@ -40,7 +40,7 @@ const CardProject = ({ project }: { project: IProject }) => {
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 45vw"
-          priority={project.id <= 2}
+          priority={priority}
         />
         <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-colors duration-500" />
       </div>
