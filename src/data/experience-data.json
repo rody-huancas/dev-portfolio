@@ -47,7 +47,7 @@
             "Rediseño y desarrollo del sitio web oficial de Appex IA con animaciones GSAP enfocadas en métricas comerciales.",
             "Optimización de Core Web Vitals y estrategia de SEO técnico para impulsar el posicionamiento."
           ],
-          "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Prisma ORM", "MongoDB"]
+          "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Prisma ORM", "PostgreSQL"]
         },
         {
           "position"   : "Desarrollador Frontend (Freelance)",
