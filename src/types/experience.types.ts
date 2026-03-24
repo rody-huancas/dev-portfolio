@@ -1,7 +1,9 @@
+import type { LocalizedText } from "@/types/i18n.types";
+
 export interface IExperienceRole {
-  position    : string;
-  period      : string;
-  description : string[];
+  position    : LocalizedText;
+  period      : LocalizedText;
+  description : LocalizedText[];
   technologies: string[];
 }
 

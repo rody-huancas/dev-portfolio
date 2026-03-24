@@ -1,13 +1,18 @@
+"use client";
+
 import ExperienceSection from "../ExperienceSection";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowUpRight, FiMail } from "react-icons/fi";
+import { useI18n } from "@/i18n/I18nProvider";
 
 const HeroSection = () => {
+  const { dictionary } = useI18n();
+
   return (
     <section
       id="hero"
       className="flex flex-col gap-20"
-      aria-label="Sección de presentación"
+      aria-label={dictionary.hero.sectionAria}
     >
       <div className="relative flex min-h-screen flex-col justify-center">
         <div
@@ -28,11 +33,11 @@ const HeroSection = () => {
               className="h-1.5 w-1.5 rounded-full bg-status"
               aria-hidden="true"
             />
-            <span>Disponible para trabajar</span>
+            <span>{dictionary.hero.availability}</span>
           </div>
 
           <h1 className="mt-5 max-w-4xl space-y-5 text-[2.85rem] font-bold leading-[0.94] tracking-[-0.07em] text-background dark:text-foreground sm:space-y-6 sm:text-[4.2rem] sm:leading-[0.92] md:text-[5.2rem] lg:text-[6rem]">
-            <span className="block">Hola, soy Rody,</span>
+            <span className="block">{dictionary.hero.greeting}</span>
 
             <span className="mt-3 block md:mt-4">
               <span className="relative inline-flex max-w-full -rotate-[2.5deg] px-1 py-1">
@@ -54,7 +59,7 @@ const HeroSection = () => {
                     aria-hidden="true"
                   />
                   <span className="relative whitespace-nowrap">
-                    Software Developer
+                    {dictionary.hero.role}
                   </span>
                 </span>
               </span>
@@ -62,35 +67,33 @@ const HeroSection = () => {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-background/68 dark:text-foreground/74 md:text-xl">
-            Programar es fácil, lo difícil es hacerlo simple. Llevo{" "}
-            <span className="font-semibold text-status">+3 años</span>{" "}
-            priorizando la claridad sobre la complejidad, convencido de que una
-            solución es perfecta no cuando no hay nada más que añadir, sino
-            cuando no queda nada por quitar.
+            {dictionary.hero.intro.beforeYears}
+            <span className="font-semibold text-status">{dictionary.hero.intro.years}</span>
+            {dictionary.hero.intro.afterYears}
           </p>
 
           <nav
             className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4"
-            aria-label="Enlaces de contacto y redes sociales"
+            aria-label={dictionary.hero.linksNavAria}
           >
             <a
               href="mailto:rodyhuancas.04@gmail.com"
-              aria-label="Enviar correo electrónico a rodyhuancas.04@gmail.com"
-              title="Contactar por email"
+              aria-label={dictionary.hero.email.ariaLabel}
+              title={dictionary.hero.email.title}
               className="group inline-flex items-center gap-3 text-sm font-medium text-background/72 transition-colors hover:text-background dark:text-foreground/72 dark:hover:text-foreground"
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-full border border-background/14 transition-transform duration-200 group-hover:-translate-y-0.5 dark:border-foreground/14">
                 <FiMail aria-hidden="true" className="shrink-0 text-[0.9rem]" />
               </span>
               <span className="border-b border-transparent pb-1 transition-colors group-hover:border-current">
-                Escríbeme
+                {dictionary.hero.email.label}
               </span>
             </a>
 
             <a
               href="https://github.com/rody-huancas"
-              aria-label="Ver perfil de GitHub de Rody Huancas"
-              title="Visitar GitHub"
+              aria-label={dictionary.hero.github.ariaLabel}
+              title={dictionary.hero.github.title}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 text-sm font-medium text-background/72 transition-colors hover:text-background dark:text-foreground/72 dark:hover:text-foreground"
@@ -108,8 +111,8 @@ const HeroSection = () => {
 
             <a
               href="https://linkedin.com/in/rody-huancas"
-              aria-label="Ver perfil de LinkedIn de Rody Huancas"
-              title="Visitar LinkedIn"
+              aria-label={dictionary.hero.linkedin.ariaLabel}
+              title={dictionary.hero.linkedin.title}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 text-sm font-medium text-background/72 transition-colors hover:text-background dark:text-foreground/72 dark:hover:text-foreground"
@@ -127,8 +130,8 @@ const HeroSection = () => {
 
             <a
               href="https://res.cloudinary.com/dmgazox1n/image/upload/v1769735355/Portfolio/Documents/CV%20-%20HILDER%20RODY%20HUANCAS%20CHUQUIPOMA.pdf"
-              aria-label="Descargar currículum vitae en formato PDF"
-              title="Descargar CV"
+              aria-label={dictionary.hero.resume.ariaLabel}
+              title={dictionary.hero.resume.title}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 text-sm font-medium text-background/72 transition-colors hover:text-background dark:text-foreground/72 dark:hover:text-foreground"
@@ -140,7 +143,7 @@ const HeroSection = () => {
                 />
               </span>
               <span className="border-b border-transparent pb-1 transition-colors group-hover:border-current">
-                Ver CV
+                {dictionary.hero.resume.label}
               </span>
             </a>
           </nav>

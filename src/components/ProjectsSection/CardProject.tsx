@@ -3,11 +3,14 @@
 import Image from "next/image";
 import useThemeStore from "@/store/useThemeStore";
 import { cn } from "@/utils/cn.utils";
+import { useI18n } from "@/i18n/I18nProvider";
 import { techConfig } from "@/config/tech.config";
+import { getLocalizedText } from "@/i18n/utils";
 import type { IProject } from "@/types/projects.types";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const CardProject = ({ project, priority = false }: { project: IProject; priority?: boolean }) => {
+  const { locale, dictionary } = useI18n();
   const theme = useThemeStore((state) => state.theme);
   const { imageUrl, title, description, technologies, githubUrl, liveUrl, type } = project;
 
@@ -29,14 +32,14 @@ const CardProject = ({ project, priority = false }: { project: IProject; priorit
 
       {type && (
         <span className={getTypeBadgeClasses(type)}>
-          {type}
+          {dictionary.projects.type[type]}
         </span>
       )}
 
       <div className="w-full lg:w-[45%] min-h-60 lg:min-h-full overflow-hidden relative">
         <Image
           src={imageUrl}
-          alt={`Captura de pantalla del proyecto ${title}`}
+          alt={dictionary.projects.imageAlt(title)}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 45vw"
@@ -51,7 +54,7 @@ const CardProject = ({ project, priority = false }: { project: IProject; priorit
         </h3>
 
         <p className="text-background/60 dark:text-foreground text-lg leading-relaxed">
-          {description}
+          {getLocalizedText(description, locale)}
         </p>
 
         <div className="flex flex-wrap gap-3">
@@ -88,7 +91,7 @@ const CardProject = ({ project, priority = false }: { project: IProject; priorit
               className="flex items-center gap-2 text-sm text-background/60 dark:text-foreground hover:text-background/80 dark:hover:text-foreground transition-colors group/link"
             >
               <FiGithub size={20} className="group-hover/link:text-status transition-colors" />
-              <span>Código Fuente</span>
+              <span>{dictionary.projects.sourceCode}</span>
             </a>
           )}
 
@@ -103,7 +106,7 @@ const CardProject = ({ project, priority = false }: { project: IProject; priorit
                 size={20}
                 className="group-hover/link:text-status transition-colors"
               />
-              <span>Demo</span>
+              <span>{dictionary.projects.demo}</span>
             </a>
           )}
         </div>

@@ -1,11 +1,15 @@
-import { cn } from '@/utils/cn.utils';
-import type { SocialItem } from '@/types/header.types';
+"use client";
+
+import { useI18n } from "@/i18n/I18nProvider";
+import { cn } from "@/utils/cn.utils";
+import type { SocialItem } from "@/types/header.types";
 
 interface SocialButtonProps {
   item: SocialItem;
 }
 
 const SocialButton = ({ item }: SocialButtonProps) => {
+  const { dictionary } = useI18n();
   const Icon = item.icon;
 
   return (
@@ -17,7 +21,7 @@ const SocialButton = ({ item }: SocialButtonProps) => {
         "w-12 h-12 rounded-full flex items-center justify-center relative group transition-all duration-300",
         "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10"
       )}
-      aria-label={`Visitar mi perfil de ${item.label}`}
+      aria-label={dictionary.header.socialProfileAria(item.label)}
     >
       <Icon size={20} aria-hidden="true" />
       
