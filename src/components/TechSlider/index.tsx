@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { TECH_STACK } from "@/config/stack.config";
 import useThemeStore from "@/store/useThemeStore";
 
@@ -15,25 +14,13 @@ const TechSlider = () => {
     >
       <h2 className="sr-only">Habilidades técnicas</h2>
       
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden py-4 -my-4 -rotate-2 transform-gpu">
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-foreground dark:from-background to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-foreground dark:from-background to-transparent z-10 pointer-events-none" />
 
-        <div className="flex overflow-visible py-12">
-          <motion.div
-            className="flex whitespace-nowrap gap-20 items-center px-10"
-            animate={{
-              x: ["0%", "-50%"],
-            }}
-            transition={{
-              x: {
-                repeat    : Infinity,
-                repeatType: "loop",
-                duration  : 40,
-                ease      : "linear",
-              },
-            }}
-            whileHover={{ transition: { duration: 0 } }} 
+        <div className="flex overflow-visible py-14">
+          <div
+            className="tech-slider-track flex whitespace-nowrap gap-20 items-center px-10 will-change-transform"
             style={{ width: "fit-content" }}
           >
             {duplicatedTech.map((tech, index) => {
@@ -65,7 +52,7 @@ const TechSlider = () => {
                 </div>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
