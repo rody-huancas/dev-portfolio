@@ -4,11 +4,12 @@ import { useRef } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Title from "../Title";
 import CardExperience from "./CardExperience";
-import experienceData from "@/data/experience-data.json";
-import type { IExperience } from "@/types/experience.types";
+import { useI18n } from "@/i18n/I18nProvider";
+import { experienceData } from "@/data/experience.data";
 
 const ExperienceSection = () => {
-  const experiences  = experienceData.experience as IExperience[];
+  const { dictionary } = useI18n();
+  const experiences  = experienceData;
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -25,11 +26,14 @@ const ExperienceSection = () => {
   return (
     <section className="w-full mt-20 px-4 md:px-0">
       <div className="mb-16">
-        <Title label="Experiencia" title="Mi ruta" subtitle="profesional" />
+        <Title
+          label={dictionary.experience.sectionLabel}
+          title={dictionary.experience.sectionTitle}
+          subtitle={dictionary.experience.sectionSubtitle}
+        />
 
         <p className="text-text-muted dark:text-foreground/70 text-lg max-w-xl">
-          Trayectoria profesional enfocada en crear soluciones digitales
-          eficientes y escalables.
+          {dictionary.experience.description}
         </p>
       </div>
 
