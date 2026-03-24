@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import Title from "../Title";
+import { useI18n } from "@/i18n/I18nProvider";
 import { BsArrowRight } from "react-icons/bs";
 
 const ContactSection = () => {
+  const { dictionary } = useI18n();
   const [isPending, setIsPending] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -26,12 +28,12 @@ const ContactSection = () => {
         headers: { "Content-Type": "application/json" },
       });
 
-      if (!response.ok) throw new Error("Error en el envío");
+      if (!response.ok) throw new Error(dictionary.contact.submitError);
 
-      toast.success("¡Mensaje enviado correctamente! Te responderé pronto.");
+      toast.success(dictionary.contact.success);
       (e.target as HTMLFormElement).reset();
     } catch (error) {
-      toast.error("Hubo un problema al enviar el mensaje. Inténtalo de nuevo.");
+      toast.error(dictionary.contact.error);
     } finally {
       setIsPending(false);
     }
@@ -40,19 +42,22 @@ const ContactSection = () => {
   return (
     <section id="contact" className="pt-24 w-full">
       <div className="space-y-5">
-        <Title label="Contacto" title="Hablemos" subtitle="ahora" />
+        <Title
+          label={dictionary.contact.sectionLabel}
+          title={dictionary.contact.sectionTitle}
+          subtitle={dictionary.contact.sectionSubtitle}
+        />
 
         <div className="space-y-10">
           <p className="text-description text-lg md:text-xl font-light">
-            ¿Tienes un proyecto en mente o simplemente quieres saludar? Estoy
-            disponible para nuevas oportunidades y retos técnicos.
+            {dictionary.contact.description}
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-xs font-mono uppercase tracking-widest text-hero-muted">
-                  Nombre
+                  {dictionary.contact.fields.name}
                 </label>
                 <input
                   name="name"
@@ -60,13 +65,13 @@ const ContactSection = () => {
                   id="name"
                   required
                   className="w-full bg-white/40 dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
-                  placeholder="Tu nombre"
+                  placeholder={dictionary.contact.fields.namePlaceholder}
                 />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="email" className="text-xs font-mono uppercase tracking-widest text-hero-muted">
-                  Email
+                  {dictionary.contact.fields.email}
                 </label>
                 <input
                   name="email"
@@ -74,14 +79,14 @@ const ContactSection = () => {
                   id="email"
                   required
                   className="w-full bg-white/40 dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors placeholder:text-description"
-                  placeholder="email@ejemplo.com"
+                  placeholder={dictionary.contact.fields.emailPlaceholder}
                 />
               </div>
             </div>
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-xs font-mono uppercase tracking-widest text-hero-muted">
-                Mensaje
+                {dictionary.contact.fields.message}
               </label>
               <textarea
                 name="message"
@@ -89,7 +94,7 @@ const ContactSection = () => {
                 rows={5}
                 required
                 className="w-full bg-white/40 dark:bg-input-bg border border-background/10 dark:border-foreground/10 rounded-xl px-4 py-4 text-foreground focus:outline-none focus:border-status transition-colors resize-none placeholder:text-description"
-                placeholder="¿En qué puedo ayudarte?"
+                placeholder={dictionary.contact.fields.messagePlaceholder}
               ></textarea>
             </div>
 
@@ -99,7 +104,7 @@ const ContactSection = () => {
               className="group relative w-full md:w-auto px-10 py-4 bg-background dark:bg-foreground dark:text-background text-foreground font-bold rounded-full overflow-hidden transition-all hover:pr-14 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <span className="relative z-10 text-sm uppercase tracking-widest">
-                {isPending ? "Enviando..." : "Enviar mensaje"}
+                {isPending ? dictionary.contact.submitting : dictionary.contact.submit}
               </span>
 
               {!isPending && (
