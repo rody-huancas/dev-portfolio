@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import useThemeStore from "@/store/useThemeStore";
+import { useI18n } from "@/i18n/I18nProvider";
 import { techConfig } from "@/config/tech.config";
-import { IExperience } from "@/types/experience.types";
+import { getLocalizedText } from "@/i18n/utils";
+import type { IExperience } from "@/types/experience.types";
 import { FiExternalLink, FiFileText } from "react-icons/fi";
 
 interface ExperienceProps {
@@ -11,6 +13,7 @@ interface ExperienceProps {
 }
 
 const CardExperience = ({ experience }: ExperienceProps) => {
+  const { locale, dictionary } = useI18n();
   const theme = useThemeStore((state) => state.theme);
   const hasSingleRole = experience.roles.length === 1;
 
@@ -42,7 +45,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
               {experience.company}
             </h3>
             <p className="text-lg text-background/60 dark:text-foreground font-medium">
-              {hasSingleRole ? experience.roles[0].position : "Colaboraciones en distintos periodos"}
+              {hasSingleRole ? getLocalizedText(experience.roles[0].position, locale) : dictionary.experience.multipleRoles}
             </p>
           </div>
         </div>
@@ -50,20 +53,20 @@ const CardExperience = ({ experience }: ExperienceProps) => {
         <div className="space-y-10">
           {experience.roles.map((role, index) => (
             <div
-              key={`${experience.id}-${role.position}-${role.period}`}
+              key={`${experience.id}-${getLocalizedText(role.position, locale)}-${getLocalizedText(role.period, locale)}`}
               className={index === 0 ? "space-y-4" : "space-y-4 pt-6 border-t border-background/10 dark:border-foreground/10"}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                 {!hasSingleRole && (
                   <p className="text-lg font-semibold text-background/70 dark:text-foreground">
-                    {role.position}
+                    {getLocalizedText(role.position, locale)}
                   </p>
                 )}
                 <span className="w-fit inline-block text-[10px] md:text-[10px] font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border 
                   bg-indigo-50 text-blue-500 border-blue-200 
                   dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/30 
                   transition-colors duration-300">
-                  {role.period}
+                  {getLocalizedText(role.period, locale)}
                 </span>
               </div>
 
@@ -74,7 +77,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
                     className="text-background/60 dark:text-foreground leading-relaxed text-base flex gap-2"
                   >
                     <span className="text-status mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full bg-status" />
-                    <span className="flex-1" dangerouslySetInnerHTML={{ __html: item }} />
+                    <span className="flex-1" dangerouslySetInnerHTML={{ __html: getLocalizedText(item, locale) }} />
                   </li>
                 ))}
               </ul>
@@ -116,7 +119,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
             className="flex items-center gap-2 text-sm text-background/60 dark:text-foreground hover:text-status transition-colors"
           >
             <FiExternalLink className="text-status" size={16} />
-            <span>Sitio web</span>
+            <span>{dictionary.experience.website}</span>
           </a>
           {experience.certificateUrl && (
             <a
@@ -126,7 +129,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
               className="flex items-center gap-2 text-sm text-background/60 dark:text-foreground hover:text-status transition-colors"
             >
               <FiFileText className="text-status" size={16} />
-              <span>Constancia</span>
+              <span>{dictionary.experience.certificate}</span>
             </a>
           )}
         </div>
