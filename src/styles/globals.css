@@ -38,3 +38,21 @@
 body {
   font-family: var(--font-sans);
 }
+
+@keyframes tech-slider-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.tech-slider-track {
+  animation: tech-slider-marquee 40s linear infinite;
+}
+
+.tech-slider-track:hover {
+  animation-play-state: paused;
+}
