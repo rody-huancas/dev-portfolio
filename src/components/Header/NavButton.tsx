@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
-import { cn } from '@/utils/cn.utils';
-import type { MenuItem } from '@/types/header.types';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { useI18n } from "@/i18n/I18nProvider";
+import { cn } from "@/utils/cn.utils";
+import type { MenuItem } from "@/types/header.types";
 
 interface NavButtonProps {
   item    : MenuItem;
@@ -13,11 +14,12 @@ interface NavButtonProps {
 }
 
 const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
+  const { dictionary } = useI18n();
   const pathname = usePathname();
   const Icon = item.icon;
-  
-  const isInternalScroll = item.path.startsWith('/#') && pathname === '/';
-  const isHomeScroll     = item.path                              === '/' && pathname === '/';
+
+  const isInternalScroll = item.path.startsWith("/#") && pathname === "/";
+  const isHomeScroll     = item.path === "/" && pathname === "/";
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (isInternalScroll || isHomeScroll) {
@@ -31,16 +33,16 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
   };
 
   return (
-    <Link
-      href={item.path}
-      onClick={handleClick}
-      className={cn(
-        "w-12 h-12 rounded-full flex items-center justify-center relative group transition-colors duration-500 outline-none",
-        isActive ? "text-black" : "text-gray-400 hover:text-white hover:bg-[#1f1e1e]"
-      )}
-      aria-label={`Ir a ${item.label}`}
-      aria-current={isActive ? "page" : undefined}
-    >
+      <Link
+        href={item.path}
+        onClick={handleClick}
+        className={cn(
+          "w-12 h-12 rounded-full flex items-center justify-center relative group transition-colors duration-500 outline-none",
+          isActive ? "text-black" : "text-gray-400 hover:text-white hover:bg-[#1f1e1e]",
+        )}
+        aria-label={dictionary.header.navItemAria(item.label)}
+        aria-current={isActive ? "page" : undefined}
+      >
       {isActive && (
         <motion.div
           layoutId="activeBackground"
