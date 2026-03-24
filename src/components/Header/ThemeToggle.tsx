@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useI18n } from "@/i18n/I18nProvider";
 import useThemeStore from "@/store/useThemeStore";
 import { cn } from "@/utils/cn.utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ThemeToggle = () => {
+  const { dictionary } = useI18n();
   const theme       = useThemeStore((state) => state.theme);
   const setTheme    = useThemeStore((state) => state.setTheme);
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
@@ -34,7 +36,7 @@ const ThemeToggle = () => {
         "text-gray-600 dark:text-gray-100 hover:bg-black/5 dark:hover:bg-white/10",
       )}
       onClick={toggleTheme}
-      aria-label="Cambiar tema"
+      aria-label={dictionary.header.themeToggleAria}
     >
       <AnimatePresence mode="wait" initial={false}>
         {theme === "light" ? (
