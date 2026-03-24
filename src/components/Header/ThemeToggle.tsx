@@ -36,7 +36,7 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       aria-label="Cambiar tema"
     >
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" initial={false}>
         {theme === "light" ? (
           <motion.svg
             key="moon"
@@ -48,16 +48,17 @@ const ThemeToggle = () => {
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            initial={{ scale: 0.5, opacity: 0, rotate: -20 }}
-            animate={{ scale: 1, opacity: 1, rotate: 0 }}
-            exit={{ scale: 0.5, opacity: 0, rotate: 20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            className="absolute inset-0 m-auto"
+            initial={{ opacity: 0, scale: 0.82, filter: "blur(3px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            exit={{ opacity: 0, scale: 0.9, filter: "blur(2px)" }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <motion.path
               d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-              initial={{ pathLength: 0 }}
+              initial={{ pathLength: 0.35, opacity: 0.7 }}
               animate={{ pathLength: 1 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
             />
           </motion.svg>
         ) : (
@@ -71,24 +72,25 @@ const ThemeToggle = () => {
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.5, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 300, damping: 18 }}
+            className="absolute inset-0 m-auto"
+            initial={{ opacity: 0, scale: 0.82, filter: "blur(3px)" }}
+            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+            exit={{ opacity: 0, scale: 0.9, filter: "blur(2px)" }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <motion.circle
               cx="12"
               cy="12"
               r="5"
-              initial={{ scale: 0 }}
+              initial={{ scale: 0.7, opacity: 0.5 }}
               animate={{ scale: 1 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
             />
 
             <motion.g
-              initial={{ rotate: -45 }}
-              animate={{ rotate: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.18, ease: "easeOut" }}
             >
               {[
                 "M12 1v2",
@@ -99,16 +101,13 @@ const ThemeToggle = () => {
                 "M21 12h2",
                 "M4.22 19.78l1.42-1.42",
                 "M18.36 5.64l1.42-1.42",
-              ].map((d, i) => (
+              ].map((d) => (
                 <motion.path
-                  key={i}
+                  key={d}
                   d={d}
-                  initial={{ pathLength: 0, opacity: 0 }}
+                  initial={{ pathLength: 0.4, opacity: 0 }}
                   animate={{ pathLength: 1, opacity: 1 }}
-                  transition={{
-                    delay: i * 0.03,
-                    duration: 0.5,
-                  }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
                 />
               ))}
             </motion.g>
