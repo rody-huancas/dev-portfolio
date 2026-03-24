@@ -1,5 +1,8 @@
+"use client";
+
 import { createElement } from "react";
 import { cn } from "@/utils/cn.utils";
+import { useI18n } from "@/i18n/I18nProvider";
 
 type HeadingLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
@@ -13,6 +16,7 @@ interface Props {
 }
 
 const Title = (props: Props) => {
+  const { dictionary } = useI18n();
   const { label, title, subtitle, level = "h2", id, className = "" } = props;
 
   if (!title && !label) return null;
@@ -27,7 +31,7 @@ const Title = (props: Props) => {
         <div
           className="flex items-center gap-2 mb-4"
           role="doc-subtitle"
-          aria-label="Etiqueta de sección"
+          aria-label={dictionary.title.sectionLabelAria}
         >
           <span className="w-8 h-0.5 bg-status" aria-hidden="true"></span>
           <span className="text-status font-mono text-sm tracking-widest uppercase">
