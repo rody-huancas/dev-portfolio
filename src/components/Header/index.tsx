@@ -5,16 +5,23 @@ import { usePathname } from "next/navigation";
 import { LayoutGroup } from "framer-motion";
 import NavButton from "./NavButton";
 import ThemeToggle from "./ThemeToggle";
+import LanguageToggle from "./LanguageToggle";
 import SocialButton from "./SocialButton";
+import { useI18n } from "@/i18n/I18nProvider";
 import { useScrollNavigation } from "@/hooks/useScrollNavigation";
 import { menuItems, socialItems } from "@/config/header.config";
 
 const Header = () => {
+  const { dictionary } = useI18n();
   const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("hero");
   const { scrollToSection } = useScrollNavigation({ setActiveSection, menuItems });
 
   const isHomePage = pathname === "/";
+  const translatedMenuItems = menuItems.map((item) => ({
+    ...item,
+    label: dictionary.header.menu[item.id as keyof typeof dictionary.header.menu],
+  }));
 
   useEffect(() => {
     if (isHomePage) {
@@ -27,11 +34,11 @@ const Header = () => {
       <nav
         className="flex flex-row lg:flex-col gap-4 items-center justify-center"
         role="navigation"
-        aria-label="Navegación principal"
+        aria-label={dictionary.header.navigationAria}
       >
         <div className="bg-white/80 dark:bg-header/80 backdrop-blur-md border border-black/5 dark:border-white/5 rounded-full p-2 flex flex-row lg:flex-col gap-2 shadow-xl dark:shadow-2xl transition-colors duration-500">
           <LayoutGroup>
-            {menuItems.map((item) => {
+            {translatedMenuItems.map((item) => {
               const isActive = isHomePage ? activeSection === item.id : pathname === item.path;
 
               return (
@@ -52,7 +59,8 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="bg-white/80 dark:bg-header/80 backdrop-blur-md border border-black/5 dark:border-white/5 rounded-full p-2 flex-row lg:flex-col gap-2 shadow-xl dark:shadow-2xl transition-colors duration-500">
+        <div className="bg-white/80 dark:bg-header/80 backdrop-blur-md border border-black/5 dark:border-white/5 rounded-full p-2 flex flex-row lg:flex-col gap-2 shadow-xl dark:shadow-2xl transition-colors duration-500">
+          <LanguageToggle />
           <ThemeToggle />
         </div>
       </nav>
