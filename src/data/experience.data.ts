@@ -2,11 +2,11 @@ import type { IExperience } from "@/types/experience.types";
 
 export const experienceData: IExperience[] = [
   {
-    id: "78c63b02-4cdb-4959-9ca9-34d64d236875",
-    company: "NTT DATA Europe & Latam",
-    websiteUrl: "https://pe.nttdata.com/",
+    id            : "78c63b02-4cdb-4959-9ca9-34d64d236875",
+    company       : "NTT DATA Europe & Latam",
+    websiteUrl    : "https://pe.nttdata.com/",
     certificateUrl: "",
-    roles: [
+    roles         : [
       {
         position: {
           es: "Desarrollador Frontend",
@@ -27,11 +27,11 @@ export const experienceData: IExperience[] = [
     ],
   },
   {
-    id: "4fe573a2-1030-4565-832a-ceb418a161a8",
-    company: "USS - Universidad Señor de Sipán",
-    websiteUrl: "https://www.uss.edu.pe/",
+    id            : "4fe573a2-1030-4565-832a-ceb418a161a8",
+    company       : "USS - Universidad Señor de Sipán",
+    websiteUrl    : "https://www.uss.edu.pe/",
     certificateUrl: "https://www.linkedin.com/in/rody-huancas/details/experience/1769064663215/single-media-viewer/",
-    roles: [
+    roles         : [
       {
         position: {
           es: "Analista Desarrollador",
@@ -60,11 +60,11 @@ export const experienceData: IExperience[] = [
     ],
   },
   {
-    id: "5255ba03-4ce9-4e10-a4d4-323961a60064",
-    company: "Appex IA",
-    websiteUrl: "https://www.appexsistemas.com/",
+    id            : "5255ba03-4ce9-4e10-a4d4-323961a60064",
+    company       : "Appex IA",
+    websiteUrl    : "https://www.appexsistemas.com/",
     certificateUrl: "https://www.linkedin.com/in/rody-huancas/details/experience/2721821616/multiple-media-viewer/",
-    roles: [
+    roles         : [
       {
         position: {
           es: "Desarrollador Full Stack (Freelance)",
@@ -114,11 +114,11 @@ export const experienceData: IExperience[] = [
     ],
   },
   {
-    id: "f5b12b41-2bea-459a-b65c-81c92e22f024",
-    company: "DATEC CONSULTING SAC",
-    websiteUrl: "https://www.datec.pe/",
+    id            : "f5b12b41-2bea-459a-b65c-81c92e22f024",
+    company       : "DATEC CONSULTING SAC",
+    websiteUrl    : "https://www.datec.pe/",
     certificateUrl: "https://www.linkedin.com/in/rody-huancas/details/experience/2244137012/multiple-media-viewer/",
-    roles: [
+    roles         : [
       {
         position: {
           es: "Desarrollador Full Stack",
