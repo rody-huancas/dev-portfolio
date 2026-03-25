@@ -24,7 +24,7 @@ const ExperienceSection = () => {
   });
 
   return (
-    <section className="w-full mt-20 px-4 md:px-0">
+    <section className="w-full px-4 md:px-0">
       <div className="mb-16">
         <Title
           label={dictionary.experience.sectionLabel}
