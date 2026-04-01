@@ -8,7 +8,7 @@ export const projectsData: IProject[] = [
       es: "La web principal de Appex IA diseñada para conectar empresas con soluciones tecnológicas. Incluye una interfaz interactiva para el usuario y un sistema privado donde el equipo administra todas las consultas de forma centralizada.",
       en: "Appex IA's main website, designed to connect companies with technology solutions. It includes an interactive user-facing interface and a private system where the team manages every inquiry from one place.",
     },
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Prisma ORM", "MongoDB"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Prisma ORM", "PostgreSQL"],
     githubUrl: "",
     liveUrl: "https://www.appexsistemas.com/",
     imageUrl: "/projects/image-appexia.webp",
