@@ -38,7 +38,9 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
         onClick={handleClick}
         className={cn(
           "w-12 h-12 rounded-full flex items-center justify-center relative group transition-colors duration-500 outline-none",
-          isActive ? "text-black" : "text-gray-400 hover:text-white hover:bg-[#1f1e1e]",
+          isActive
+            ? "text-white dark:text-black"
+            : "text-gray-500 dark:text-gray-400 hover:text-black hover:bg-black/10 dark:hover:text-white dark:hover:bg-[#1f1e1e]",
         )}
         aria-label={dictionary.header.navItemAria(item.label)}
         aria-current={isActive ? "page" : undefined}
@@ -46,7 +48,7 @@ const NavButton = ({ item, isActive, onClick }: NavButtonProps) => {
       {isActive && (
         <motion.div
           layoutId="activeBackground"
-          className="absolute inset-0 bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+          className="absolute inset-0 bg-[#343639] dark:bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,0.3)]"
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
         />
       )}
