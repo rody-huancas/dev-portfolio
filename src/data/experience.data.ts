@@ -30,7 +30,7 @@ export const experienceData: IExperience[] = [
     id            : "4fe573a2-1030-4565-832a-ceb418a161a8",
     company       : "USS - Universidad Señor de Sipán",
     websiteUrl    : "https://www.uss.edu.pe/",
-    certificateUrl: "https://www.linkedin.com/in/rody-huancas/details/experience/1769064663215/single-media-viewer/",
+    certificateUrl: "https://res.cloudinary.com/dmgazox1n/image/upload/v1775520201/Portfolio/Documents/records/CERTIFICADO%20DE%20TRABAJO%20-%20USS.jpg",
     roles         : [
       {
         position: {
@@ -60,11 +60,12 @@ export const experienceData: IExperience[] = [
     ],
   },
   {
-    id            : "5255ba03-4ce9-4e10-a4d4-323961a60064",
-    company       : "Appex IA",
-    websiteUrl    : "https://www.appexsistemas.com/",
-    certificateUrl: "https://www.linkedin.com/in/rody-huancas/details/experience/2721821616/multiple-media-viewer/",
-    roles         : [
+    id               : "5255ba03-4ce9-4e10-a4d4-323961a60064",
+    company          : "Appex IA",
+    websiteUrl       : "https://www.appexsistemas.com/",
+    certificateUrl   : "https://res.cloudinary.com/dmgazox1n/image/upload/v1775520201/Portfolio/Documents/records/CERTIFICADO%20DE%20TRABAJO%20-%20APPEXIA.jpg",
+    recommendationUrl: "https://res.cloudinary.com/dmgazox1n/image/upload/v1775520201/Portfolio/Documents/records/CARTA%20DE%20RECOMENDACION%20-%20APPEXIA.jpg",
+    roles            : [
       {
         position: {
           es: "Desarrollador Full Stack (Freelance)",
@@ -117,7 +118,7 @@ export const experienceData: IExperience[] = [
     id            : "f5b12b41-2bea-459a-b65c-81c92e22f024",
     company       : "DATEC CONSULTING SAC",
     websiteUrl    : "https://www.datec.pe/",
-    certificateUrl: "https://www.linkedin.com/in/rody-huancas/details/experience/2244137012/multiple-media-viewer/",
+    certificateUrl: "https://res.cloudinary.com/dmgazox1n/image/upload/v1775520201/Portfolio/Documents/records/CERTIFICADO%20DE%20TRABAJO%20-%20DATEC.jpg",
     roles         : [
       {
         position: {
