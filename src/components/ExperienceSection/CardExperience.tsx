@@ -6,6 +6,7 @@ import { useI18n } from "@/i18n/I18nProvider";
 import { techConfig } from "@/config/tech.config";
 import { getLocalizedText } from "@/i18n/utils";
 import type { IExperience } from "@/types/experience.types";
+import { SlEnvolopeLetter } from "react-icons/sl";
 import { FiExternalLink, FiFileText } from "react-icons/fi";
 
 interface ExperienceProps {
@@ -121,6 +122,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
             <FiExternalLink className="text-status" size={16} />
             <span>{dictionary.experience.website}</span>
           </a>
+
           {experience.certificateUrl && (
             <a
               href={experience.certificateUrl}
@@ -130,6 +132,18 @@ const CardExperience = ({ experience }: ExperienceProps) => {
             >
               <FiFileText className="text-status" size={16} />
               <span>{dictionary.experience.certificate}</span>
+            </a>
+          )}
+
+          {experience.recommendationUrl && (
+            <a
+              href={experience.recommendationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-background/60 dark:text-foreground hover:text-status transition-colors"
+            >
+              <SlEnvolopeLetter className="text-status" size={16} />
+              <span>{dictionary.experience.recommendation}</span>
             </a>
           )}
         </div>
