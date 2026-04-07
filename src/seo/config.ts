@@ -1,8 +1,9 @@
 export const seoConfig = {
   siteUrl   : "https://rody-huancas.dev",
-  siteName  : "Rody Huancas Portfolio",
+  siteName  : "Rody Huancas - Portfolio",
   authorName: "Rody Huancas",
   aliases   : [
+    "Rody",
     "Rody Huancas",
     "Hilder Huancas",
     "Hilder Rody",
