@@ -8,9 +8,10 @@ export interface IExperienceRole {
 }
 
 export interface IExperience {
-  id            : string;
-  company       : string;
-  websiteUrl    : string;
-  certificateUrl: string;
-  roles         : IExperienceRole[];
+  id                : string;
+  company           : string;
+  websiteUrl        : string;
+  certificateUrl    : string;
+  recommendationUrl?: string;
+  roles             : IExperienceRole[];
 }

@@ -8,10 +8,7 @@ const sharedKeywords = [
   "Full Stack Developer",
   "Desarrollador Full Stack",
   "Desarrollador Web Perú",
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Portafolio",
+  "Portafolio Rody Huancas",
 ];
 
 export const rootMetadata: Metadata = {

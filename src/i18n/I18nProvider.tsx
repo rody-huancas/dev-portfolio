@@ -2,7 +2,8 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { defaultLocale, localeCookieName, localeStorageKey, type Locale } from "@/i18n/config";
-import { getDictionary, type AppDictionary } from "@/i18n/dictionaries";
+import { getDictionary } from "@/i18n/dictionaries";
+import { type AppDictionary } from "@/types/dictionaries.types";
 
 interface I18nContextValue {
   locale    : Locale;

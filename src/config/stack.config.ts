@@ -24,7 +24,7 @@ import IconReactNative from "@/components/icons/IconReactNative";
 
 export const TECH_STACK = [
   // Languages
-  { name: "JavaScript"  , icon: SiJavascript , color: "#F7DF1E", lightColor: "#F7DF1E" },
+  { name: "JavaScript"  , icon: SiJavascript , color: "#F7DF1E", lightColor: "#EAB308" },
   { name: "TypeScript"  , icon: SiTypescript , color: "#3178C6", lightColor: "#3178C6" },
   { name: "PHP"         , icon: SiPhp        , color: "#777BB4", lightColor: "#777BB4" },
   { name: "C#"          , icon: IconCSharp   , color: "#390091", lightColor: "#390091" },
