@@ -16,15 +16,8 @@ const HeroSection = () => {
     >
       <div className="relative flex min-h-screen flex-col justify-center">
         <div
-          className="pointer-events-none absolute inset-0 opacity-60 dark:opacity-20"
+          className="pointer-events-none absolute inset-0 grid-bg"
           aria-hidden="true"
-          style={{
-            backgroundImage: [
-              "linear-gradient(to right, rgba(23,23,23,0.08) 1px, transparent 1px)",
-              "linear-gradient(to bottom, rgba(23,23,23,0.08) 1px, transparent 1px)",
-            ].join(", "),
-            backgroundSize: "48px 48px",
-          }}
         />
 
         <div className="relative z-10 w-full max-w-5xl space-y-16 lg:px-5">
