@@ -2,6 +2,19 @@ import type { IProject } from "@/types/projects.types";
 
 export const projectsData: IProject[] = [
   {
+    id: "af80df3d-1580-443a-b475-91fe219d070c",
+    title: "AxisDev",
+    description: {
+      es: "Un tablero personal donde tienes todo tu mundo de Google (Drive, Gmail, Calendario y Tareas) en una sola pantalla. En lugar de abrir mil pestañas, aquí puedes ver tus archivos recientes, revisar correos y configurar tus preferencias para trabajar más rápido y sin distracciones.",
+      en: "A personal dashboard that puts your entire Google world (Drive, Gmail, Calendar, and Tasks) on a single screen. Instead of opening a thousand tabs, you can check recent files, read emails, and tweak your own settings to work faster and stay focused.",
+    },
+    technologies: ["Next.js", "Tailwind CSS", "NextAuth", "Supabase", "Zustand", "React Hook Form"],
+    githubUrl: "https://github.com/rody-huancas/axisdev",
+    liveUrl: "https://axisdev.vercel.app/",
+    imageUrl: "/projects/image-axisdev.webp",
+    type: "FullStack",
+  },
+  {
     id: "62c17723-d764-4b6e-95a8-c86c69a5bd50",
     title: "Appex IA",
     description: {
