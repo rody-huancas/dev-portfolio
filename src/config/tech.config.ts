@@ -36,6 +36,8 @@ import {
   SiStorybook,
   SiSupabase,
   SiReacthookform,
+  SiVitest,
+  SiNpm,
 } from "react-icons/si";
 
 export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
@@ -78,10 +80,12 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
   "Docker" : { color: "#2496ED",                        icon: SiDocker, bg: "rgba(36, 150, 237, 0.15)" },
   "Git"    : { color: "#F05032",                        icon: SiGit   , bg: "rgba(240, 80, 50, 0.15)"  },
   "Expo"   : { color: "#ffffff", lightColor: "#000000", icon: SiExpo  , bg: "rgba(255, 255, 255, 0.1)" },
+  "NPM"    : { color: "#CB3837"                       , icon: SiNpm   , bg: "rgba(203, 56, 55, 0.15)"  },
 
   // Testing
-  "Jest"      : { color: "#C21325", icon: SiJest,      bg: "rgba(194, 19, 37, 0.1)"   },
-  "Storybook" : { color: "#FF4785", icon: SiStorybook, bg: "rgba(255, 71, 133, 0.12)" },
+  "Jest"      : { color: "#C21325"                       , icon: SiJest     , bg: "rgba(194, 19, 37, 0.1)"   },
+  "Storybook" : { color: "#FF4785"                       , icon: SiStorybook, bg: "rgba(255, 71, 133, 0.12)" },
+  "Vitest"    : { color: "#FCC72B", lightColor: "#729B1B", icon: SiVitest   , bg: "rgba(252, 199, 43, 0.15)" },
 
   // Librerias - Utilidades
   "NextAuth"           : { color: "#ffffff", lightColor: "#8C27D9", icon: IconNextAuth   , bg: "rgba(140, 39, 217, 0.15)"  },

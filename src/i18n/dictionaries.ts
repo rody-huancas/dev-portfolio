@@ -68,10 +68,12 @@ export const dictionaries: Record<Locale, AppDictionary> = {
       imageAlt       : (title) => `Captura de pantalla del proyecto ${title}`,
       sourceCode     : "Código fuente",
       demo           : "Demo",
+      website        : "Sitio web",
       type           : {
         FrontEnd : "Frontend",
         BackEnd  : "Backend",
         FullStack: "Full Stack",
+        Library  : "Librería",
       },
     },
     experience: {
@@ -212,10 +214,12 @@ export const dictionaries: Record<Locale, AppDictionary> = {
       imageAlt       : (title) => `${title} project screenshot`,
       sourceCode     : "Source code",
       demo           : "Live demo",
+      website        : "Website",
       type           : {
         FrontEnd : "Frontend",
         BackEnd  : "Backend",
         FullStack: "Full Stack",
+        Library  : "Library",
       },
     },
     experience: {

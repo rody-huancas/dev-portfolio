@@ -64,7 +64,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
                   </p>
                 )}
                 <span className="w-fit inline-block text-[10px] md:text-[10px] font-bold tracking-wider uppercase px-4 py-1.5 rounded-full border 
-                  bg-indigo-50 text-blue-500 border-blue-200 
+                  bg-transparent text-blue-500 border-blue-200 
                   dark:bg-blue-500/10 dark:text-blue-400 dark:border-blue-500/30 
                   transition-colors duration-300">
                   {getLocalizedText(role.period, locale)}
@@ -112,7 +112,7 @@ const CardExperience = ({ experience }: ExperienceProps) => {
           ))}
         </div>
 
-        <div className="flex items-center gap-6 pt-2">
+        <div className="flex items-center flex-wrap gap-6 pt-2">
           <a
             href={experience.websiteUrl}
             target="_blank"
