@@ -64,10 +64,12 @@ export interface AppDictionary {
     imageAlt       : (title: string) => string;
     sourceCode     : string;
     demo           : string;
+    website        : string;
     type           : {
       FrontEnd : string;
       BackEnd  : string;
       FullStack: string;
+      Library  : string;
     };
   };
   experience: {
