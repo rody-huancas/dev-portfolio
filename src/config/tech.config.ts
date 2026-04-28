@@ -38,6 +38,7 @@ import {
   SiReacthookform,
   SiVitest,
   SiNpm,
+  SiRedhatopenshift,
 } from "react-icons/si";
 
 export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
@@ -77,10 +78,11 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
   "Prisma ORM" : { color: "#5A67D8", lightColor: "#2D3748", icon: SiPrisma    , bg: "rgba(90, 103, 216, 0.15)"  },
 
   // DevOps / Herramientas
-  "Docker" : { color: "#2496ED",                        icon: SiDocker, bg: "rgba(36, 150, 237, 0.15)" },
-  "Git"    : { color: "#F05032",                        icon: SiGit   , bg: "rgba(240, 80, 50, 0.15)"  },
-  "Expo"   : { color: "#ffffff", lightColor: "#000000", icon: SiExpo  , bg: "rgba(255, 255, 255, 0.1)" },
-  "NPM"    : { color: "#CB3837"                       , icon: SiNpm   , bg: "rgba(203, 56, 55, 0.15)"  },
+  "Docker"   : { color: "#2496ED",                        icon: SiDocker         , bg: "rgba(36, 150, 237, 0.15)" },
+  "Git"      : { color: "#F05032",                        icon: SiGit            , bg: "rgba(240, 80, 50, 0.15)"  },
+  "Expo"     : { color: "#ffffff", lightColor: "#000000", icon: SiExpo           , bg: "rgba(255, 255, 255, 0.1)" },
+  "NPM"      : { color: "#CB3837"                       , icon: SiNpm            , bg: "rgba(203, 56, 55, 0.15)"  },
+  "OpenShift": { color: "#EE0001"                       , icon: SiRedhatopenshift, bg: "rgba(238, 0, 0, 0.15)"    },
 
   // Testing
   "Jest"      : { color: "#C21325"                       , icon: SiJest     , bg: "rgba(194, 19, 37, 0.1)"   },
