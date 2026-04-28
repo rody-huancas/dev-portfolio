@@ -9,8 +9,8 @@ export const experienceData: IExperience[] = [
     roles         : [
       {
         position: {
-          es: "Desarrollador Frontend",
-          en: "Frontend Developer",
+          es: "Desarrollador Full Stack",
+          en: "Full Stack Developer",
         },
         period: {
           es: "Ene 2026 - Presente",
@@ -18,11 +18,23 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Desarrollo del frontend de la nueva aplicación para Telefónica Argentina, implementando interfaces basadas en lineamientos de UX y colaborando en equipos multidisciplinarios bajo metodologías ágiles.",
-            en: "Build the frontend for Telefónica Argentina's new application, implementing interfaces based on UX guidelines and collaborating with multidisciplinary teams under agile methodologies.",
+            es: "Desarrollo de nuevas funcionalidades para las plataformas web y móvil de Telefónica Argentina, priorizando la velocidad y la experiencia de usuario.",
+            en: "Developing new features for Telefónica Argentina's web and mobile platforms, focusing on speed and user experience.",
+          },
+          {
+            es: "Creación de componentes reutilizables para la librería UI del cliente, asegurando que todos los productos mantengan el mismo diseño.",
+            en: "Building reusable components for the client's UI library, ensuring all products maintain a consistent design.",
+          },
+          {
+            es: "Construcción de microservicios para manejar la lógica de negocio y mejorar la comunicación entre el front y los datos.",
+            en: "Building microservices to handle business logic and improve communication between the frontend and data.",
+          },
+          {
+            es: "Apoyo en la gestión de despliegues y monitoreo de la infraestructura para que el servicio siempre esté disponible.",
+            en: "Supporting deployment management and infrastructure monitoring to keep the service always available.",
           },
         ],
-        technologies: ["React.js", "React Native", "Next.js", "TypeScript", "Material UI", "Git", "Jest", "Storybook"],
+        technologies: ["Next.js", "React Native", "Node.js", "Express", "TypeScript", "OpenShift", "Docker", "Jest", "Storybook", "Material UI", "Git"],
       },
     ],
   },
