@@ -34,7 +34,7 @@ export const experienceData: IExperience[] = [
             en: "Supporting deployment management and infrastructure monitoring to keep the service always available.",
           },
         ],
-        technologies: ["Next.js", "React Native", "Node.js", "Express", "TypeScript", "OpenShift", "Docker", "Jest", "Storybook", "Material UI", "Git"],
+        technologies: ["Next.js", "React Native", "Node.js", "Express", "TypeScript", "OpenShift", "Jest", "Storybook", "Material UI", "Git"],
       },
     ],
   },
