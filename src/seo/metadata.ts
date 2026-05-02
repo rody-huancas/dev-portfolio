@@ -6,6 +6,12 @@ const defaultImage = "/logo.svg";
 const sharedKeywords = [
   ...seoConfig.aliases,
   "Full Stack Developer",
+  "Rody",
+  "Hilder Rody",
+  "Rody Huancas",
+  "Rody Chuquipoma",
+  "Rody Huancas Chuquipoma",
+  "Hilder Rody Huancas Chuquipoma",
   "Desarrollador Full Stack",
   "Desarrollador Web Perú",
   "Portafolio Rody Huancas",
@@ -58,6 +64,7 @@ export const rootMetadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : undefined,
 };
 
 export const homeMetadata: Metadata = {
