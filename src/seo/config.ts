@@ -1,6 +1,6 @@
 export const seoConfig = {
-  siteUrl   : "https://rody-huancas.dev",
-  siteName  : "Rody Huancas - Portfolio",
+  siteUrl   : "https://rody-huancas.vercel.app",
+  siteName  : "Rody Huancas",
   authorName: "Rody Huancas",
   aliases   : [
     "Rody",
@@ -13,7 +13,7 @@ export const seoConfig = {
   role          : "Full Stack Developer",
   locale        : "es_PE",
   defaultTitle  : "Rody Huancas | Full Stack Developer",
-  defaultBio    : "Portafolio profesional de Rody Huancas, desarrollador Full Stack especializado en React, Next.js y TypeScript.",
+  defaultBio    : "Ingeniero de Sistemas de la USS en Perú, desarrollador Full Stack especializado en el ecosistema JavaScript/TypeScript (React, Next.js, NestJS)",
   contactEmail  : "rodyhuancas.04@gmail.com",
   socialProfiles: [
     "https://github.com/rody-huancas",
