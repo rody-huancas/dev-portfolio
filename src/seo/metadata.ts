@@ -6,6 +6,12 @@ const defaultImage = "/logo.svg";
 const sharedKeywords = [
   ...seoConfig.aliases,
   "Full Stack Developer",
+  "Rody",
+  "Hilder Rody",
+  "Rody Huancas",
+  "Rody Chuquipoma",
+  "Rody Huancas Chuquipoma",
+  "Hilder Rody Huancas Chuquipoma",
   "Desarrollador Full Stack",
   "Desarrollador Web Perú",
   "Portafolio Rody Huancas",
@@ -25,6 +31,12 @@ export const rootMetadata: Metadata = {
   alternates  : {
     canonical: seoConfig.siteUrl,
   },
+  icons: {
+    icon    : "/favicon.ico",
+    apple   : "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     type       : "website",
     locale     : seoConfig.locale,
@@ -53,21 +65,22 @@ export const rootMetadata: Metadata = {
     googleBot: {
       index               : true,
       follow              : true,
-      "max-image-preview": "large",
-      "max-snippet"      : -1,
-      "max-video-preview": -1,
+      "max-image-preview" : "large",
+      "max-snippet"       : -1,
+      "max-video-preview" : -1,
     },
   },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : undefined,
 };
 
 export const homeMetadata: Metadata = {
-  title      : "Rody Huancas | Software Developer",
+  title      : seoConfig.defaultTitle,
   description: "Desarrollador de software especializado en crear soluciones digitales escalables y robustas con React, Next.js y TypeScript.",
   keywords   : [
     ...seoConfig.aliases,
-    "Software Developer",
+    "Full Stack Developer",
+    "Desarrollador Full Stack",
     "Desarrollador de software",
-    "Full Stack",
     "React",
     "Next.js",
     "TypeScript",
@@ -77,7 +90,7 @@ export const homeMetadata: Metadata = {
     canonical: seoConfig.siteUrl,
   },
   openGraph: {
-    title      : "Rody Huancas | Software Developer",
+    title      : seoConfig.defaultTitle,
     description: "Construyo aplicaciones pensando en el largo plazo y en la experiencia del usuario.",
     url        : seoConfig.siteUrl,
     locale     : seoConfig.locale,
@@ -86,7 +99,7 @@ export const homeMetadata: Metadata = {
   },
   twitter: {
     card       : "summary_large_image",
-    title      : "Rody Huancas | Software Developer",
+    title      : seoConfig.defaultTitle,
     description: "Portafolio y servicios de desarrollo de software moderno.",
     images     : [defaultImage],
   },
