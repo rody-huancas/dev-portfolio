@@ -13,7 +13,7 @@ export const seoConfig = {
   role          : "Full Stack Developer",
   locale        : "es_PE",
   defaultTitle  : "Rody Huancas | Full Stack Developer",
-  defaultBio    : "Ingeniero de Sistemas de la USS en Perú, desarrollador Full Stack especializado en el ecosistema JavaScript/TypeScript (React, Next.js, NestJS)",
+  defaultBio    : "Hay miles de developers. Pocos entienden tanto el negocio como el código. Ingeniero de Sistemas con 3 años entregando software completo, limpio y listo para escalar.",
   contactEmail  : "rodyhuancas.04@gmail.com",
   socialProfiles: [
     "https://github.com/rody-huancas",
