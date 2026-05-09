@@ -74,7 +74,7 @@ export const rootMetadata: Metadata = {
 };
 
 export const homeMetadata: Metadata = {
-  title      : seoConfig.defaultTitle,
+  title      : { absolute: seoConfig.defaultTitle },
   description: "Desarrollador de software especializado en crear soluciones digitales escalables y robustas con React, Next.js y TypeScript.",
   keywords   : [
     ...seoConfig.aliases,
