@@ -39,6 +39,7 @@ import {
   SiVitest,
   SiNpm,
   SiRedhatopenshift,
+  SiBootstrap,
 } from "react-icons/si";
 
 export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
@@ -56,6 +57,7 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
   "Next.js"       : { color: "#ffffff", lightColor: "#000000", icon: SiNextdotjs         , bg: "rgba(255, 255, 255, 0.1)"  },
   "Astro"         : { color: "#ffffff", lightColor: "#FF5D01", icon: IconAstro           , bg: "rgba(255, 93, 1, 0.1)"     },
   "Tailwind CSS"  : { color: "#06B6D4",                        icon: SiTailwindcss       , bg: "rgba(6, 182, 212, 0.15)"   },
+  "Bootstrap"     : { color: "#7952B3"                       , icon: SiBootstrap         , bg: "rgba(121, 82, 179, 0.15)"  },
   "Material UI"   : { color: "#0081CB",                        icon: IconMUI             , bg: "rgba(0, 129, 203, 0.15)"   },
   "Framer Motion" : { color: "#FEF62A", lightColor: "#d4cd00", icon: TbBrandFramerMotion , bg: "rgba(254, 246, 42, 0.1)"   },
   "GSAP"          : { color: "#88CE02",                        icon: IconGsap            , bg: "rgba(136, 206, 2, 0.15)"   },

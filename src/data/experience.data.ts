@@ -89,12 +89,12 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Rediseño y desarrollo del sitio web oficial de Appex IA con animaciones GSAP enfocadas en métricas comerciales.",
-            en: "Redesigned and developed Appex IA's official website with GSAP animations focused on business metrics.",
+            es: "Rediseñé el sitio web oficial de la empresa, mejorando su presencia en línea con animaciones atractivas enfocadas en mostrar resultados del negocio.",
+            en: "Redesigned the company's official website, improving its online presence with engaging animations focused on showcasing business results.",
           },
           {
-            es: "Optimización de Core Web Vitals y estrategia de SEO técnico para impulsar el posicionamiento.",
-            en: "Optimized Core Web Vitals and technical SEO strategy to improve positioning.",
+            es: "Apliqué mejoras técnicas para que el sitio cargue más rápido y aparezca mejor posicionado en los resultados de búsqueda.",
+            en: "Applied technical improvements to make the site load faster and rank better in search results.",
           },
         ],
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Prisma ORM", "PostgreSQL"],
@@ -143,19 +143,27 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Mantenimiento y expansión de un ERP empresarial basado en PHP.",
-            en: "Maintained and expanded a PHP-based enterprise ERP.",
+            es: "Participé en el mantenimiento y crecimiento de un ERP empresarial crítico, asegurando la continuidad operativa del negocio.",
+            en: "Participated in the maintenance and growth of a critical enterprise ERP, ensuring business operational continuity.",
           },
           {
-            es: "Desarrollo de una nueva versión del ERP utilizando NestJS para modernizar la estructura del sistema.",
-            en: "Built a new ERP version with NestJS to modernize the system structure.",
+            es: "Formé parte del equipo que migró el sistema a una arquitectura moderna, mejorando su mantenibilidad y escalabilidad a futuro.",
+            en: "Was part of the team that migrated the system to a modern architecture, improving its maintainability and future scalability.",
           },
           {
-            es: "Implementación de nuevas funcionalidades y módulos de gestión integrados al ecosistema existente.",
-            en: "Implemented new features and management modules integrated into the existing ecosystem.",
+            es: "Desarrollé e integré nuevos módulos de gestión al ecosistema existente, ampliando las capacidades operativas de la plataforma.",
+            en: "Developed and integrated new management modules into the existing ecosystem, expanding the platform's operational capabilities.",
+          },
+          {
+            es: "Optimicé consultas a la base de datos, reduciendo tiempos de respuesta en procesos que anteriormente eran lentos.",
+            en: "Optimized database queries, reducing response times in processes that were previously slow.",
+          },
+          {
+            es: "Realicé despliegues del sistema para nuevos clientes, asegurando una implementación estable y sin interrupciones.",
+            en: "Handled system deployments for new clients, ensuring a stable and seamless implementation.",
           },
         ],
-        technologies: ["PHP", "React.js", "JavaScript", "NestJS", "PostgreSQL", "Docker"],
+        technologies: ["PHP", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "TypeScript", "NestJS", "PostgreSQL", "Docker"],
       },
     ],
   },
