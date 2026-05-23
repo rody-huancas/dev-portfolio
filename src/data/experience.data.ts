@@ -55,16 +55,20 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Optimización de consultas críticas logrando reducir tiempos de respuesta en un 95%.",
-            en: "Optimized critical queries, reducing response times by 95%.",
+            es: "Desarrollé tres sistemas internos desde cero: control de asistencia docente, gestión de repositorios entre áreas y un sistema de capacitación que incluía inscripción masiva, seguimiento de asistencia, generación automática de certificados, reportes y control de permisos por usuario.",
+            en: "Built three internal systems from scratch: faculty attendance tracking, cross-department file repository management, and a training platform featuring bulk enrollment, attendance tracking, automatic certificate generation, reports, and role-based permissions.",
           },
           {
-            es: "Integración de React y TypeScript como stack principal para el desarrollo de nuevos proyectos internos.",
-            en: "Introduced React and TypeScript as the main stack for new internal projects.",
+            es: "Optimicé consultas SQL críticas reduciendo tiempos de respuesta de varios minutos a segundos, identificando y resolviendo cuellos de botella en los procesos más exigentes del sistema.",
+            en: "Optimized critical SQL queries, cutting response times from several minutes down to seconds by identifying and resolving bottlenecks in the system's most demanding processes.",
           },
           {
-            es: "Rediseño y desarrollo de módulos integrales para la gestión de procesos universitarios.",
-            en: "Redesigned and developed end-to-end modules for university process management.",
+            es: "Lideré la adopción de React y TypeScript como stack principal para el desarrollo de nuevos sistemas, modernizando el flujo de trabajo del equipo e introduciendo Git como herramienta de control de versiones.",
+            en: "Led the adoption of React and TypeScript as the main stack for new systems, modernizing the team's workflow and introducing Git for version control.",
+          },
+          {
+            es: "Participé activamente en la toma de decisiones técnicas para nuevos requerimientos, aportando criterio en el diseño de soluciones y en el crecimiento de los sistemas existentes.",
+            en: "Actively participated in technical decision-making for new requirements, contributing to solution design and the evolution of existing systems.",
           },
         ],
         technologies: ["C#", ".Net", "React.js", "JavaScript", "TypeScript", "SQL Server", "Git"],
