@@ -122,7 +122,7 @@ const HeroSection = () => {
             </a>
 
             <a
-              href="https://res.cloudinary.com/dmgazox1n/image/upload/v1779678975/Portfolio/Documents/CV%20-%20RODY%20HUANCAS%20CHUQUIPOMA.pdf"
+              href={dictionary.hero.resume.url}
               aria-label={dictionary.hero.resume.ariaLabel}
               title={dictionary.hero.resume.title}
               target="_blank"
