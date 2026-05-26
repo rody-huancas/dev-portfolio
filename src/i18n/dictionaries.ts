@@ -54,6 +54,7 @@ export const dictionaries: Record<Locale, AppDictionary> = {
         ariaLabel: "Descargar currículum vitae en formato PDF",
         title    : "Descargar CV",
         label    : "Ver CV",
+        url      : "https://res.cloudinary.com/dmgazox1n/image/upload/v1779678975/Portfolio/Documents/CV%20-%20RODY%20HUANCAS%20CHUQUIPOMA.pdf",
       },
     },
     projects: {
@@ -200,6 +201,7 @@ export const dictionaries: Record<Locale, AppDictionary> = {
         ariaLabel: "Download resume in PDF format",
         title    : "Download resume",
         label    : "View resume",
+        url      : "https://res.cloudinary.com/dmgazox1n/image/upload/v1779760447/Portfolio/Documents/CV%20-%20HILDER%20RODY%20HUANCAS%20CHUQUIPOMA%20-%20EN.pdf",
       },
     },
     projects: {
