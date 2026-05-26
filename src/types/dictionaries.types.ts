@@ -50,6 +50,7 @@ export interface AppDictionary {
       ariaLabel: string;
       title    : string;
       label    : string;
+      url      : string;
     };
   };
   projects: {
