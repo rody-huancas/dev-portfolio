@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import { DM_Sans } from "next/font/google";
 import { cn } from "@/utils/cn.utils";
 import { themeScript } from "@/utils/theme-script";
 import { rootMetadata } from "@/seo/metadata";
@@ -9,11 +8,6 @@ import { localeCookieName, resolveLocale } from "@/i18n/config";
 import { jsonLd, personJsonLd, websiteJsonLd } from "@/seo/schema";
 import "@/styles/globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets : ["latin"],
-});
-
 export const metadata: Metadata = rootMetadata;
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -21,7 +15,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const initialLocale = resolveLocale(cookieStore.get(localeCookieName)?.value);
 
   return (
-    <html lang={initialLocale} suppressHydrationWarning>
+    <html lang={initialLocale} suppressHydrationWarning className="font-sans">
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <script
@@ -32,11 +26,12 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           type="application/ld+json"
           dangerouslySetInnerHTML={jsonLd(websiteJsonLd)}
         />
+        <link rel="preload" href="/fonts/chillax/Chillax-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
       
-      <body className={cn("antialiased bg-foreground text-background dark:text-foreground dark:bg-background", dmSans.className)}>
+      <body className={cn("antialiased bg-foreground text-background dark:text-foreground dark:bg-background font-sans")}>
         <I18nProvider initialLocale={initialLocale}>
           {children}
         </I18nProvider>

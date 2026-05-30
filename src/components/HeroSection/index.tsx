@@ -42,7 +42,7 @@ const HeroSection = () => {
                   className="absolute inset-0 translate-x-1.5 translate-y-1 rotate-[1.2deg] rounded-2xl border border-status/20 bg-status/18 sm:translate-x-2 sm:translate-y-1.5 sm:rounded-[1.2rem] md:translate-x-2.5 md:translate-y-2 md:rounded-[1.35rem]"
                   aria-hidden="true"
                 />
-                <span className="relative inline-flex max-w-full rounded-2xl bg-status px-4 py-2 text-[2.15rem] leading-none text-foreground shadow-[0_12px_30px_rgba(34,197,94,0.10)] sm:rounded-[1.2rem] sm:px-5 sm:py-2 sm:text-[3rem] md:rounded-[1.35rem] md:px-6 md:py-2.5 md:text-[4rem] lg:text-[6rem]">
+                <span className="relative inline-flex max-w-full rounded-2xl bg-status px-4 py-2 text-[2.15rem] leading-none text-foreground shadow-[0_12px_30px_rgba(34,197,94,0.10)] sm:rounded-[1.2rem] sm:px-5 sm:py-2 sm:text-[3rem] md:rounded-[1.35rem] md:px-6 md:py-2.5 md:text-[4rem] lg:text-[5rem]">
                   <span
                     className="absolute left-2 top-1.5 h-1.5 w-1.5 rounded-full bg-foreground/16 sm:left-3 sm:top-2 sm:h-2 sm:w-2"
                     aria-hidden="true"

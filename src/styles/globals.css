@@ -1,3 +1,4 @@
+@import "./fonts.css";
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -32,11 +33,12 @@
   --color-status      : var(--status-available);
   --color-secondary   : var(--text-secondary);
   --color-description : var(--text-description);
-  --font-sans         : var(--font-dm-sans);
+  --font-sans         : Chillax, ui-sans-serif, system-ui, sans-serif;
+  --font-mono         : Chillax, ui-sans-serif, system-ui, sans-serif;
 }
 
-body {
-  font-family: var(--font-sans);
+html {
+  font-family: Chillax, ui-sans-serif, system-ui, sans-serif;
 }
 
 @keyframes tech-slider-marquee {
