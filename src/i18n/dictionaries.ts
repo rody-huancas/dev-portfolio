@@ -29,7 +29,7 @@ export const dictionaries: Record<Locale, AppDictionary> = {
     hero: {
       sectionAria : "Sección de presentación",
       availability: "Disponible para trabajar",
-      greeting    : "Hola, soy Rody,",
+      greeting    : "Hola, soy Rody",
       role        : "Software Developer",
       intro       : {
         beforeYears: "Programar es fácil, lo difícil es hacerlo simple. Llevo ",
@@ -176,7 +176,7 @@ export const dictionaries: Record<Locale, AppDictionary> = {
     hero: {
       sectionAria : "Introduction section",
       availability: "Available for work",
-      greeting    : "Hi, I'm Rody,",
+      greeting    : "Hi, I'm Rody",
       role        : "Software Developer",
       intro       : {
         beforeYears: "Writing code is easy, making it simple is the hard part. I have spent ",
