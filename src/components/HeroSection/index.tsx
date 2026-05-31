@@ -1,9 +1,9 @@
 "use client";
 
+import { useI18n } from "@/i18n/I18nProvider";
 import ExperienceSection from "../ExperienceSection";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowUpRight, FiMail } from "react-icons/fi";
-import { useI18n } from "@/i18n/I18nProvider";
 
 const HeroSection = () => {
   const { dictionary } = useI18n();
