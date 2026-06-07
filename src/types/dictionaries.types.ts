@@ -89,12 +89,10 @@ export interface AppDictionary {
     sectionSubtitle: string;
     paragraphs     : {
       first: {
-        beforeName     : string;
-        afterName      : string;
-        universityLabel: string;
-        afterUniversity: string;
-        years          : string;
-        afterYears     : string;
+        beforeName: string;
+        afterName : string;
+        years     : string;
+        afterYears: string;
       };
       second: {
         beforeRole       : string;
@@ -102,18 +100,13 @@ export interface AppDictionary {
         between          : string;
         architecture     : string;
         afterArchitecture: string;
+        stack            : string;
+        afterStack       : string;
       };
       third: {
-        beforeStack  : string;
-        stack        : string;
-        between      : string;
-        emphasis     : string;
-        afterEmphasis: string;
-      };
-      closing: {
-        beforeHighlight: string;
-        highlight      : string;
-        afterHighlight : string;
+        beforeEmphasis: string;
+        emphasis      : string;
+        afterEmphasis : string;
       };
     };
   };
