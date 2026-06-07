@@ -24,16 +24,6 @@ const AboutSection = () => {
               Rody Huancas
             </span>
             {about.first.afterName}
-            <a
-              href="https://www.uss.edu.pe/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="dark:text-foreground text-background/80 font-medium hover:text-status transition-all border-b border-status/20 hover:border-status mx-1"
-              title="Universidad Señor de Sipán"
-            >
-              {about.first.universityLabel}
-            </a>
-            {about.first.afterUniversity}
             <span className="text-status">{about.first.years}</span>
             {about.first.afterYears}
           </p>
@@ -48,25 +38,17 @@ const AboutSection = () => {
               {about.second.architecture}
             </span>
             {about.second.afterArchitecture}
+            <span className="dark:text-foreground text-background/80">
+              {about.second.stack}
+            </span>
+            {about.second.afterStack}
           </p>
 
           <p>
-            {about.third.beforeStack}
-            <span className="dark:text-foreground text-background/80">
-              {about.third.stack}
-            </span>
-            {about.third.between}
+            {about.third.beforeEmphasis}
             <span className="text-status">{about.third.emphasis}</span>
             {about.third.afterEmphasis}
           </p>
-
-          <div className="pt-10 border-t border-background/10 dark:border-foreground/10">
-            <p className="dark:text-foreground text-background/60 font-medium">
-              {about.closing.beforeHighlight}
-              <span className="text-status">{about.closing.highlight}</span>
-              {about.closing.afterHighlight}
-            </p>
-          </div>
         </div>
       </div>
 
