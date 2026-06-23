@@ -2,6 +2,19 @@ import type { IProject } from "@/types/projects.types";
 
 export const projectsData: IProject[] = [
   {
+    id         : "5a0b3797-a8f2-47bc-8d49-268daeaad611",
+    title      : "Premios Lopito",
+    description: {
+      es: "Sistema completo de sorteos online con panel de administración, verificación de boletos por comprobante, consulta de DNI en tiempo real y exportación de reportes en PDF y Excel. Pagos vía YAPE y PLIN con gestión multi-administrador.",
+      en: "Full-featured online raffle system with an admin dashboard, ticket verification via payment receipts, real-time DNI lookup, and report exports in PDF and Excel. Supports YAPE and PLIN payments with multi-admin management.",
+    },
+    technologies: ["Next.js", "PostgreSQL", "Drizzle ORM", "Tanstack Query", "Better Auth", "GSAP", "Tailwind CSS"],
+    githubUrl   : "",
+    liveUrl     : "https://www.premioslopito.com/",
+    imageUrl    : "/projects/image-premios-lopito.webp",
+    type        : "FullStack"
+  },
+  {
     id         : "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     title      : "React Rescuer",
     description: {
