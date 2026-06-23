@@ -40,7 +40,10 @@ import {
   SiNpm,
   SiRedhatopenshift,
   SiBootstrap,
+  SiDrizzle
 } from "react-icons/si";
+import IconBetterAuth from "@/components/icons/IconBetterAuth";
+import IconTanstackQuery from "@/components/icons/IconTanstackQuery";
 
 export const techConfig: Record<string, { color: string; lightColor?: string; icon: IconType; bg: string }> = {
 
@@ -60,6 +63,7 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
   "Bootstrap"     : { color: "#7952B3"                       , icon: SiBootstrap         , bg: "rgba(121, 82, 179, 0.15)"  },
   "Material UI"   : { color: "#0081CB",                        icon: IconMUI             , bg: "rgba(0, 129, 203, 0.15)"   },
   "Framer Motion" : { color: "#FEF62A", lightColor: "#d4cd00", icon: TbBrandFramerMotion , bg: "rgba(254, 246, 42, 0.1)"   },
+  "Tanstack Query": { color: "#FF4154", lightColor: "#FF4154", icon: IconTanstackQuery   , bg: "rgba(254, 246, 42, 0.1)"   },
   "GSAP"          : { color: "#88CE02",                        icon: IconGsap            , bg: "rgba(136, 206, 2, 0.15)"   },
   "Vite"          : { color: "#646CFF",                        icon: SiVite              , bg: "rgba(100, 108, 255, 0.15)" },
 
@@ -72,12 +76,13 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
   ".Net"    : { color: "#ffffff", lightColor: "#5632D5", icon: SiDotnet   , bg: "rgba(81, 43, 212, 0.7)"    },
 
   // Base de datos
-  "PostgreSQL" : { color: "#4169E1",                        icon: SiPostgresql, bg: "rgba(65, 105, 225, 0.15)"  },
-  "MySQL"      : { color: "#4479A1",                        icon: SiMysql     , bg: "rgba(68, 121, 161, 0.15)"  },
-  "SQL Server" : { color: "#CC2927",                        icon: DiMsqlServer, bg: "rgba(204, 41, 39, 0.15)"   },
-  "MongoDB"    : { color: "#47A248",                        icon: SiMongodb   , bg: "rgba(71, 162, 72, 0.15)"   },
-  "TypeORM"    : { color: "#FF6619",                        icon: SiTypeorm   , bg: "rgba(255, 102, 25, 0.1)"   },
-  "Prisma ORM" : { color: "#5A67D8", lightColor: "#2D3748", icon: SiPrisma    , bg: "rgba(90, 103, 216, 0.15)"  },
+  "PostgreSQL"  : { color: "#4169E1",                        icon: SiPostgresql, bg: "rgba(65, 105, 225, 0.15)"  },
+  "MySQL"       : { color: "#4479A1",                        icon: SiMysql     , bg: "rgba(68, 121, 161, 0.15)"  },
+  "SQL Server"  : { color: "#CC2927",                        icon: DiMsqlServer, bg: "rgba(204, 41, 39, 0.15)"   },
+  "MongoDB"     : { color: "#47A248",                        icon: SiMongodb   , bg: "rgba(71, 162, 72, 0.15)"   },
+  "TypeORM"     : { color: "#FF6619",                        icon: SiTypeorm   , bg: "rgba(255, 102, 25, 0.1)"   },
+  "Drizzle ORM" : { color: "#C5F74F", lightColor: "#111110", icon: SiDrizzle   , bg: "rgba(197, 247, 79, 0.55)"  },
+  "Prisma ORM"  : { color: "#5A67D8", lightColor: "#2D3748", icon: SiPrisma    , bg: "rgba(90, 103, 216, 0.15)"  },
 
   // DevOps / Herramientas
   "Docker"   : { color: "#2496ED",                        icon: SiDocker         , bg: "rgba(36, 150, 237, 0.15)" },
@@ -93,6 +98,7 @@ export const techConfig: Record<string, { color: string; lightColor?: string; ic
 
   // Librerias - Utilidades
   "NextAuth"           : { color: "#ffffff", lightColor: "#8C27D9", icon: IconNextAuth   , bg: "rgba(140, 39, 217, 0.15)"  },
+  "Better Auth"        : { color: "#ffffff", lightColor: "#000000", icon: IconBetterAuth , bg: "rgba(140, 39, 217, 0.15)"  },
   "Auth.js"            : { color: "#ffffff", lightColor: "#000000", icon: SiNextdotjs    , bg: "rgba(255, 255, 255, 0.1)"  },
   "Supabase"           : { color: "#3ECF8E",                        icon: SiSupabase     , bg: "rgba(62, 207, 142, 0.15)"  },
   "Zustand"            : { color: "#ffffff", lightColor: "#43392F", icon: IconZustand    , bg: "rgba(67, 57, 47, 0.15)"    },
