@@ -1,8 +1,8 @@
+import { defineProject } from "@/utils/id.utils";
 import type { IProject } from "@/types/projects.types";
 
 export const projectsData: IProject[] = [
-  {
-    id         : "5a0b3797-a8f2-47bc-8d49-268daeaad611",
+  defineProject({
     title      : "Premios Lopito",
     description: {
       es: "Sistema completo de sorteos online con panel de administración, verificación de boletos por comprobante, consulta de DNI en tiempo real y exportación de reportes en PDF y Excel. Pagos vía YAPE y PLIN con gestión multi-administrador.",
@@ -12,14 +12,13 @@ export const projectsData: IProject[] = [
     githubUrl   : "",
     liveUrl     : "https://www.premioslopito.com/",
     imageUrl    : "/projects/image-premios-lopito.webp",
-    type        : "FullStack"
-  },
-  {
-    id         : "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    type        : "FullStack",
+  }),
+  defineProject({
     title      : "React Rescuer",
     description: {
       es: "Una librería ligera diseñada para rescatar aplicaciones de React de errores fatales de renderizado. Permite atrapar fallos en componentes específicos, mostrar fallback UIs personalizadas y recuperar el estado sin necesidad de recargar toda la página.",
-      en: "A lightweight library designed to rescue React applications from fatal rendering errors. It catches failures in specific components, displays custom fallback UIs, and recovers state without needing a full page reload."
+      en: "A lightweight library designed to rescue React applications from fatal rendering errors. It catches failures in specific components, displays custom fallback UIs, and recovers state without needing a full page reload.",
     },
     technologies: ["Next.js", "Tailwind CSS", "TypeScript", "GSAP", "NPM", "Vitest"],
     githubUrl   : "https://github.com/rody-huancas/website-react-rescuer",
@@ -31,9 +30,8 @@ export const projectsData: IProject[] = [
       { type: "repo"   , url: "https://github.com/rody-huancas/website-react-rescuer" },
       { type: "npm"    , url: "https://www.npmjs.com/package/react-rescuer" },
     ],
-  },
-  {
-    id         : "af80df3d-1580-443a-b475-91fe219d070c",
+  }),
+  defineProject({
     title      : "AxisDev",
     description: {
       es: "Un tablero personal donde tienes todo tu mundo de Google (Drive, Gmail, Calendario y Tareas) en una sola pantalla. En lugar de abrir mil pestañas, aquí puedes ver tus archivos recientes, revisar correos y configurar tus preferencias para trabajar más rápido.",
@@ -44,9 +42,8 @@ export const projectsData: IProject[] = [
     liveUrl     : "https://axisdev.vercel.app/",
     imageUrl    : "/projects/image-axisdev.webp",
     type        : "FullStack",
-  },
-  {
-    id         : "62c17723-d764-4b6e-95a8-c86c69a5bd50",
+  }),
+  defineProject({
     title      : "Appex IA",
     description: {
       es: "La web principal de Appex IA diseñada para conectar empresas con soluciones tecnológicas. Incluye una interfaz interactiva y un sistema privado donde administran todas la información de forma centralizada.",
@@ -57,9 +54,8 @@ export const projectsData: IProject[] = [
     liveUrl     : "https://www.appexsistemas.com/",
     imageUrl    : "/projects/image-appexia.webp",
     type        : "FullStack",
-  },
-  {
-    id         : "ed4f0c80-014e-4fa9-b8b0-e58cceedee08",
+  }),
+  defineProject({
     title      : "VizGit",
     description: {
       es: "Transforma tus commits en una experiencia visual. Una herramienta rápida y sin registros para analizar tu impacto en GitHub y compartir tus estadísticas con estilo.",
@@ -70,9 +66,8 @@ export const projectsData: IProject[] = [
     liveUrl     : "https://vizgit-rh.vercel.app/",
     imageUrl    : "/projects/image-vizgit.webp",
     type        : "FrontEnd",
-  },
-  {
-    id         : "e6c0c439-8959-4c42-a627-d78f69ef0c15",
+  }),
+  defineProject({
     title      : "Dependra",
     description: {
       es: "Convierte cualquier repo público de GitHub en un mapa interactivo. Ideal para entender arquitecturas complejas y ver cómo se conectan las piezas de tu código de un vistazo.",
@@ -83,9 +78,8 @@ export const projectsData: IProject[] = [
     liveUrl     : "https://dependra-rh.vercel.app/",
     imageUrl    : "/projects/image-dependra.webp",
     type        : "FrontEnd",
-  },
-  {
-    id         : "13e17624-43aa-46da-9b8f-859c5e682916",
+  }),
+  defineProject({
     title      : "FavorApp",
     description: {
       es: "La app para encontrar trabajo o pedir favores en tu ciudad. Landing page diseñada para conectar colaboradores locales con clientes de forma sencilla y directa.",
@@ -96,9 +90,8 @@ export const projectsData: IProject[] = [
     liveUrl     : "https://www.favorapp.app/",
     imageUrl    : "/projects/image-favorapp.webp",
     type        : "FrontEnd",
-  },
-  {
-    id         : "84f21e59-a43d-4ae9-9291-73529eba385a",
+  }),
+  defineProject({
     title      : "Enfoque Salud",
     description: {
       es: "Web médica que va más allá de informar. Incluye asistentes para calcular tu IMC o seguir tu embarazo, mejorando la experiencia del paciente desde el primer clic.",
@@ -109,5 +102,5 @@ export const projectsData: IProject[] = [
     liveUrl     : "https://www.clinicaenfoquesalud.com/",
     imageUrl    : "/projects/image-clinicaenfoquesalud.webp",
     type        : "FrontEnd",
-  },
+  }),
 ];

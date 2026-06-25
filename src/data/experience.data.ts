@@ -1,8 +1,8 @@
+import { defineExperience } from "@/utils/id.utils";
 import type { IExperience } from "@/types/experience.types";
 
 export const experienceData: IExperience[] = [
-  {
-    id            : "78c63b02-4cdb-4959-9ca9-34d64d236875",
+  defineExperience({
     company       : "NTT DATA Europe & Latam",
     websiteUrl    : "https://pe.nttdata.com/",
     certificateUrl: "",
@@ -37,9 +37,8 @@ export const experienceData: IExperience[] = [
         technologies: ["Next.js", "React Native", "Node.js", "Express", "TypeScript", "OpenShift", "Jest", "Storybook", "Material UI", "Git"],
       },
     ],
-  },
-  {
-    id            : "4fe573a2-1030-4565-832a-ceb418a161a8",
+  }),
+  defineExperience({
     company       : "USS - Universidad Señor de Sipán",
     websiteUrl    : "https://www.uss.edu.pe/",
     certificateUrl: "https://res.cloudinary.com/dmgazox1n/image/upload/v1775520201/Portfolio/Documents/records/CERTIFICADO%20DE%20TRABAJO%20-%20USS.jpg",
@@ -74,9 +73,8 @@ export const experienceData: IExperience[] = [
         technologies: ["C#", ".Net", "React.js", "JavaScript", "TypeScript", "SQL Server", "Git"],
       },
     ],
-  },
-  {
-    id               : "5255ba03-4ce9-4e10-a4d4-323961a60064",
+  }),
+  defineExperience({
     company          : "Appex IA",
     websiteUrl       : "https://www.appexsistemas.com/",
     certificateUrl   : "https://res.cloudinary.com/dmgazox1n/image/upload/v1775520201/Portfolio/Documents/records/CERTIFICADO%20DE%20TRABAJO%20-%20APPEXIA.jpg",
@@ -129,9 +127,8 @@ export const experienceData: IExperience[] = [
         technologies: ["React Native", "Next.js", "TypeScript", "Tailwind CSS", "Git"],
       },
     ],
-  },
-  {
-    id            : "f5b12b41-2bea-459a-b65c-81c92e22f024",
+  }),
+  defineExperience({
     company       : "DATEC CONSULTING SAC",
     websiteUrl    : "https://www.datec.pe/",
     certificateUrl: "https://res.cloudinary.com/dmgazox1n/image/upload/v1775520201/Portfolio/Documents/records/CERTIFICADO%20DE%20TRABAJO%20-%20DATEC.jpg",
@@ -170,5 +167,5 @@ export const experienceData: IExperience[] = [
         technologies: ["PHP", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "TypeScript", "NestJS", "PostgreSQL", "Docker"],
       },
     ],
-  },
+  }),
 ];
