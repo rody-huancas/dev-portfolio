@@ -9,8 +9,8 @@ export const experienceData: IExperience[] = [
     roles         : [
       {
         position: {
-          es: "Desarrollador Full Stack",
-          en: "Full Stack Developer",
+          es: "Ingeniero de Software",
+          en: "Software Engineer",
         },
         period: {
           es: "Ene 2026 - Presente",
