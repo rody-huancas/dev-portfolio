@@ -3,6 +3,23 @@ import type { IProject } from "@/types/projects.types";
 
 export const projectsData: IProject[] = [
   defineProject({
+    title      : "Tabus JS",
+    description: {
+      es: "Un bus de mensajes liviano y type-safe para comunicar pestañas del navegador en tiempo real. Cuenta con soporte nativo para SSR (fallback en memoria), control de presencia automático y throttling inteligente integrado para eventos de alta frecuencia.",
+      en: "A lightweight, type-safe message bus for cross-tab communication in real time. It features native SSR support (in-memory fallback), automatic presence tracking, and built-in smart throttling for high-frequency events.",
+    },
+    technologies: ["Astro", "GSAP", "TypeScript", "NPM", "Vitest", "VitePress"],
+    githubUrl   : "https://github.com/rody-huancas/tabus-js",
+    liveUrl     : "https://tabus-js.vercel.app/",
+    imageUrl    : "/projects/image-tabus-js.webp",
+    type        : "Library",
+    links       : [
+      { type: "website", url: "https://tabus-js.vercel.app/" },
+      { type: "repo"   , url: "https://github.com/rody-huancas/tabus-js" },
+      { type: "npm"    , url: "https://www.npmjs.com/package/tabus-js" },
+    ],
+  }),
+  defineProject({
     title      : "Premios Lopito",
     description: {
       es: "Sistema completo de sorteos online con panel de administración, verificación de boletos por comprobante, consulta de DNI en tiempo real y exportación de reportes en PDF y Excel. Pagos vía YAPE y PLIN con gestión multi-administrador.",
