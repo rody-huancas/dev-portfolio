@@ -30,7 +30,7 @@ const Header = () => {
   }, [isHomePage]);
 
   return (
-    <header className="fixed z-50 bottom-6 left-1/2 -translate-x-1/2 lg:bottom-auto lg:left-10 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0">
+    <header className="fixed z-50 bottom-(--floating-bar-offset) left-1/2 -translate-x-1/2 lg:bottom-auto lg:left-10 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-0">
       <nav
         className="flex flex-row lg:flex-col gap-4 items-center justify-center"
         role="navigation"
