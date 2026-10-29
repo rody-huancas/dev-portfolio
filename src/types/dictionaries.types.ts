@@ -1,3 +1,6 @@
+import type { HeroLinkId, IHeroLinkCopy } from "@/types/hero.types";
+import type { TechGroupId } from "@/types/stack.types";
+
 export interface AppDictionary {
   title: {
     sectionLabelAria: string;
@@ -25,33 +28,18 @@ export interface AppDictionary {
   hero: {
     sectionAria : string;
     availability: string;
-    greeting    : string;
-    role        : string;
-    intro       : {
+    name        : {
+      first: string;
+      last : string;
+    };
+    role : string;
+    intro: {
       beforeYears: string;
       years      : string;
       afterYears : string;
     };
     linksNavAria: string;
-    email       : {
-      ariaLabel: string;
-      title    : string;
-      label    : string;
-    };
-    github: {
-      ariaLabel: string;
-      title    : string;
-    };
-    linkedin: {
-      ariaLabel: string;
-      title    : string;
-    };
-    resume: {
-      ariaLabel: string;
-      title    : string;
-      label    : string;
-      url      : string;
-    };
+    links       : Record<HeroLinkId, IHeroLinkCopy>;
   };
   projects: {
     sectionLabel   : string;
@@ -108,6 +96,13 @@ export interface AppDictionary {
         emphasis      : string;
         afterEmphasis : string;
       };
+    };
+    stack: {
+      label      : string;
+      title      : string;
+      subtitle   : string;
+      description: string;
+      groups     : Record<TechGroupId, string>;
     };
   };
   contact: {

@@ -29,32 +29,39 @@ export const dictionaries: Record<Locale, AppDictionary> = {
     hero: {
       sectionAria : "Sección de presentación",
       availability: "Disponible para trabajar",
-      greeting    : "Hola, soy Rody",
-      role        : "Software Developer",
-      intro       : {
+      name        : {
+        first: "RODY",
+        last : "HUANCAS",
+      },
+      role : "Software Developer",
+      intro: {
         beforeYears: "Programar es fácil, lo difícil es hacerlo simple. Llevo ",
-        years      : "+3 años",
-        afterYears : " priorizando la claridad sobre la complejidad, convencido de que una solución es perfecta no cuando no hay nada más que añadir, sino cuando no queda nada por quitar.",
+        years      : "+5 años",
+        afterYears : " priorizando la claridad sobre la complejidad.",
       },
       linksNavAria: "Enlaces de contacto y redes sociales",
-      email       : {
-        ariaLabel: "Enviar correo electrónico a rodyhuancas.04@gmail.com",
-        title    : "Contactar por email",
-        label    : "Escríbeme",
-      },
-      github: {
-        ariaLabel: "Ver perfil de GitHub de Rody Huancas",
-        title    : "Visitar GitHub",
-      },
-      linkedin: {
-        ariaLabel: "Ver perfil de LinkedIn de Rody Huancas",
-        title    : "Visitar LinkedIn",
-      },
-      resume: {
-        ariaLabel: "Descargar currículum vitae en formato PDF",
-        title    : "Descargar CV",
-        label    : "Ver CV",
-        url      : "https://res.cloudinary.com/dmgazox1n/image/upload/v1779678975/Portfolio/Documents/CV%20-%20RODY%20HUANCAS%20CHUQUIPOMA.pdf",
+      links       : {
+        email: {
+          ariaLabel: "Enviar correo electrónico a rodyhuancas.04@gmail.com",
+          title    : "Contactar por email",
+          label    : "Escríbeme",
+        },
+        github: {
+          ariaLabel: "Ver perfil de GitHub de Rody Huancas",
+          title    : "Visitar GitHub",
+          label    : "GitHub",
+        },
+        linkedin: {
+          ariaLabel: "Ver perfil de LinkedIn de Rody Huancas",
+          title    : "Visitar LinkedIn",
+          label    : "LinkedIn",
+        },
+        resume: {
+          ariaLabel: "Descargar currículum vitae en formato PDF",
+          title    : "Descargar CV",
+          label    : "Ver CV",
+          url      : "https://res.cloudinary.com/dmgazox1n/image/upload/v1779678975/Portfolio/Documents/CV%20-%20RODY%20HUANCAS%20CHUQUIPOMA.pdf",
+        },
       },
     },
     projects: {
@@ -113,6 +120,17 @@ export const dictionaries: Record<Locale, AppDictionary> = {
           afterEmphasis : "; soluciones que aporten valor real hoy y que estén preparadas para crecer en el futuro sin dolores de cabeza.",
         },
       },
+      stack: {
+        label      : "Stack",
+        title      : "Habilidades",
+        subtitle   : "técnicas",
+        description: "Las herramientas con las que construyo, de la interfaz a la base de datos.",
+        groups     : {
+          frontend  : "Frontend",
+          backend   : "Backend",
+          mobileData: "Móvil y datos",
+        },
+      },
     },
     contact: {
       sectionLabel   : "Contacto",
@@ -169,32 +187,39 @@ export const dictionaries: Record<Locale, AppDictionary> = {
     hero: {
       sectionAria : "Introduction section",
       availability: "Available for work",
-      greeting    : "Hi, I'm Rody",
-      role        : "Software Developer",
-      intro       : {
+      name        : {
+        first: "RODY",
+        last : "HUANCAS",
+      },
+      role : "Software Developer",
+      intro: {
         beforeYears: "Writing code is easy, making it simple is the hard part. I have spent ",
-        years      : "+3 years",
-        afterYears : " prioritizing clarity over complexity, convinced that a solution is perfect not when there is nothing else to add, but when there is nothing left to remove.",
+        years      : "+5 years",
+        afterYears : " prioritizing clarity over complexity.",
       },
       linksNavAria: "Contact and social links",
-      email       : {
-        ariaLabel: "Send an email to rodyhuancas.04@gmail.com",
-        title    : "Contact by email",
-        label    : "Write to me",
-      },
-      github: {
-        ariaLabel: "View Rody Huancas GitHub profile",
-        title    : "Visit GitHub",
-      },
-      linkedin: {
-        ariaLabel: "View Rody Huancas LinkedIn profile",
-        title    : "Visit LinkedIn",
-      },
-      resume: {
-        ariaLabel: "Download resume in PDF format",
-        title    : "Download resume",
-        label    : "View resume",
-        url      : "https://res.cloudinary.com/dmgazox1n/image/upload/v1779760447/Portfolio/Documents/CV%20-%20HILDER%20RODY%20HUANCAS%20CHUQUIPOMA%20-%20EN.pdf",
+      links       : {
+        email: {
+          ariaLabel: "Send an email to rodyhuancas.04@gmail.com",
+          title    : "Contact by email",
+          label    : "Write to me",
+        },
+        github: {
+          ariaLabel: "View Rody Huancas GitHub profile",
+          title    : "Visit GitHub",
+          label    : "GitHub",
+        },
+        linkedin: {
+          ariaLabel: "View Rody Huancas LinkedIn profile",
+          title    : "Visit LinkedIn",
+          label    : "LinkedIn",
+        },
+        resume: {
+          ariaLabel: "Download resume in PDF format",
+          title    : "Download resume",
+          label    : "View resume",
+          url      : "https://res.cloudinary.com/dmgazox1n/image/upload/v1779760447/Portfolio/Documents/CV%20-%20HILDER%20RODY%20HUANCAS%20CHUQUIPOMA%20-%20EN.pdf",
+        },
       },
     },
     projects: {
@@ -251,6 +276,17 @@ export const dictionaries: Record<Locale, AppDictionary> = {
           beforeEmphasis: "To me, programming is not \"shipping code\" automatically to complete a task. My real goal is to apply engineering to design ",
           emphasis      : "clean, fast, and scalable systems",
           afterEmphasis : "; solutions that deliver real value today and are ready to grow in the future without headaches.",
+        },
+      },
+      stack: {
+        label      : "Stack",
+        title      : "Technical",
+        subtitle   : "skills",
+        description: "The tools I build with, from the interface to the database.",
+        groups     : {
+          frontend  : "Frontend",
+          backend   : "Backend",
+          mobileData: "Mobile & data",
         },
       },
     },
