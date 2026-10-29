@@ -2,7 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { motion } from "framer-motion";
-import TechCorner from "./TechCorner";
+import LineGridCell from "../LineGrid/LineGridCell";
 import { stackTimeline } from "@/config/stack.config";
 import { useMotionTransition } from "@/hooks/useMotionTransition";
 import type { ITech } from "@/types/stack.types";
@@ -12,62 +12,17 @@ interface Props {
   index: number;
 }
 
-const lineX = {
-  hidden : { scaleX: 0 },
-  visible: { scaleX: 1 },
-};
-
-const lineY = {
-  hidden : { scaleY: 0 },
-  visible: { scaleY: 1 },
-};
-
-const cornerPositions = [
-  "-top-1 -left-1",
-  "-top-1 -right-[3px]",
-  "-bottom-[3px] -left-1",
-  "-bottom-[3px] -right-[3px]",
-];
-
 const TechCell = ({ tech, index }: Props) => {
   const { name, icon: Icon, color, lightColor, iconScale } = tech;
   const brandStyle = { "--brand": color, "--brand-light": lightColor ?? color } as CSSProperties;
   const transition = useMotionTransition();
 
-  const lineTransition = transition({
-    delay   : index * stackTimeline.lineStagger,
-    duration: stackTimeline.lineDuration,
-    ease    : "easeInOut",
-  });
-
-  const cornerTransition = transition({
-    delay   : stackTimeline.cornerDelay + index * stackTimeline.lineStagger,
-    duration: stackTimeline.revealDuration,
-    ease    : "easeOut",
-  });
-
   return (
-    <li
-      className="group relative flex flex-col items-center justify-center gap-2.5 px-2 py-7 transition-colors duration-300 hover:bg-status/5"
+    <LineGridCell
+      index={index}
+      className="group flex flex-col items-center justify-center gap-2.5 px-2 py-7 transition-colors duration-300 hover:bg-status/5"
       style={brandStyle}
     >
-      <motion.span
-        className="pointer-events-none absolute inset-y-0 right-0 w-px origin-top bg-background/10 dark:bg-foreground/10"
-        aria-hidden="true"
-        variants={lineY}
-        transition={lineTransition}
-      />
-      <motion.span
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left bg-background/10 dark:bg-foreground/10"
-        aria-hidden="true"
-        variants={lineX}
-        transition={lineTransition}
-      />
-
-      {cornerPositions.map((position) => (
-        <TechCorner key={position} className={position} transition={cornerTransition} />
-      ))}
-
       <motion.span
         className="flex flex-col items-center gap-2.5"
         variants={{
@@ -89,7 +44,7 @@ const TechCell = ({ tech, index }: Props) => {
           {name}
         </span>
       </motion.span>
-    </li>
+    </LineGridCell>
   );
 };
 
