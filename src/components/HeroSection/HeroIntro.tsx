@@ -15,7 +15,7 @@ const HeroIntro = ({ beforeYears, years, afterYears }: Props) => {
 
   return (
     <motion.p
-      className="max-w-[600px] text-lg leading-8 text-background/68 dark:text-foreground/74 md:text-xl"
+      className="max-w-[600px] text-base leading-7 text-background/68 dark:text-foreground/74 md:text-xl md:leading-8"
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={transition({ delay: heroTimeline.introDelay, duration: heroTimeline.revealDuration, ease: "easeOut" })}

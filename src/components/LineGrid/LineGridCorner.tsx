@@ -8,7 +8,7 @@ interface Props {
   transition: Transition;
 }
 
-const TechCorner = ({ className, transition }: Props) => {
+const LineGridCorner = ({ className, transition }: Props) => {
   return (
     <motion.span
       className={cn("pointer-events-none absolute z-10 h-1.75 w-1.75 bg-status", className)}
@@ -22,4 +22,4 @@ const TechCorner = ({ className, transition }: Props) => {
   );
 };
 
-export default TechCorner;
+export default LineGridCorner;

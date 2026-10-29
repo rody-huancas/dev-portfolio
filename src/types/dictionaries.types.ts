@@ -1,5 +1,6 @@
 import type { HeroLinkId, IHeroLinkCopy } from "@/types/hero.types";
 import type { TechGroupId } from "@/types/stack.types";
+import type { IHighlightedText } from "@/types/about.types";
 
 export interface AppDictionary {
   title: {
@@ -70,33 +71,18 @@ export interface AppDictionary {
     website        : string;
     certificate    : string;
     recommendation : string;
+    showMore       : string;
+    showLess       : string;
   };
   about: {
     sectionLabel   : string;
     sectionTitle   : string;
     sectionSubtitle: string;
     paragraphs     : {
-      first: {
-        beforeName: string;
-        afterName : string;
-        years     : string;
-        afterYears: string;
-      };
-      second: {
-        beforeRole       : string;
-        role             : string;
-        between          : string;
-        architecture     : string;
-        afterArchitecture: string;
-        stack            : string;
-        afterStack       : string;
-      };
-      third: {
-        beforeEmphasis: string;
-        emphasis      : string;
-        afterEmphasis : string;
-      };
+      first : IHighlightedText;
+      second: IHighlightedText;
     };
+    quote: IHighlightedText;
     stack: {
       label      : string;
       title      : string;

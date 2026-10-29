@@ -1,56 +1,47 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Title from "../Title";
 import TechStack from "../TechStack";
+import AboutQuote from "./AboutQuote";
+import AboutReveal from "./AboutReveal";
+import HighlightedText from "./HighlightedText";
 import { useI18n } from "@/i18n/I18nProvider";
 
 const AboutSection = () => {
   const { dictionary } = useI18n();
-  const about = dictionary.about.paragraphs;
+  const { about } = dictionary;
 
   return (
     <section id="about" className="pt-24">
-      <div className="space-y-5">
-        <Title
-          label={dictionary.about.sectionLabel}
-          title={dictionary.about.sectionTitle}
-          subtitle={dictionary.about.sectionSubtitle}
-        />
+      <Title
+        label={about.sectionLabel}
+        title={about.sectionTitle}
+        subtitle={about.sectionSubtitle}
+      />
 
-        <div className="space-y-10 text-background/60 dark:text-foreground text-lg md:text-xl leading-relaxed">
+      <motion.div
+        className="space-y-6 text-lg leading-relaxed text-background/60 dark:text-foreground md:text-xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <AboutReveal index={0}>
           <p>
-            {about.first.beforeName}
-            <span className="dark:text-foreground text-background/80 font-medium">
-              Rody Huancas
-            </span>
-            {about.first.afterName}
-            <span className="text-status">{about.first.years}</span>
-            {about.first.afterYears}
+            <HighlightedText text={about.paragraphs.first} />
           </p>
+        </AboutReveal>
 
+        <AboutReveal index={1}>
           <p>
-            {about.second.beforeRole}
-            <span className="text-status font-medium underline decoration-status/40 underline-offset-8">
-              {about.second.role}
-            </span>
-            {about.second.between}
-            <span className="dark:text-foreground text-background/80">
-              {about.second.architecture}
-            </span>
-            {about.second.afterArchitecture}
-            <span className="dark:text-foreground text-background/80">
-              {about.second.stack}
-            </span>
-            {about.second.afterStack}
+            <HighlightedText text={about.paragraphs.second} />
           </p>
+        </AboutReveal>
 
-          <p>
-            {about.third.beforeEmphasis}
-            <span className="text-status">{about.third.emphasis}</span>
-            {about.third.afterEmphasis}
-          </p>
-        </div>
-      </div>
+        <AboutReveal index={2} className="pt-4">
+          <AboutQuote text={about.quote} />
+        </AboutReveal>
+      </motion.div>
 
       <TechStack />
     </section>

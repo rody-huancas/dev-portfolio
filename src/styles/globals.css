@@ -21,6 +21,11 @@
   --status-available-light: #6fdc97;
   --text-secondary  : #d1d5db;
   --text-description: #9ca3af;
+
+  /* Floating Navigation Bar (mobile) */
+  --floating-bar-height: 4.125rem;
+  --floating-bar-offset: calc(1.5rem + env(safe-area-inset-bottom));
+  --floating-bar-space : calc(var(--floating-bar-height) + var(--floating-bar-offset));
 }
 
 @theme inline {

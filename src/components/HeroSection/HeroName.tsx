@@ -22,7 +22,7 @@ const HeroName = ({ firstName, lastName, role }: Props) => {
 
         <HeroBrushTag
           label={role}
-          className="my-4 text-[max(1em,125px)] md:absolute md:top-[0.08em] md:left-[2.16em] md:m-0 md:text-[1em]"
+          className="mt-4 mb-px text-[max(1em,125px)] md:absolute md:top-[0.08em] md:left-[2.16em] md:m-0 md:text-[1em]"
         />
       </span>
 
