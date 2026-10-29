@@ -17,17 +17,17 @@ const HeroSection = () => {
       className="flex flex-col gap-20"
       aria-label={hero.sectionAria}
     >
-      <div className="relative flex min-h-screen flex-col justify-center">
+      <div className="relative flex flex-col md:min-h-screen md:justify-center">
         <div
           className="pointer-events-none absolute inset-0 grid-bg"
           aria-hidden="true"
         />
 
         <div className="@container relative z-10 w-full">
-          <div className="py-24 [--hero-name-size:min(190px,calc(100cqw/4.7))]">
+          <div className="pt-6 pb-[calc(var(--floating-bar-space)+16px)] md:py-24 [--hero-name-size:min(190px,calc(100cqw/4.7))]">
             <HeroBadge label={hero.availability} />
 
-            <div className="mt-[calc(var(--hero-name-size)*0.044)]">
+            <div className="-mt-1 md:mt-[calc(var(--hero-name-size)*0.044)]">
               <HeroName
                 firstName={hero.name.first}
                 lastName={hero.name.last}
@@ -35,7 +35,7 @@ const HeroSection = () => {
               />
             </div>
 
-            <div className="mt-[max(1.75rem,calc(var(--hero-name-size)*0.28))]">
+            <div className="mt-5 md:mt-[max(1.75rem,calc(var(--hero-name-size)*0.28))]">
               <HeroIntro
                 beforeYears={hero.intro.beforeYears}
                 years={hero.intro.years}
@@ -43,7 +43,7 @@ const HeroSection = () => {
               />
             </div>
 
-            <div className="mt-[max(2rem,calc(var(--hero-name-size)*0.224))]">
+            <div className="mt-5 md:mt-[max(2rem,calc(var(--hero-name-size)*0.224))]">
               <HeroLinks
                 ariaLabel={hero.linksNavAria}
                 copy={hero.links}
