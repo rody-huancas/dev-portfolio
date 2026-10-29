@@ -1,6 +1,7 @@
 import { defineExperience } from "@/utils/id.utils";
 import type { IExperience } from "@/types/experience.types";
 
+// Orden en el que se muestran en la sección; las primeras quedan visibles y el resto en «Ver más experiencia».
 export const experienceData: IExperience[] = [
   defineExperience({
     company       : "NTT DATA Europe & Latam",
@@ -18,20 +19,16 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Desarrollo de nuevas funcionalidades para las plataformas web y móvil de Telefónica Argentina, priorizando la velocidad y la experiencia de usuario.",
-            en: "Developing new features for Telefónica Argentina's web and mobile platforms, focusing on speed and user experience.",
+            es: "Desarrollo funciones web y móviles para Telefónica Argentina, cuidando velocidad y UX.",
+            en: "I build web and mobile features for Telefónica Argentina, focused on speed and UX.",
           },
           {
-            es: "Creación de componentes reutilizables para la librería UI del cliente, asegurando que todos los productos mantengan el mismo diseño.",
-            en: "Building reusable components for the client's UI library, ensuring all products maintain a consistent design.",
+            es: "Creo componentes reutilizables para que todos los productos del cliente luzcan igual.",
+            en: "I build reusable UI components so every client product looks consistent.",
           },
           {
-            es: "Construcción de microservicios para manejar la lógica de negocio y mejorar la comunicación entre el front y los datos.",
-            en: "Building microservices to handle business logic and improve communication between the frontend and data.",
-          },
-          {
-            es: "Apoyo en la gestión de despliegues y monitoreo de la infraestructura para que el servicio siempre esté disponible.",
-            en: "Supporting deployment management and infrastructure monitoring to keep the service always available.",
+            es: "Construyo microservicios que conectan el frontend con los datos del negocio.",
+            en: "I build microservices that connect the frontend with business data.",
           },
         ],
         technologies: ["Next.js", "React Native", "Node.js", "Express", "TypeScript", "OpenShift", "Jest", "Storybook", "Material UI", "Git"],
@@ -54,20 +51,16 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Desarrollé tres sistemas internos desde cero: control de asistencia docente, gestión de repositorios entre áreas y un sistema de capacitación que incluía inscripción masiva, seguimiento de asistencia, generación automática de certificados, reportes y control de permisos por usuario.",
-            en: "Built three internal systems from scratch: faculty attendance tracking, cross-department file repository management, and a training platform featuring bulk enrollment, attendance tracking, automatic certificate generation, reports, and role-based permissions.",
+            es: "Creé 3 sistemas internos desde cero: asistencia docente, repositorios y capacitación.",
+            en: "Built 3 internal systems from scratch: faculty attendance, file repositories and training.",
           },
           {
-            es: "Optimicé consultas SQL críticas reduciendo tiempos de respuesta de varios minutos a segundos, identificando y resolviendo cuellos de botella en los procesos más exigentes del sistema.",
-            en: "Optimized critical SQL queries, cutting response times from several minutes down to seconds by identifying and resolving bottlenecks in the system's most demanding processes.",
+            es: "Optimicé consultas SQL críticas y bajé los tiempos de respuesta de minutos a segundos.",
+            en: "Optimized critical SQL queries, cutting response times from minutes to seconds.",
           },
           {
-            es: "Lideré la adopción de React y TypeScript como stack principal para el desarrollo de nuevos sistemas, modernizando el flujo de trabajo del equipo e introduciendo Git como herramienta de control de versiones.",
-            en: "Led the adoption of React and TypeScript as the main stack for new systems, modernizing the team's workflow and introducing Git for version control.",
-          },
-          {
-            es: "Participé activamente en la toma de decisiones técnicas para nuevos requerimientos, aportando criterio en el diseño de soluciones y en el crecimiento de los sistemas existentes.",
-            en: "Actively participated in technical decision-making for new requirements, contributing to solution design and the evolution of existing systems.",
+            es: "Impulsé React, TypeScript y Git en el equipo para modernizar la forma de trabajar.",
+            en: "Introduced React, TypeScript and Git to the team to modernize how we work.",
           },
         ],
         technologies: ["C#", ".Net", "React.js", "JavaScript", "TypeScript", "SQL Server", "Git"],
@@ -91,12 +84,12 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Rediseñé el sitio web oficial de la empresa, mejorando su presencia en línea con animaciones atractivas enfocadas en mostrar resultados del negocio.",
-            en: "Redesigned the company's official website, improving its online presence with engaging animations focused on showcasing business results.",
+            es: "Rediseñé el sitio web de la empresa con animaciones que destacan sus resultados.",
+            en: "Redesigned the company website with animations that highlight its results.",
           },
           {
-            es: "Apliqué mejoras técnicas para que el sitio cargue más rápido y aparezca mejor posicionado en los resultados de búsqueda.",
-            en: "Applied technical improvements to make the site load faster and rank better in search results.",
+            es: "Mejoré la velocidad de carga del sitio y su posición en los buscadores.",
+            en: "Improved the site's load speed and its search engine ranking.",
           },
         ],
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Prisma ORM", "PostgreSQL"],
@@ -112,16 +105,12 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Integrante principal del equipo de desarrollo de <a href='https://play.google.com/store/apps/details?id=com.favorapp&hl=es_PE' target='_blank' rel='noopener noreferrer' class='text-status font-bold hover:underline'>FavorApp</a>.",
-            en: "Key member of the development team behind <a href='https://play.google.com/store/apps/details?id=com.favorapp&hl=es_PE' target='_blank' rel='noopener noreferrer' class='text-status font-bold hover:underline'>FavorApp</a>.",
+            es: "Desarrollé la app <a href='https://play.google.com/store/apps/details?id=com.favorapp&hl=es_PE' target='_blank' rel='noopener noreferrer' class='text-status font-bold hover:underline'>FavorApp</a> como parte del equipo principal.",
+            en: "Built the <a href='https://play.google.com/store/apps/details?id=com.favorapp&hl=es_PE' target='_blank' rel='noopener noreferrer' class='text-status font-bold hover:underline'>FavorApp</a> mobile app as part of the core team.",
           },
           {
-            es: "Desarrollo y despliegue de sitios web a medida según requerimientos del cliente.",
-            en: "Developed and deployed custom websites based on client requirements.",
-          },
-          {
-            es: "Mentoría técnica y revisión de código para asegurar la escalabilidad del proyecto.",
-            en: "Provided technical mentoring and code reviews to keep the project scalable.",
+            es: "Guié al equipo con mentorías y revisiones de código para que el proyecto escale.",
+            en: "Mentored the team and reviewed code so the project could scale.",
           },
         ],
         technologies: ["React Native", "Next.js", "TypeScript", "Tailwind CSS", "Git"],
@@ -144,24 +133,16 @@ export const experienceData: IExperience[] = [
         },
         description: [
           {
-            es: "Participé en el mantenimiento y crecimiento de un ERP empresarial crítico, asegurando la continuidad operativa del negocio.",
-            en: "Participated in the maintenance and growth of a critical enterprise ERP, ensuring business operational continuity.",
+            es: "Mantuve y amplié un ERP crítico con nuevos módulos de gestión.",
+            en: "Maintained and extended a critical ERP with new management modules.",
           },
           {
-            es: "Formé parte del equipo que migró el sistema a una arquitectura moderna, mejorando su mantenibilidad y escalabilidad a futuro.",
-            en: "Was part of the team that migrated the system to a modern architecture, improving its maintainability and future scalability.",
+            es: "Participé en la migración del ERP a una arquitectura moderna y fácil de mantener.",
+            en: "Helped migrate the ERP to a modern architecture that is easier to maintain.",
           },
           {
-            es: "Desarrollé e integré nuevos módulos de gestión al ecosistema existente, ampliando las capacidades operativas de la plataforma.",
-            en: "Developed and integrated new management modules into the existing ecosystem, expanding the platform's operational capabilities.",
-          },
-          {
-            es: "Optimicé consultas a la base de datos, reduciendo tiempos de respuesta en procesos que anteriormente eran lentos.",
-            en: "Optimized database queries, reducing response times in processes that were previously slow.",
-          },
-          {
-            es: "Realicé despliegues del sistema para nuevos clientes, asegurando una implementación estable y sin interrupciones.",
-            en: "Handled system deployments for new clients, ensuring a stable and seamless implementation.",
+            es: "Optimicé consultas lentas a la base de datos para acelerar procesos clave.",
+            en: "Optimized slow database queries to speed up key processes.",
           },
         ],
         technologies: ["PHP", "React.js", "Tailwind CSS", "Bootstrap", "JavaScript", "TypeScript", "NestJS", "PostgreSQL", "Docker"],
