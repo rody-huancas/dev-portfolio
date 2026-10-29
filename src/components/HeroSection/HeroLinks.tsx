@@ -16,7 +16,7 @@ const HeroLinks = ({ ariaLabel, copy }: Props) => {
 
   return (
     <nav
-      className="flex flex-wrap items-center gap-x-7 gap-y-4"
+      className="grid grid-cols-2 gap-4 md:flex md:flex-wrap md:items-center md:gap-x-7 md:gap-y-4"
       aria-label={ariaLabel}
     >
       {heroLinks.map((link, index) => {
