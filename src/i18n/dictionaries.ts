@@ -93,6 +93,8 @@ export const dictionaries: Record<Locale, AppDictionary> = {
       website        : "Sitio web",
       certificate    : "Constancia",
       recommendation : "Recomendación",
+      showMore       : "Ver más experiencia",
+      showLess       : "Ver menos",
     },
     about: {
       sectionLabel   : "Sobre mí",
@@ -100,25 +102,20 @@ export const dictionaries: Record<Locale, AppDictionary> = {
       sectionSubtitle: "historia",
       paragraphs     : {
         first: {
-          beforeName: "Me llamo ",
-          afterName : ". Mi historia con la tecnología empezó por pura curiosidad: quería entender cómo funcionaban las cosas por dentro y terminé descubriendo mi profesión. Hoy, tras graduarme como Ingeniero de Sistemas, llevo ",
-          years     : "más de tres años",
-          afterYears: " construyendo software real y transformando ideas abstractas en aplicaciones que la gente usa en su día a día.",
+          before   : "Soy Rody, ",
+          highlight: "Ingeniero de Sistemas",
+          after    : " de Chiclayo. Empecé en la tecnología por curiosidad, queriendo entender cómo funcionaban las cosas por dentro, y terminé haciendo de eso mi profesión.",
         },
         second: {
-          beforeRole       : "No me gusta dejar las cosas a medias. Como ",
-          role             : "desarrollador Full Stack",
-          between          : ", disfruto encargarme de la ",
-          architecture     : "arquitectura completa",
-          afterArchitecture: ". Me meto de lleno en todo el proceso: desde diseñar una interfaz intuitiva en el navegador hasta estructurar bases de datos seguras y optimizadas en el servidor. Mi terreno de juego principal es el ecosistema de ",
-          stack            : "JavaScript y TypeScript",
-          afterStack       : ".",
+          before   : "Hoy llevo más de ",
+          highlight: "5 años",
+          after    : " construyendo software que la gente usa todos los días. Disfruto encargarme de todo el proceso: desde una interfaz clara en el navegador hasta una base de datos ordenada y segura.",
         },
-        third: {
-          beforeEmphasis: "Para mí, programar no es \"picar código\" de forma automática para cumplir una tarea. Mi verdadero objetivo es aplicar ingeniería para diseñar ",
-          emphasis      : "sistemas limpios, rápidos y escalables",
-          afterEmphasis : "; soluciones que aporten valor real hoy y que estén preparadas para crecer en el futuro sin dolores de cabeza.",
-        },
+      },
+      quote: {
+        before   : "No escribo código por escribir: busco soluciones ",
+        highlight: "simples, rápidas",
+        after    : " y que puedan crecer sin dolores de cabeza.",
       },
       stack: {
         label      : "Stack",
@@ -251,6 +248,8 @@ export const dictionaries: Record<Locale, AppDictionary> = {
       website        : "Website",
       certificate    : "Certificate",
       recommendation : "Recommendation",
+      showMore       : "Show more experience",
+      showLess       : "Show less",
     },
     about: {
       sectionLabel   : "About",
@@ -258,25 +257,20 @@ export const dictionaries: Record<Locale, AppDictionary> = {
       sectionSubtitle: "story",
       paragraphs     : {
         first: {
-          beforeName: "My name is ",
-          afterName : ". My story with technology started out of pure curiosity: I wanted to understand how things worked on the inside and ended up discovering my profession. Today, after graduating as a Systems Engineer, I have spent ",
-          years     : "more than three years",
-          afterYears: " building real software and turning abstract ideas into applications people use in their everyday lives.",
+          before   : "I'm Rody, a ",
+          highlight: "Systems Engineer",
+          after    : " from Chiclayo. I got into tech out of curiosity, wanting to understand how things worked on the inside, and ended up turning that into my profession.",
         },
         second: {
-          beforeRole       : "I don't like leaving things halfway done. As a ",
-          role             : "Full Stack developer",
-          between          : ", I enjoy owning the ",
-          architecture     : "full architecture",
-          afterArchitecture: ". I dive deep into the entire process: from designing an intuitive interface in the browser to structuring secure, optimized databases on the server. My main playground is the ",
-          stack            : "JavaScript and TypeScript ecosystem",
-          afterStack       : ".",
+          before   : "Today I have more than ",
+          highlight: "5 years",
+          after    : " of experience building software people use every day. I enjoy owning the whole process: from a clear interface in the browser to a tidy, secure database.",
         },
-        third: {
-          beforeEmphasis: "To me, programming is not \"shipping code\" automatically to complete a task. My real goal is to apply engineering to design ",
-          emphasis      : "clean, fast, and scalable systems",
-          afterEmphasis : "; solutions that deliver real value today and are ready to grow in the future without headaches.",
-        },
+      },
+      quote: {
+        before   : "I don't write code for the sake of it: I look for solutions that are ",
+        highlight: "simple, fast",
+        after    : " and able to grow without headaches.",
       },
       stack: {
         label      : "Stack",
