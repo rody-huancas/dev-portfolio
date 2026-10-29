@@ -1,7 +1,7 @@
 "use client";
 
 import Title from "../Title";
-import TechSlider from "../TechSlider";
+import TechStack from "../TechStack";
 import { useI18n } from "@/i18n/I18nProvider";
 
 const AboutSection = () => {
@@ -52,7 +52,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <TechSlider />
+      <TechStack />
     </section>
   );
 };
